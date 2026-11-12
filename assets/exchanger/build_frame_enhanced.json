@@ -1,0 +1,1239 @@
+{
+ "commands": [
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 90,
+    "width": 1328,
+    "height": 1350,
+    "center": [
+     -345,
+     0,
+     675
+    ],
+    "name": "FixedFrameL",
+    "body_name": "FrameFixed"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 90,
+    "width": 1328,
+    "height": 1350,
+    "center": [
+     345,
+     0,
+     675
+    ],
+    "name": "FixedFrameR",
+    "body_name": "FrameFixed",
+    "operation": "join",
+    "targets": [
+     "FrameFixed"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 780,
+    "width": 1328,
+    "height": 90,
+    "center": [
+     0,
+     0,
+     45
+    ],
+    "name": "FixedFrameB",
+    "body_name": "FrameFixed",
+    "operation": "join",
+    "targets": [
+     "FrameFixed"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 780,
+    "width": 1328,
+    "height": 90,
+    "center": [
+     0,
+     0,
+     1305
+    ],
+    "name": "FixedFrameT",
+    "body_name": "FrameFixed",
+    "operation": "join",
+    "targets": [
+     "FrameFixed"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 90,
+    "width": 1328,
+    "height": 1350,
+    "center": [
+     -345,
+     0,
+     675
+    ],
+    "name": "MovingFrameL",
+    "body_name": "FrameMoving"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 90,
+    "width": 1328,
+    "height": 1350,
+    "center": [
+     345,
+     0,
+     675
+    ],
+    "name": "MovingFrameR",
+    "body_name": "FrameMoving",
+    "operation": "join",
+    "targets": [
+     "FrameMoving"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 780,
+    "width": 1328,
+    "height": 90,
+    "center": [
+     0,
+     0,
+     45
+    ],
+    "name": "MovingFrameB",
+    "body_name": "FrameMoving",
+    "operation": "join",
+    "targets": [
+     "FrameMoving"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 780,
+    "width": 1328,
+    "height": 90,
+    "center": [
+     0,
+     0,
+     1305
+    ],
+    "name": "MovingFrameT",
+    "body_name": "FrameMoving",
+    "operation": "join",
+    "targets": [
+     "FrameMoving"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 1620,
+    "base": [
+     -280,
+     -280,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieRod1",
+    "body_name": "TieRod1",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     -280,
+     -280,
+     -9
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut1B",
+    "body_name": "TieNut1B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     -280,
+     -280,
+     1611
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut1T",
+    "body_name": "TieNut1T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     -280,
+     -280,
+     -3
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher1B",
+    "body_name": "TieWasher1B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     -280,
+     -280,
+     1617
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher1T",
+    "body_name": "TieWasher1T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 28,
+    "height": 1580,
+    "base": [
+     -280,
+     -280,
+     20
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieSleeve1",
+    "body_name": "TieSleeve1",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 1620,
+    "base": [
+     280,
+     -280,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieRod2",
+    "body_name": "TieRod2",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     280,
+     -280,
+     -9
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut2B",
+    "body_name": "TieNut2B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     280,
+     -280,
+     1611
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut2T",
+    "body_name": "TieNut2T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     280,
+     -280,
+     -3
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher2B",
+    "body_name": "TieWasher2B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     280,
+     -280,
+     1617
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher2T",
+    "body_name": "TieWasher2T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 28,
+    "height": 1580,
+    "base": [
+     280,
+     -280,
+     20
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieSleeve2",
+    "body_name": "TieSleeve2",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 1620,
+    "base": [
+     -280,
+     280,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieRod3",
+    "body_name": "TieRod3",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     -280,
+     280,
+     -9
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut3B",
+    "body_name": "TieNut3B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     -280,
+     280,
+     1611
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut3T",
+    "body_name": "TieNut3T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     -280,
+     280,
+     -3
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher3B",
+    "body_name": "TieWasher3B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     -280,
+     280,
+     1617
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher3T",
+    "body_name": "TieWasher3T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 28,
+    "height": 1580,
+    "base": [
+     -280,
+     280,
+     20
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieSleeve3",
+    "body_name": "TieSleeve3",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 1620,
+    "base": [
+     280,
+     280,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieRod4",
+    "body_name": "TieRod4",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     280,
+     280,
+     -9
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut4B",
+    "body_name": "TieNut4B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 18,
+    "base": [
+     280,
+     280,
+     1611
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieNut4T",
+    "body_name": "TieNut4T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     280,
+     280,
+     -3
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher4B",
+    "body_name": "TieWasher4B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 40,
+    "height": 6,
+    "base": [
+     280,
+     280,
+     1617
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieWasher4T",
+    "body_name": "TieWasher4T",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 28,
+    "height": 1580,
+    "base": [
+     280,
+     280,
+     20
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "TieSleeve4",
+    "body_name": "TieSleeve4",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 1350,
+    "height": 120,
+    "center": [
+     -350,
+     0,
+     -60
+    ],
+    "name": "SkidRailL",
+    "body_name": "Skid"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 1350,
+    "height": 120,
+    "center": [
+     350,
+     0,
+     -60
+    ],
+    "name": "SkidRailR",
+    "body_name": "Skid",
+    "operation": "join",
+    "targets": [
+     "Skid"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 800,
+    "width": 80,
+    "height": 80,
+    "center": [
+     0,
+     -550,
+     -40
+    ],
+    "name": "CrossMember_-550",
+    "body_name": "Skid",
+    "operation": "join",
+    "targets": [
+     "Skid"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 800,
+    "width": 80,
+    "height": 80,
+    "center": [
+     0,
+     0,
+     -40
+    ],
+    "name": "CrossMember_0",
+    "body_name": "Skid",
+    "operation": "join",
+    "targets": [
+     "Skid"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 800,
+    "width": 80,
+    "height": 80,
+    "center": [
+     0,
+     550,
+     -40
+    ],
+    "name": "CrossMember_550",
+    "body_name": "Skid",
+    "operation": "join",
+    "targets": [
+     "Skid"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 100,
+    "height": 20,
+    "center": [
+     -350,
+     -650,
+     -10
+    ],
+    "name": "Foot1",
+    "body_name": "Foot1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 100,
+    "height": 20,
+    "center": [
+     350,
+     -650,
+     -10
+    ],
+    "name": "Foot2",
+    "body_name": "Foot2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 100,
+    "height": 20,
+    "center": [
+     -350,
+     650,
+     -10
+    ],
+    "name": "Foot3",
+    "body_name": "Foot3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 100,
+    "height": 20,
+    "center": [
+     350,
+     650,
+     -10
+    ],
+    "name": "Foot4",
+    "body_name": "Foot4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 160,
+    "height": 60,
+    "center": [
+     -390,
+     0,
+     1350
+    ],
+    "name": "LiftLugL",
+    "body_name": "LiftLugL"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 35,
+    "height": 85,
+    "base": [
+     -390,
+     0,
+     1350
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "LiftHoleL",
+    "body_name": "LiftHoleL",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 160,
+    "height": 60,
+    "center": [
+     390,
+     0,
+     1350
+    ],
+    "name": "LiftLugR",
+    "body_name": "LiftLugR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 35,
+    "height": 85,
+    "base": [
+     390,
+     0,
+     1350
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "LiftHoleR",
+    "body_name": "LiftHoleR",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 780,
+    "width": 80,
+    "height": 60,
+    "center": [
+     0,
+     0,
+     1390
+    ],
+    "name": "CarryBarTop",
+    "body_name": "CarryBarTop"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 80,
+    "height": 30,
+    "center": [
+     -300,
+     0,
+     1405
+    ],
+    "name": "CarryGrip-300",
+    "body_name": "CarryGrip-300"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 80,
+    "height": 30,
+    "center": [
+     -100,
+     0,
+     1405
+    ],
+    "name": "CarryGrip-100",
+    "body_name": "CarryGrip-100"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 80,
+    "height": 30,
+    "center": [
+     100,
+     0,
+     1405
+    ],
+    "name": "CarryGrip100",
+    "body_name": "CarryGrip100"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 80,
+    "height": 30,
+    "center": [
+     300,
+     0,
+     1405
+    ],
+    "name": "CarryGrip300",
+    "body_name": "CarryGrip300"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 780,
+    "width": 80,
+    "height": 40,
+    "center": [
+     0,
+     0,
+     -20
+    ],
+    "name": "GuideBarBot",
+    "body_name": "GuideBarBot"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 280,
+    "width": 3,
+    "height": 180,
+    "center": [
+     0,
+     -668,
+     800
+    ],
+    "name": "Nameplate",
+    "body_name": "Nameplate"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 4,
+    "height": 6,
+    "base": [
+     -120,
+     -670,
+     870
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "RivetNP-12070",
+    "body_name": "RivetNP-12070",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 4,
+    "height": 6,
+    "base": [
+     120,
+     -670,
+     870
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "RivetNP12070",
+    "body_name": "RivetNP12070",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 4,
+    "height": 6,
+    "base": [
+     -120,
+     -670,
+     730
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "RivetNP-120-70",
+    "body_name": "RivetNP-120-70",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 4,
+    "height": 6,
+    "base": [
+     120,
+     -670,
+     730
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "RivetNP120-70",
+    "body_name": "RivetNP120-70",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     200,
+     -670,
+     1050
+    ],
+    "name": "LabelHIF",
+    "body_name": "LabelHIF"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     200,
+     -670,
+     500
+    ],
+    "name": "LabelHOF",
+    "body_name": "LabelHOF"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     -200,
+     -670,
+     1050
+    ],
+    "name": "LabelCIF",
+    "body_name": "LabelCIF"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     -200,
+     -670,
+     500
+    ],
+    "name": "LabelCOF",
+    "body_name": "LabelCOF"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     200,
+     670,
+     1050
+    ],
+    "name": "LabelHIR",
+    "body_name": "LabelHIR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     200,
+     670,
+     500
+    ],
+    "name": "LabelHOR",
+    "body_name": "LabelHOR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     -200,
+     670,
+     1050
+    ],
+    "name": "LabelCIR",
+    "body_name": "LabelCIR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 40,
+    "center": [
+     -200,
+     670,
+     500
+    ],
+    "name": "LabelCOR",
+    "body_name": "LabelCOR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 514,
+    "height": 1270,
+    "center": [
+     -365,
+     0,
+     635
+    ],
+    "name": "GasketL",
+    "body_name": "GasketL"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 514,
+    "height": 1270,
+    "center": [
+     365,
+     0,
+     635
+    ],
+    "name": "GasketR",
+    "body_name": "GasketR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 738,
+    "width": 514,
+    "height": 8,
+    "center": [
+     0,
+     0,
+     0
+    ],
+    "name": "GasketB",
+    "body_name": "GasketB"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 738,
+    "width": 514,
+    "height": 8,
+    "center": [
+     0,
+     0,
+     1270
+    ],
+    "name": "GasketT",
+    "body_name": "GasketT"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 2,
+    "height": 30,
+    "center": [
+     0,
+     -668,
+     1250
+    ],
+    "name": "CompLabel",
+    "body_name": "CompLabel"
+   }
+  }
+ ]
+}

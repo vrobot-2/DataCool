@@ -1,0 +1,7 @@
+{
+  "commands": [
+    {"command":"file.insert_step","params":{"path":"C:\\coding-project\\datacool\\assets\\exchanger\\exchanger_frame.step"}},
+    {"command":"file.insert_step","params":{"path":"C:\\coding-project\\datacool\\assets\\exchanger\\exchanger_core.step"}},
+    {"command":"file.insert_step","params":{"path":"C:\\coding-project\\datacool\\assets\\exchanger\\exchanger_ports.step"}}
+  ]
+}

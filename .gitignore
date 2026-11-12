@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+# build outputs
+app/dist/
+build/
+# logs / scratch
+*.log
+pipeline/logs/
+docs/_shots.log
+# heavy regenerable pipeline outputs (STEP/.sc are the sources of truth)
+*.obj
+pipeline/scene_unbaked.glb
+pipeline/scene_baked.blend
+# OS
+.DS_Store
+Thumbs.db

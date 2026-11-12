@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DataCool — Control Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#07080B; --fg:#E7E9ED; --mute:rgba(231,233,237,.48);
+    --line:rgba(231,233,237,.11);
+    --a:#7C8BFF;
+    --sans:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums;overflow-x:hidden}
+
+  /* ---------- left rail ---------- */
+  .rail{position:fixed;left:0;top:0;bottom:0;width:198px;z-index:60;display:flex;
+        flex-direction:column;justify-content:space-between;padding:26px 24px 26px;
+        border-right:1px solid var(--line);background:rgba(7,8,11,.82);backdrop-filter:blur(14px)}
+  .rail .brand{font-weight:600;font-size:13px;letter-spacing:.22em}
+  .rail .brand span{display:block;margin-top:6px;font-family:var(--mono);font-size:8px;
+                    letter-spacing:.16em;color:var(--mute);text-transform:uppercase}
+  .rail ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+  .rail li{position:relative}
+  .rail a{display:flex;align-items:baseline;gap:10px;padding:9px 0;text-decoration:none;
+          color:var(--mute);font-family:var(--mono);font-size:10px;letter-spacing:.13em;
+          text-transform:uppercase;transition:color .3s}
+  .rail a b{font-weight:400;font-size:9px;opacity:.6}
+  .rail a:before{content:"";position:absolute;left:-24px;top:50%;width:2px;height:0;
+                 background:var(--a);transition:height .3s;transform:translateY(-50%)}
+  .rail li.on a{color:var(--fg)}
+  .rail li.on a:before{height:18px}
+  .rail li.on a b{color:var(--a);opacity:1}
+  .rail .foot{font-family:var(--mono);font-size:8px;letter-spacing:.14em;color:var(--mute);
+              text-transform:uppercase;line-height:2}
+  .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--a);
+       margin-right:7px;vertical-align:1px;animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+
+  /* ---------- readouts ---------- */
+  .readout{position:fixed;top:30px;right:44px;z-index:55;display:flex;gap:56px;text-align:right}
+  .readout .r .k{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;
+                 text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+  .readout .r .v{font-size:40px;font-weight:300;line-height:.9;letter-spacing:-.04em}
+  .readout .r .v small{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--mute);
+                       margin-left:5px;font-weight:400}
+  .readout .idx{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--mute);
+                align-self:flex-end;padding-bottom:4px}
+  .readout .idx b{color:var(--a);font-weight:500}
+
+  /* ---------- sections ---------- */
+  main{margin-left:198px;position:relative}
+  .phase{min-height:100vh;position:relative;display:flex;align-items:flex-end;
+         padding:0 56px 92px;overflow:hidden}
+  .phase .ghost{position:absolute;right:-1vw;bottom:2vh;font-size:clamp(220px,26vw,420px);
+                line-height:.72;font-weight:600;letter-spacing:-.07em;color:transparent;
+                -webkit-text-stroke:1px rgba(231,233,237,.06);pointer-events:none;user-select:none}
+  .copy{position:relative;z-index:1;max-width:560px}
+  .eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-family:var(--mono);
+           font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--a)}
+  .eyebrow span{color:var(--mute)}
+  h1,h2{margin:0;font-weight:500;letter-spacing:-.035em;line-height:.98;text-wrap:balance}
+  h1{font-size:clamp(38px,4.1vw,62px)}
+  h2{font-size:clamp(36px,3.8vw,56px)}
+  .lede{margin:20px 0 0;max-width:44ch;font-size:15.5px;line-height:1.65;color:rgba(231,233,237,.6)}
+  .notes{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;
+         border-top:1px solid var(--line);max-width:460px}
+  .notes li{display:flex;gap:14px;align-items:baseline;padding:10px 0;
+            border-bottom:1px solid var(--line);font-size:12.5px;color:rgba(231,233,237,.7)}
+  .notes li b{font-family:var(--mono);font-size:8.5px;font-weight:400;letter-spacing:.1em;
+              color:var(--a);flex:none}
+
+  .cta{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:12px 18px;
+       border:1px solid var(--line);border-radius:2px;color:var(--fg);text-decoration:none;
+       font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+       transition:border-color .3s,color .3s}
+  .cta:hover{border-color:var(--a);color:var(--a)}
+
+  .scrollcue{position:fixed;left:198px;bottom:26px;z-index:55;display:flex;align-items:center;
+             gap:10px;padding-left:56px;font-family:var(--mono);font-size:8px;letter-spacing:.18em;
+             text-transform:uppercase;color:var(--mute)}
+  .scrollcue i{display:block;width:1px;height:22px;background:var(--line);position:relative;overflow:hidden}
+  .scrollcue i:after{content:"";position:absolute;left:0;top:-22px;width:1px;height:22px;
+                     background:var(--a);animation:drip 2s cubic-bezier(.6,0,.4,1) infinite}
+  @keyframes drip{to{top:22px}}
+
+  .progress{position:fixed;left:198px;right:0;bottom:0;height:2px;z-index:65;background:transparent}
+  .progress i{display:block;height:2px;width:0;background:var(--a);transition:background .3s}
+
+  @media (max-width:900px){
+    .rail{left:0;right:0;bottom:auto;width:auto;height:58px;flex-direction:row;align-items:center;
+          padding:0 18px;border-right:0;border-bottom:1px solid var(--line)}
+    .rail .brand span,.rail ol,.rail .foot{display:none}
+    .rail .brand{font-size:11px}
+    main{margin-left:0;padding-top:58px}
+    .readout{top:74px;right:18px;gap:26px}
+    .readout .r .v{font-size:22px}
+    .readout .idx{display:none}
+    .phase{padding:120px 20px 110px;align-items:flex-end}
+    .phase .ghost{font-size:52vw;bottom:12vh}
+    .scrollcue{left:0;padding-left:20px;bottom:20px}
+    .progress{left:0}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<aside class="rail">
+  <div>
+    <div class="brand">DATACOOL<span>Thermal recovery system</span></div>
+    <ol id="rail">
+      <li data-i="0"><a href="#intro"><b>00</b> Intro</a></li>
+      <li data-i="1"><a href="#p1"><b>01</b> Capture</a></li>
+      <li data-i="2"><a href="#p2"><b>02</b> Transport</a></li>
+      <li data-i="3"><a href="#p3"><b>03</b> Exchange</a></li>
+      <li data-i="4"><a href="#p4"><b>04</b> Reuse</a></li>
+    </ol>
+  </div>
+  <div class="foot">
+    <div><span class="dot"></span>Loop nominal</div>
+    <div>Rev 02 / 2026</div>
+  </div>
+</aside>
+
+<div class="readout">
+  <div class="r"><span class="k" id="m1l">Rack temp</span><span class="v"><b id="m1v">24</b><small id="m1s">°C</small></span></div>
+  <div class="r"><span class="k" id="m2l">Heat recovered</span><span class="v"><b id="m2v">0</b><small id="m2s">%</small></span></div>
+  <div class="idx"><b id="pNo">00</b> / 04</div>
+</div>
+
+<main>
+
+  <section class="phase" id="intro" data-id="intro" data-phase="0" style="--a:#7C8BFF">
+    <span class="ghost">00</span>
+    <div class="copy">
+      <p class="eyebrow">00 <span>/ System</span></p>
+      <h1>Every rack is a radiator. We stopped calling it waste.</h1>
+      <p class="lede">DataCool rejects nothing to the sky. It captures heat at the die and hands it, as hot water, to the city above.</p>
+      <ul class="notes">
+        <li><b>01</b><span>Direct-to-chip capture at 85 °C source temperature</span></li>
+        <li><b>02</b><span>Sealed transport loop, zero evaporation</span></li>
+        <li><b>03</b><span>96.4 % effective plate exchange, no cross-mixing</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="phase" id="p1" data-id="p1" data-phase="1" style="--a:#FF6B57">
+    <span class="ghost">01</span>
+    <div class="copy">
+      <p class="eyebrow">01 <span>/ Capture</span></p>
+      <h2>Direct-to-chip capture</h2>
+      <p class="lede">Coolant runs across the hottest silicon, not the room. Heat never reaches the air, so the rack never throttles.</p>
+      <ul class="notes">
+        <li><b>01</b><span>Micro-channel cold plates on CPU / GPU packages</span></li>
+        <li><b>02</b><span>Rack delta 85 °C → 32 °C at the manifold</span></li>
+        <li><b>03</b><span>No room-scale air conditioning load</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="phase" id="p2" data-id="p2" data-phase="2" style="--a:#8FA2FF">
+    <span class="ghost">02</span>
+    <div class="copy">
+      <p class="eyebrow">02 <span>/ Transport</span></p>
+      <h2>High-velocity extraction</h2>
+      <p class="lede">Sealed conduits pull the load away at 4.2 litres a second. Nothing evaporates, and nothing touches the electronics.</p>
+      <ul class="notes">
+        <li><b>01</b><span>Closed-loop manifold, zero evaporation</span></li>
+        <li><b>02</b><span>Particle flow fields through translucent pipe</span></li>
+        <li><b>03</b><span>Indigo at inlet, crimson under load</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="phase" id="p3" data-id="p3" data-phase="3" style="--a:#FFC266">
+    <span class="ghost">03</span>
+    <div class="copy">
+      <p class="eyebrow">03 <span>/ Exchange</span></p>
+      <h2>The exchange</h2>
+      <p class="lede">Two loops share a wall and nothing else. Ninety-six percent of the heat crosses over; zero fluid crosses with it.</p>
+      <ul class="notes">
+        <li><b>01</b><span>Counter-flow plate core, 95 %+ effectiveness</span></li>
+        <li><b>02</b><span>Crimson → blue on the process side</span></li>
+        <li><b>03</b><span>Municipal water leaves warm amber</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="phase" id="p4" data-id="p4" data-phase="4" style="--a:#FFB45C">
+    <span class="ghost">04</span>
+    <div class="copy">
+      <p class="eyebrow">04 <span>/ Reuse</span></p>
+      <h2>District energy</h2>
+      <p class="lede">The camera rises through the slab. Warm mains fan out under the street and light up the buildings above.</p>
+      <ul class="notes">
+        <li><b>01</b><span>Subterranean mains glow amber outward</span></li>
+        <li><b>02</b><span>Housing, schools and civic centres on the loop</span></li>
+        <li><b>03</b><span>Once-wasted heat becomes zero-carbon warmth</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="phase" id="end" data-id="end" data-phase="4" style="--a:#FFB45C">
+    <span class="ghost">↺</span>
+    <div class="copy">
+      <p class="eyebrow">— <span>/ Loop closes</span></p>
+      <h1>85 °C at the die.<br>A warm apartment at dusk.</h1>
+      <p class="lede">Four stages, one continuous loop. The construction is a camera move, a plate pack and a city — nothing else.</p>
+      <a class="cta" href="#intro">↺ &nbsp;Replay the scroll</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="scrollcue"><i></i> Scroll 00 — 04</div>
+<div class="progress"><i id="bar"></i></div>
+
+<script>
+const phases = {
+  0:{title:"System",m:[["Rack temp",24,"°C"],["Heat recovered",0,"%"]]},
+  1:{title:"Capture",m:[["Rack temp",85,"°C"],["Heat recovered",62,"%"]]},
+  2:{title:"Transport",m:[["Fluid velocity",4.2,"L/s"],["Evaporation",0,"%"]]},
+  3:{title:"Exchange",m:[["Heat recovered",96.4,"%"],["Cross-mixing",0,"%"]]},
+  4:{title:"Reuse",m:[["CO₂ offset",1420,"t/yr"],["Homes heated",12000,""]]}
+};
+const $=id=>document.getElementById(id);
+const items=[...$("rail").children];
+let active=-1,raf=0,tick=null;
+
+function count(el,to){
+  const dec=String(to).includes(".")?1:0;
+  if(window.__snap){el.textContent=to.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g,",");return;}
+  const from=parseFloat(el.textContent.replace(/[^\d.]/g,""))||0;
+  const start=performance.now(),dur=750,
+        ease=t=>1-Math.pow(1-t,3);
+  cancelAnimationFrame(raf);
+  const step=now=>{const t=Math.min(1,(now-start)/dur);
+    let v=(from+(to-from)*ease(t)).toFixed(dec);
+    el.textContent=v.replace(/\B(?=(\d{3})+(?!\d))/g,",");
+    if(t<1)raf=requestAnimationFrame(step)};
+  raf=requestAnimationFrame(step);
+}
+function setPhase(i){
+  if(i===active)return; active=i;
+  const p=phases[i];
+  const sec=document.querySelector('.phase[data-phase="'+i+'"]');
+  const a=sec?getComputedStyle(sec).getPropertyValue("--a").trim():"#7C8BFF";
+  document.documentElement.style.setProperty("--a",a);
+  items.forEach((li,k)=>li.classList.toggle("on",k===i));
+  $("pNo").textContent=String(i).padStart(2,"0");
+  $("m1l").textContent=p.m[0][0]; $("m2l").textContent=p.m[1][0];
+  $("m1s").textContent=p.m[0][2]; $("m2s").textContent=p.m[1][2];
+  count($("m1v"),p.m[0][1]); count($("m2v"),p.m[1][1]);
+  $("bar").style.background=a;
+}
+document.querySelectorAll(".phase").forEach(s=>{
+  new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting)setPhase(+e.target.dataset.phase)},{threshold:.5}).observe(s);
+});
+addEventListener("scroll",()=>{
+  const max=document.documentElement.scrollHeight-innerHeight;
+  $("bar").style.width=(max>0?scrollY/max*100:0)+"%";
+},{passive:true});
+
+const q=new URLSearchParams(location.search);
+if(q.get("only")){
+  window.__snap=1;
+  document.querySelectorAll(".phase").forEach(s=>{if(s.dataset.id!==q.get("only"))s.style.display="none"});
+  const vis=document.querySelector('.phase[data-id="'+q.get("only")+'"]');
+  if(vis)setTimeout(()=>setPhase(+vis.dataset.phase),60);
+}else setPhase(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,9371 @@
+{
+ "commands": [
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 40,
+    "height": 2150,
+    "center": [
+     -260,
+     -460,
+     1125.0
+    ],
+    "name": "UprightFL",
+    "body_name": "RackFrame"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 40,
+    "height": 2150,
+    "center": [
+     260,
+     -460,
+     1125.0
+    ],
+    "name": "UprightFR",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 40,
+    "height": 2150,
+    "center": [
+     -260,
+     460,
+     1125.0
+    ],
+    "name": "UprightRL",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 40,
+    "height": 2150,
+    "center": [
+     260,
+     460,
+     1125.0
+    ],
+    "name": "UprightRR",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 560,
+    "width": 40,
+    "height": 40,
+    "center": [
+     0,
+     -460,
+     60
+    ],
+    "name": "BottomRailF",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 560,
+    "width": 40,
+    "height": 40,
+    "center": [
+     0,
+     460,
+     60
+    ],
+    "name": "BottomRailR",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 560,
+    "width": 40,
+    "height": 40,
+    "center": [
+     0,
+     -460,
+     2180
+    ],
+    "name": "TopRailF",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 560,
+    "width": 40,
+    "height": 40,
+    "center": [
+     0,
+     460,
+     2180
+    ],
+    "name": "TopRailR",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 880,
+    "height": 40,
+    "center": [
+     -260,
+     0,
+     60
+    ],
+    "name": "SideRailBL",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 880,
+    "height": 40,
+    "center": [
+     260,
+     0,
+     60
+    ],
+    "name": "SideRailBR",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 880,
+    "height": 40,
+    "center": [
+     -260,
+     0,
+     2180
+    ],
+    "name": "SideRailTL",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 880,
+    "height": 40,
+    "center": [
+     260,
+     0,
+     2180
+    ],
+    "name": "SideRailTR",
+    "body_name": "RackFrame",
+    "operation": "join",
+    "targets": [
+     "RackFrame"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     -260,
+     -460,
+     80
+    ],
+    "name": "Bracket01",
+    "body_name": "Bracket01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     260,
+     -460,
+     80
+    ],
+    "name": "Bracket02",
+    "body_name": "Bracket02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     -260,
+     460,
+     80
+    ],
+    "name": "Bracket03",
+    "body_name": "Bracket03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     260,
+     460,
+     80
+    ],
+    "name": "Bracket04",
+    "body_name": "Bracket04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     -260,
+     -460,
+     2160
+    ],
+    "name": "Bracket05",
+    "body_name": "Bracket05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     260,
+     -460,
+     2160
+    ],
+    "name": "Bracket06",
+    "body_name": "Bracket06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     -260,
+     460,
+     2160
+    ],
+    "name": "Bracket07",
+    "body_name": "Bracket07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30,
+    "width": 30,
+    "height": 24,
+    "center": [
+     260,
+     460,
+     2160
+    ],
+    "name": "Bracket08",
+    "body_name": "Bracket08"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 6,
+    "height": 12,
+    "base": [
+     -260,
+     -460,
+     40
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "GroundStud",
+    "body_name": "GroundStud",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 80,
+    "height": 6,
+    "center": [
+     -260,
+     -460,
+     47
+    ],
+    "name": "CasterPlate1",
+    "body_name": "CasterPlate1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     -273,
+     -460,
+     31
+    ],
+    "name": "CasterFork1A",
+    "body_name": "CasterFork1A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     -247,
+     -460,
+     31
+    ],
+    "name": "CasterFork1B",
+    "body_name": "CasterFork1B"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 16,
+    "base": [
+     -268,
+     -460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterWheel1",
+    "body_name": "CasterWheel1",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 6,
+    "height": 30,
+    "base": [
+     -275,
+     -460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterHub1",
+    "body_name": "CasterHub1",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 80,
+    "height": 6,
+    "center": [
+     260,
+     -460,
+     47
+    ],
+    "name": "CasterPlate2",
+    "body_name": "CasterPlate2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     247,
+     -460,
+     31
+    ],
+    "name": "CasterFork2A",
+    "body_name": "CasterFork2A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     273,
+     -460,
+     31
+    ],
+    "name": "CasterFork2B",
+    "body_name": "CasterFork2B"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 16,
+    "base": [
+     252,
+     -460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterWheel2",
+    "body_name": "CasterWheel2",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 6,
+    "height": 30,
+    "base": [
+     245,
+     -460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterHub2",
+    "body_name": "CasterHub2",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 80,
+    "height": 6,
+    "center": [
+     -260,
+     460,
+     47
+    ],
+    "name": "CasterPlate3",
+    "body_name": "CasterPlate3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     -273,
+     460,
+     31
+    ],
+    "name": "CasterFork3A",
+    "body_name": "CasterFork3A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     -247,
+     460,
+     31
+    ],
+    "name": "CasterFork3B",
+    "body_name": "CasterFork3B"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 16,
+    "base": [
+     -268,
+     460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterWheel3",
+    "body_name": "CasterWheel3",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 6,
+    "height": 30,
+    "base": [
+     -275,
+     460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterHub3",
+    "body_name": "CasterHub3",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 80,
+    "height": 6,
+    "center": [
+     260,
+     460,
+     47
+    ],
+    "name": "CasterPlate4",
+    "body_name": "CasterPlate4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     247,
+     460,
+     31
+    ],
+    "name": "CasterFork4A",
+    "body_name": "CasterFork4A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 36,
+    "height": 34,
+    "center": [
+     273,
+     460,
+     31
+    ],
+    "name": "CasterFork4B",
+    "body_name": "CasterFork4B"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 22,
+    "height": 16,
+    "base": [
+     252,
+     460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterWheel4",
+    "body_name": "CasterWheel4",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 6,
+    "height": 30,
+    "base": [
+     245,
+     460,
+     22
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "CasterHub4",
+    "body_name": "CasterHub4",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     285
+    ],
+    "name": "Tray01",
+    "body_name": "Tray01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     329
+    ],
+    "name": "Plate01",
+    "body_name": "ColdPlate01"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     389
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew01-6060",
+    "body_name": "PlateScrew01-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     389
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew016060",
+    "body_name": "PlateScrew016060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     269
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew01-60-60",
+    "body_name": "PlateScrew01-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     269
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0160-60",
+    "body_name": "PlateScrew0160-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA01",
+    "body_name": "UqdBaseA01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA01",
+    "body_name": "UqdCollarBlueA01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA01",
+    "body_name": "ColdPlate01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB01",
+    "body_name": "UqdBaseB01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB01",
+    "body_name": "UqdCollarRedB01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB01",
+    "body_name": "ColdPlate01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA01",
+    "body_name": "HoseA01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA01F",
+    "body_name": "HoseCrimpA01F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA01R",
+    "body_name": "HoseCrimpA01R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB01",
+    "body_name": "HoseB01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB01F",
+    "body_name": "HoseCrimpB01F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     329
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB01R",
+    "body_name": "HoseCrimpB01R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     315
+    ],
+    "name": "RetClip01",
+    "body_name": "RetClip01"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     200,
+     -250,
+     380
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun01",
+    "body_name": "Branch01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     200,
+     -250,
+     315
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop01",
+    "body_name": "Branch01",
+    "operation": "join",
+    "targets": [
+     "Branch01"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     285
+    ],
+    "name": "Bezel01",
+    "body_name": "Bezel01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     285
+    ],
+    "name": "Handle01L",
+    "body_name": "Handle01L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     285
+    ],
+    "name": "Handle01R",
+    "body_name": "Handle01R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     299
+    ],
+    "name": "Grille011",
+    "body_name": "Grille011"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     285
+    ],
+    "name": "Grille012",
+    "body_name": "Grille012"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     271
+    ],
+    "name": "Grille013",
+    "body_name": "Grille013"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     285
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan01A",
+    "body_name": "Fan01A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     285
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub01A",
+    "body_name": "FanHub01A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     285
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan01B",
+    "body_name": "Fan01B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     285
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub01B",
+    "body_name": "FanHub01B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     289
+    ],
+    "name": "Port011",
+    "body_name": "Port011"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     289
+    ],
+    "name": "Port012",
+    "body_name": "Port012"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     285
+    ],
+    "name": "Psu01A",
+    "body_name": "Psu01A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     285
+    ],
+    "name": "Psu01B",
+    "body_name": "Psu01B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     297
+    ],
+    "name": "LedG01",
+    "body_name": "LedG01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     273
+    ],
+    "name": "LedA01",
+    "body_name": "LedA01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     307
+    ],
+    "name": "LabelTray01",
+    "body_name": "LabelTray01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     465
+    ],
+    "name": "Tray02",
+    "body_name": "Tray02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     509
+    ],
+    "name": "Plate02",
+    "body_name": "ColdPlate02"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     569
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew02-6060",
+    "body_name": "PlateScrew02-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     569
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew026060",
+    "body_name": "PlateScrew026060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     449
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew02-60-60",
+    "body_name": "PlateScrew02-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     449
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0260-60",
+    "body_name": "PlateScrew0260-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA02",
+    "body_name": "UqdBaseA02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA02",
+    "body_name": "UqdCollarBlueA02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA02",
+    "body_name": "ColdPlate02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB02",
+    "body_name": "UqdBaseB02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB02",
+    "body_name": "UqdCollarRedB02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB02",
+    "body_name": "ColdPlate02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA02",
+    "body_name": "HoseA02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA02F",
+    "body_name": "HoseCrimpA02F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA02R",
+    "body_name": "HoseCrimpA02R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB02",
+    "body_name": "HoseB02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB02F",
+    "body_name": "HoseCrimpB02F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     509
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB02R",
+    "body_name": "HoseCrimpB02R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     495
+    ],
+    "name": "RetClip02",
+    "body_name": "RetClip02"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     -200,
+     -250,
+     560
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun02",
+    "body_name": "Branch02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     -200,
+     -250,
+     495
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop02",
+    "body_name": "Branch02",
+    "operation": "join",
+    "targets": [
+     "Branch02"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     465
+    ],
+    "name": "Bezel02",
+    "body_name": "Bezel02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     465
+    ],
+    "name": "Handle02L",
+    "body_name": "Handle02L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     465
+    ],
+    "name": "Handle02R",
+    "body_name": "Handle02R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     479
+    ],
+    "name": "Grille021",
+    "body_name": "Grille021"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     465
+    ],
+    "name": "Grille022",
+    "body_name": "Grille022"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     451
+    ],
+    "name": "Grille023",
+    "body_name": "Grille023"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     465
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan02A",
+    "body_name": "Fan02A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     465
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub02A",
+    "body_name": "FanHub02A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     465
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan02B",
+    "body_name": "Fan02B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     465
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub02B",
+    "body_name": "FanHub02B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     469
+    ],
+    "name": "Port021",
+    "body_name": "Port021"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     469
+    ],
+    "name": "Port022",
+    "body_name": "Port022"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     465
+    ],
+    "name": "Psu02A",
+    "body_name": "Psu02A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     465
+    ],
+    "name": "Psu02B",
+    "body_name": "Psu02B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     477
+    ],
+    "name": "LedG02",
+    "body_name": "LedG02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     453
+    ],
+    "name": "LedA02",
+    "body_name": "LedA02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     487
+    ],
+    "name": "LabelTray02",
+    "body_name": "LabelTray02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     645
+    ],
+    "name": "Tray03",
+    "body_name": "Tray03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     689
+    ],
+    "name": "Plate03",
+    "body_name": "ColdPlate03"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     749
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew03-6060",
+    "body_name": "PlateScrew03-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     749
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew036060",
+    "body_name": "PlateScrew036060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     629
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew03-60-60",
+    "body_name": "PlateScrew03-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     629
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0360-60",
+    "body_name": "PlateScrew0360-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA03",
+    "body_name": "UqdBaseA03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA03",
+    "body_name": "UqdCollarBlueA03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA03",
+    "body_name": "ColdPlate03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB03",
+    "body_name": "UqdBaseB03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB03",
+    "body_name": "UqdCollarRedB03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB03",
+    "body_name": "ColdPlate03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA03",
+    "body_name": "HoseA03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA03F",
+    "body_name": "HoseCrimpA03F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA03R",
+    "body_name": "HoseCrimpA03R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB03",
+    "body_name": "HoseB03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB03F",
+    "body_name": "HoseCrimpB03F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     689
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB03R",
+    "body_name": "HoseCrimpB03R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     675
+    ],
+    "name": "RetClip03",
+    "body_name": "RetClip03"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     200,
+     -250,
+     740
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun03",
+    "body_name": "Branch03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     200,
+     -250,
+     675
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop03",
+    "body_name": "Branch03",
+    "operation": "join",
+    "targets": [
+     "Branch03"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     645
+    ],
+    "name": "Bezel03",
+    "body_name": "Bezel03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     645
+    ],
+    "name": "Handle03L",
+    "body_name": "Handle03L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     645
+    ],
+    "name": "Handle03R",
+    "body_name": "Handle03R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     659
+    ],
+    "name": "Grille031",
+    "body_name": "Grille031"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     645
+    ],
+    "name": "Grille032",
+    "body_name": "Grille032"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     631
+    ],
+    "name": "Grille033",
+    "body_name": "Grille033"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     645
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan03A",
+    "body_name": "Fan03A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     645
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub03A",
+    "body_name": "FanHub03A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     645
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan03B",
+    "body_name": "Fan03B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     645
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub03B",
+    "body_name": "FanHub03B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     649
+    ],
+    "name": "Port031",
+    "body_name": "Port031"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     649
+    ],
+    "name": "Port032",
+    "body_name": "Port032"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     645
+    ],
+    "name": "Psu03A",
+    "body_name": "Psu03A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     645
+    ],
+    "name": "Psu03B",
+    "body_name": "Psu03B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     657
+    ],
+    "name": "LedG03",
+    "body_name": "LedG03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     633
+    ],
+    "name": "LedA03",
+    "body_name": "LedA03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     667
+    ],
+    "name": "LabelTray03",
+    "body_name": "LabelTray03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     825
+    ],
+    "name": "Tray04",
+    "body_name": "Tray04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     869
+    ],
+    "name": "Plate04",
+    "body_name": "ColdPlate04"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     929
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew04-6060",
+    "body_name": "PlateScrew04-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     929
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew046060",
+    "body_name": "PlateScrew046060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     809
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew04-60-60",
+    "body_name": "PlateScrew04-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     809
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0460-60",
+    "body_name": "PlateScrew0460-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA04",
+    "body_name": "UqdBaseA04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA04",
+    "body_name": "UqdCollarBlueA04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA04",
+    "body_name": "ColdPlate04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB04",
+    "body_name": "UqdBaseB04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB04",
+    "body_name": "UqdCollarRedB04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB04",
+    "body_name": "ColdPlate04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA04",
+    "body_name": "HoseA04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA04F",
+    "body_name": "HoseCrimpA04F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA04R",
+    "body_name": "HoseCrimpA04R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB04",
+    "body_name": "HoseB04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB04F",
+    "body_name": "HoseCrimpB04F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     869
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB04R",
+    "body_name": "HoseCrimpB04R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     855
+    ],
+    "name": "RetClip04",
+    "body_name": "RetClip04"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     -200,
+     -250,
+     920
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun04",
+    "body_name": "Branch04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     -200,
+     -250,
+     855
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop04",
+    "body_name": "Branch04",
+    "operation": "join",
+    "targets": [
+     "Branch04"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     825
+    ],
+    "name": "Bezel04",
+    "body_name": "Bezel04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     825
+    ],
+    "name": "Handle04L",
+    "body_name": "Handle04L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     825
+    ],
+    "name": "Handle04R",
+    "body_name": "Handle04R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     839
+    ],
+    "name": "Grille041",
+    "body_name": "Grille041"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     825
+    ],
+    "name": "Grille042",
+    "body_name": "Grille042"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     811
+    ],
+    "name": "Grille043",
+    "body_name": "Grille043"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     825
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan04A",
+    "body_name": "Fan04A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     825
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub04A",
+    "body_name": "FanHub04A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     825
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan04B",
+    "body_name": "Fan04B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     825
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub04B",
+    "body_name": "FanHub04B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     829
+    ],
+    "name": "Port041",
+    "body_name": "Port041"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     829
+    ],
+    "name": "Port042",
+    "body_name": "Port042"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     825
+    ],
+    "name": "Psu04A",
+    "body_name": "Psu04A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     825
+    ],
+    "name": "Psu04B",
+    "body_name": "Psu04B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     837
+    ],
+    "name": "LedG04",
+    "body_name": "LedG04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     813
+    ],
+    "name": "LedA04",
+    "body_name": "LedA04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     847
+    ],
+    "name": "LabelTray04",
+    "body_name": "LabelTray04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     1005
+    ],
+    "name": "Tray05",
+    "body_name": "Tray05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     1049
+    ],
+    "name": "Plate05",
+    "body_name": "ColdPlate05"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1109
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew05-6060",
+    "body_name": "PlateScrew05-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1109
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew056060",
+    "body_name": "PlateScrew056060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     989
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew05-60-60",
+    "body_name": "PlateScrew05-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     989
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0560-60",
+    "body_name": "PlateScrew0560-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA05",
+    "body_name": "UqdBaseA05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA05",
+    "body_name": "UqdCollarBlueA05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA05",
+    "body_name": "ColdPlate05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB05",
+    "body_name": "UqdBaseB05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB05",
+    "body_name": "UqdCollarRedB05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB05",
+    "body_name": "ColdPlate05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA05",
+    "body_name": "HoseA05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA05F",
+    "body_name": "HoseCrimpA05F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA05R",
+    "body_name": "HoseCrimpA05R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB05",
+    "body_name": "HoseB05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB05F",
+    "body_name": "HoseCrimpB05F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     1049
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB05R",
+    "body_name": "HoseCrimpB05R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     1035
+    ],
+    "name": "RetClip05",
+    "body_name": "RetClip05"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     200,
+     -250,
+     1100
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun05",
+    "body_name": "Branch05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     200,
+     -250,
+     1035
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop05",
+    "body_name": "Branch05",
+    "operation": "join",
+    "targets": [
+     "Branch05"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     1005
+    ],
+    "name": "Bezel05",
+    "body_name": "Bezel05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     1005
+    ],
+    "name": "Handle05L",
+    "body_name": "Handle05L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     1005
+    ],
+    "name": "Handle05R",
+    "body_name": "Handle05R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1019
+    ],
+    "name": "Grille051",
+    "body_name": "Grille051"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1005
+    ],
+    "name": "Grille052",
+    "body_name": "Grille052"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     991
+    ],
+    "name": "Grille053",
+    "body_name": "Grille053"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     1005
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan05A",
+    "body_name": "Fan05A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     1005
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub05A",
+    "body_name": "FanHub05A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     1005
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan05B",
+    "body_name": "Fan05B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     1005
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub05B",
+    "body_name": "FanHub05B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     1009
+    ],
+    "name": "Port051",
+    "body_name": "Port051"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     1009
+    ],
+    "name": "Port052",
+    "body_name": "Port052"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     1005
+    ],
+    "name": "Psu05A",
+    "body_name": "Psu05A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     1005
+    ],
+    "name": "Psu05B",
+    "body_name": "Psu05B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1017
+    ],
+    "name": "LedG05",
+    "body_name": "LedG05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     993
+    ],
+    "name": "LedA05",
+    "body_name": "LedA05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     1027
+    ],
+    "name": "LabelTray05",
+    "body_name": "LabelTray05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     1185
+    ],
+    "name": "Tray06",
+    "body_name": "Tray06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     1229
+    ],
+    "name": "Plate06",
+    "body_name": "ColdPlate06"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1289
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew06-6060",
+    "body_name": "PlateScrew06-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1289
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew066060",
+    "body_name": "PlateScrew066060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1169
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew06-60-60",
+    "body_name": "PlateScrew06-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1169
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0660-60",
+    "body_name": "PlateScrew0660-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA06",
+    "body_name": "UqdBaseA06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA06",
+    "body_name": "UqdCollarBlueA06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA06",
+    "body_name": "ColdPlate06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB06",
+    "body_name": "UqdBaseB06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB06",
+    "body_name": "UqdCollarRedB06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB06",
+    "body_name": "ColdPlate06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA06",
+    "body_name": "HoseA06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA06F",
+    "body_name": "HoseCrimpA06F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA06R",
+    "body_name": "HoseCrimpA06R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB06",
+    "body_name": "HoseB06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB06F",
+    "body_name": "HoseCrimpB06F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     1229
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB06R",
+    "body_name": "HoseCrimpB06R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     1215
+    ],
+    "name": "RetClip06",
+    "body_name": "RetClip06"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     -200,
+     -250,
+     1280
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun06",
+    "body_name": "Branch06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     -200,
+     -250,
+     1215
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop06",
+    "body_name": "Branch06",
+    "operation": "join",
+    "targets": [
+     "Branch06"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     1185
+    ],
+    "name": "Bezel06",
+    "body_name": "Bezel06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     1185
+    ],
+    "name": "Handle06L",
+    "body_name": "Handle06L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     1185
+    ],
+    "name": "Handle06R",
+    "body_name": "Handle06R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1199
+    ],
+    "name": "Grille061",
+    "body_name": "Grille061"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1185
+    ],
+    "name": "Grille062",
+    "body_name": "Grille062"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1171
+    ],
+    "name": "Grille063",
+    "body_name": "Grille063"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     1185
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan06A",
+    "body_name": "Fan06A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     1185
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub06A",
+    "body_name": "FanHub06A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     1185
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan06B",
+    "body_name": "Fan06B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     1185
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub06B",
+    "body_name": "FanHub06B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     1189
+    ],
+    "name": "Port061",
+    "body_name": "Port061"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     1189
+    ],
+    "name": "Port062",
+    "body_name": "Port062"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     1185
+    ],
+    "name": "Psu06A",
+    "body_name": "Psu06A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     1185
+    ],
+    "name": "Psu06B",
+    "body_name": "Psu06B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1197
+    ],
+    "name": "LedG06",
+    "body_name": "LedG06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1173
+    ],
+    "name": "LedA06",
+    "body_name": "LedA06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     1207
+    ],
+    "name": "LabelTray06",
+    "body_name": "LabelTray06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     1365
+    ],
+    "name": "Tray07",
+    "body_name": "Tray07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     1409
+    ],
+    "name": "Plate07",
+    "body_name": "ColdPlate07"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1469
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew07-6060",
+    "body_name": "PlateScrew07-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1469
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew076060",
+    "body_name": "PlateScrew076060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1349
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew07-60-60",
+    "body_name": "PlateScrew07-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1349
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0760-60",
+    "body_name": "PlateScrew0760-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA07",
+    "body_name": "UqdBaseA07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA07",
+    "body_name": "UqdCollarBlueA07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA07",
+    "body_name": "ColdPlate07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB07",
+    "body_name": "UqdBaseB07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB07",
+    "body_name": "UqdCollarRedB07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB07",
+    "body_name": "ColdPlate07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA07",
+    "body_name": "HoseA07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA07F",
+    "body_name": "HoseCrimpA07F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA07R",
+    "body_name": "HoseCrimpA07R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB07",
+    "body_name": "HoseB07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB07F",
+    "body_name": "HoseCrimpB07F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     1409
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB07R",
+    "body_name": "HoseCrimpB07R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     1395
+    ],
+    "name": "RetClip07",
+    "body_name": "RetClip07"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     200,
+     -250,
+     1460
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun07",
+    "body_name": "Branch07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     200,
+     -250,
+     1395
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop07",
+    "body_name": "Branch07",
+    "operation": "join",
+    "targets": [
+     "Branch07"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     1365
+    ],
+    "name": "Bezel07",
+    "body_name": "Bezel07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     1365
+    ],
+    "name": "Handle07L",
+    "body_name": "Handle07L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     1365
+    ],
+    "name": "Handle07R",
+    "body_name": "Handle07R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1379
+    ],
+    "name": "Grille071",
+    "body_name": "Grille071"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1365
+    ],
+    "name": "Grille072",
+    "body_name": "Grille072"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1351
+    ],
+    "name": "Grille073",
+    "body_name": "Grille073"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     1365
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan07A",
+    "body_name": "Fan07A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     1365
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub07A",
+    "body_name": "FanHub07A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     1365
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan07B",
+    "body_name": "Fan07B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     1365
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub07B",
+    "body_name": "FanHub07B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     1369
+    ],
+    "name": "Port071",
+    "body_name": "Port071"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     1369
+    ],
+    "name": "Port072",
+    "body_name": "Port072"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     1365
+    ],
+    "name": "Psu07A",
+    "body_name": "Psu07A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     1365
+    ],
+    "name": "Psu07B",
+    "body_name": "Psu07B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1377
+    ],
+    "name": "LedG07",
+    "body_name": "LedG07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1353
+    ],
+    "name": "LedA07",
+    "body_name": "LedA07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     1387
+    ],
+    "name": "LabelTray07",
+    "body_name": "LabelTray07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 900,
+    "height": 70,
+    "center": [
+     0,
+     0,
+     1545
+    ],
+    "name": "Tray08",
+    "body_name": "Tray08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 140,
+    "height": 18,
+    "center": [
+     0,
+     -250,
+     1589
+    ],
+    "name": "Plate08",
+    "body_name": "ColdPlate08"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1649
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew08-6060",
+    "body_name": "PlateScrew08-6060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1649
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew086060",
+    "body_name": "PlateScrew086060",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     -60,
+     -259,
+     1529
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew08-60-60",
+    "body_name": "PlateScrew08-60-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 3,
+    "height": 10,
+    "base": [
+     60,
+     -259,
+     1529
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "PlateScrew0860-60",
+    "body_name": "PlateScrew0860-60",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     40,
+     -330,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseA08",
+    "body_name": "UqdBaseA08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     40,
+     -342,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarBlueA08",
+    "body_name": "UqdCollarBlueA08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     40,
+     -354,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbA08",
+    "body_name": "ColdPlate08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 24,
+    "base": [
+     -40,
+     -330,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdBaseB08",
+    "body_name": "UqdBaseB08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 8,
+    "base": [
+     -40,
+     -342,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "UqdCollarRedB08",
+    "body_name": "UqdCollarRedB08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 5,
+    "height": 16,
+    "base": [
+     -40,
+     -354,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "BarbB08",
+    "body_name": "ColdPlate08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     40,
+     -370,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseA08",
+    "body_name": "HoseA08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -364,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA08F",
+    "body_name": "HoseCrimpA08F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     40,
+     -415,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpA08R",
+    "body_name": "HoseCrimpA08R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 50,
+    "base": [
+     -40,
+     -370,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseB08",
+    "body_name": "HoseB08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -364,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB08F",
+    "body_name": "HoseCrimpB08F",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 10,
+    "height": 6,
+    "base": [
+     -40,
+     -415,
+     1589
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "HoseCrimpB08R",
+    "body_name": "HoseCrimpB08R",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 160,
+    "width": 6,
+    "height": 8,
+    "center": [
+     0,
+     -240,
+     1575
+    ],
+    "name": "RetClip08",
+    "body_name": "RetClip08"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 720,
+    "base": [
+     -200,
+     -250,
+     1640
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "BranchRun08",
+    "body_name": "Branch08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 65,
+    "base": [
+     -200,
+     -250,
+     1575
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchDrop08",
+    "body_name": "Branch08",
+    "operation": "join",
+    "targets": [
+     "Branch08"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 480,
+    "width": 4,
+    "height": 64,
+    "center": [
+     0,
+     -452,
+     1545
+    ],
+    "name": "Bezel08",
+    "body_name": "Bezel08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     -224,
+     -456.5,
+     1545
+    ],
+    "name": "Handle08L",
+    "body_name": "Handle08L"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 5,
+    "height": 40,
+    "center": [
+     224,
+     -456.5,
+     1545
+    ],
+    "name": "Handle08R",
+    "body_name": "Handle08R"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1559
+    ],
+    "name": "Grille081",
+    "body_name": "Grille081"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1545
+    ],
+    "name": "Grille082",
+    "body_name": "Grille082"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70,
+    "width": 3,
+    "height": 6,
+    "center": [
+     -170,
+     -455.5,
+     1531
+    ],
+    "name": "Grille083",
+    "body_name": "Grille083"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -100,
+     -446.0,
+     1545
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan08A",
+    "body_name": "Fan08A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -100,
+     -446.0,
+     1545
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub08A",
+    "body_name": "FanHub08A",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 10,
+    "base": [
+     -40,
+     -446.0,
+     1545
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "Fan08B",
+    "body_name": "Fan08B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 9,
+    "height": 12,
+    "base": [
+     -40,
+     -446.0,
+     1545
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "FanHub08B",
+    "body_name": "FanHub08B",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     8,
+     -455.5,
+     1549
+    ],
+    "name": "Port081",
+    "body_name": "Port081"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20,
+    "width": 3,
+    "height": 14,
+    "center": [
+     32,
+     -455.5,
+     1549
+    ],
+    "name": "Port082",
+    "body_name": "Port082"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     78,
+     -455.5,
+     1545
+    ],
+    "name": "Psu08A",
+    "body_name": "Psu08A"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 62,
+    "width": 3,
+    "height": 52,
+    "center": [
+     148,
+     -455.5,
+     1545
+    ],
+    "name": "Psu08B",
+    "body_name": "Psu08B"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1557
+    ],
+    "name": "LedG08",
+    "body_name": "LedG08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     196,
+     -455.5,
+     1533
+    ],
+    "name": "LedA08",
+    "body_name": "LedA08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 60,
+    "width": 2,
+    "height": 12,
+    "center": [
+     -220,
+     -455.0,
+     1567
+    ],
+    "name": "LabelTray08",
+    "body_name": "LabelTray08"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 2000,
+    "base": [
+     -200,
+     470,
+     100
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ManifoldL",
+    "body_name": "ManifoldL",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 27,
+    "height": 2000,
+    "base": [
+     200,
+     470,
+     100
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ManifoldR",
+    "body_name": "ManifoldR",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     380
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL01",
+    "body_name": "ValveBodyL01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     380
+    ],
+    "name": "ValveHandleL01",
+    "body_name": "ValveHandleL01"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     380
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR01",
+    "body_name": "ValveBodyR01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     380
+    ],
+    "name": "ValveHandleR01",
+    "body_name": "ValveHandleR01"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     560
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL02",
+    "body_name": "ValveBodyL02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     560
+    ],
+    "name": "ValveHandleL02",
+    "body_name": "ValveHandleL02"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     560
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR02",
+    "body_name": "ValveBodyR02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     560
+    ],
+    "name": "ValveHandleR02",
+    "body_name": "ValveHandleR02"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     740
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL03",
+    "body_name": "ValveBodyL03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     740
+    ],
+    "name": "ValveHandleL03",
+    "body_name": "ValveHandleL03"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     740
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR03",
+    "body_name": "ValveBodyR03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     740
+    ],
+    "name": "ValveHandleR03",
+    "body_name": "ValveHandleR03"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     920
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL04",
+    "body_name": "ValveBodyL04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     920
+    ],
+    "name": "ValveHandleL04",
+    "body_name": "ValveHandleL04"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     920
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR04",
+    "body_name": "ValveBodyR04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     920
+    ],
+    "name": "ValveHandleR04",
+    "body_name": "ValveHandleR04"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     1100
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL05",
+    "body_name": "ValveBodyL05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     1100
+    ],
+    "name": "ValveHandleL05",
+    "body_name": "ValveHandleL05"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     1100
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR05",
+    "body_name": "ValveBodyR05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     1100
+    ],
+    "name": "ValveHandleR05",
+    "body_name": "ValveHandleR05"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     1280
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL06",
+    "body_name": "ValveBodyL06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     1280
+    ],
+    "name": "ValveHandleL06",
+    "body_name": "ValveHandleL06"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     1280
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR06",
+    "body_name": "ValveBodyR06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     1280
+    ],
+    "name": "ValveHandleR06",
+    "body_name": "ValveHandleR06"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     1460
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL07",
+    "body_name": "ValveBodyL07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     1460
+    ],
+    "name": "ValveHandleL07",
+    "body_name": "ValveHandleL07"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     1460
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR07",
+    "body_name": "ValveBodyR07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     1460
+    ],
+    "name": "ValveHandleR07",
+    "body_name": "ValveHandleR07"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     -200,
+     470,
+     1640
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyL08",
+    "body_name": "ValveBodyL08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     -170,
+     470,
+     1640
+    ],
+    "name": "ValveHandleL08",
+    "body_name": "ValveHandleL08"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 18,
+    "height": 40,
+    "base": [
+     200,
+     470,
+     1640
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ValveBodyR08",
+    "body_name": "ValveBodyR08",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 80,
+    "width": 8,
+    "height": 8,
+    "center": [
+     230,
+     470,
+     1640
+    ],
+    "name": "ValveHandleR08",
+    "body_name": "ValveHandleR08"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 16,
+    "base": [
+     -200,
+     470,
+     2080
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "GaugeBodyL",
+    "body_name": "GaugeBodyL",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 30,
+    "height": 2,
+    "base": [
+     -200,
+     486,
+     2080
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "GaugeFaceL",
+    "body_name": "GaugeFaceL",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 32,
+    "height": 16,
+    "base": [
+     200,
+     470,
+     2080
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "GaugeBodyR",
+    "body_name": "GaugeBodyR",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 30,
+    "height": 2,
+    "base": [
+     200,
+     486,
+     2080
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "GaugeFaceR",
+    "body_name": "GaugeFaceR",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 14,
+    "height": 28,
+    "base": [
+     -200,
+     470,
+     80
+    ],
+    "axis": [
+     0,
+     0,
+     -1
+    ],
+    "name": "DrainValveL",
+    "body_name": "DrainValveL",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 50,
+    "width": 6,
+    "height": 6,
+    "center": [
+     -180,
+     470,
+     66
+    ],
+    "name": "DrainHandleL",
+    "body_name": "DrainHandleL"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 14,
+    "height": 28,
+    "base": [
+     200,
+     470,
+     80
+    ],
+    "axis": [
+     0,
+     0,
+     -1
+    ],
+    "name": "DrainValveR",
+    "body_name": "DrainValveR",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 50,
+    "width": 6,
+    "height": 6,
+    "center": [
+     220,
+     470,
+     66
+    ],
+    "name": "DrainHandleR",
+    "body_name": "DrainHandleR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16,
+    "width": 3,
+    "height": 2020,
+    "center": [
+     -232,
+     -446.5,
+     1110
+    ],
+    "name": "EarL",
+    "body_name": "EarL"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     130.0
+    ],
+    "name": "UTickL00",
+    "body_name": "UTickL00"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     218.9
+    ],
+    "name": "UTickL01",
+    "body_name": "UTickL01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     307.8
+    ],
+    "name": "UTickL02",
+    "body_name": "UTickL02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     396.70000000000005
+    ],
+    "name": "UTickL03",
+    "body_name": "UTickL03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     485.6
+    ],
+    "name": "UTickL04",
+    "body_name": "UTickL04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     574.5
+    ],
+    "name": "UTickL05",
+    "body_name": "UTickL05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     663.4000000000001
+    ],
+    "name": "UTickL06",
+    "body_name": "UTickL06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     752.3000000000001
+    ],
+    "name": "UTickL07",
+    "body_name": "UTickL07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     841.2
+    ],
+    "name": "UTickL08",
+    "body_name": "UTickL08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     930.1
+    ],
+    "name": "UTickL09",
+    "body_name": "UTickL09"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1019.0
+    ],
+    "name": "UTickL10",
+    "body_name": "UTickL10"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1107.9
+    ],
+    "name": "UTickL11",
+    "body_name": "UTickL11"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1196.8000000000002
+    ],
+    "name": "UTickL12",
+    "body_name": "UTickL12"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1285.7
+    ],
+    "name": "UTickL13",
+    "body_name": "UTickL13"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1374.6000000000001
+    ],
+    "name": "UTickL14",
+    "body_name": "UTickL14"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1463.5
+    ],
+    "name": "UTickL15",
+    "body_name": "UTickL15"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1552.4
+    ],
+    "name": "UTickL16",
+    "body_name": "UTickL16"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1641.3000000000002
+    ],
+    "name": "UTickL17",
+    "body_name": "UTickL17"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1730.2
+    ],
+    "name": "UTickL18",
+    "body_name": "UTickL18"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1819.1000000000001
+    ],
+    "name": "UTickL19",
+    "body_name": "UTickL19"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1908.0
+    ],
+    "name": "UTickL20",
+    "body_name": "UTickL20"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     -232,
+     -449,
+     1996.9
+    ],
+    "name": "UTickL21",
+    "body_name": "UTickL21"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16,
+    "width": 3,
+    "height": 2020,
+    "center": [
+     232,
+     -446.5,
+     1110
+    ],
+    "name": "EarR",
+    "body_name": "EarR"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     130.0
+    ],
+    "name": "UTickR00",
+    "body_name": "UTickR00"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     218.9
+    ],
+    "name": "UTickR01",
+    "body_name": "UTickR01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     307.8
+    ],
+    "name": "UTickR02",
+    "body_name": "UTickR02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     396.70000000000005
+    ],
+    "name": "UTickR03",
+    "body_name": "UTickR03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     485.6
+    ],
+    "name": "UTickR04",
+    "body_name": "UTickR04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     574.5
+    ],
+    "name": "UTickR05",
+    "body_name": "UTickR05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     663.4000000000001
+    ],
+    "name": "UTickR06",
+    "body_name": "UTickR06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     752.3000000000001
+    ],
+    "name": "UTickR07",
+    "body_name": "UTickR07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     841.2
+    ],
+    "name": "UTickR08",
+    "body_name": "UTickR08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     930.1
+    ],
+    "name": "UTickR09",
+    "body_name": "UTickR09"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1019.0
+    ],
+    "name": "UTickR10",
+    "body_name": "UTickR10"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1107.9
+    ],
+    "name": "UTickR11",
+    "body_name": "UTickR11"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1196.8000000000002
+    ],
+    "name": "UTickR12",
+    "body_name": "UTickR12"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1285.7
+    ],
+    "name": "UTickR13",
+    "body_name": "UTickR13"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1374.6000000000001
+    ],
+    "name": "UTickR14",
+    "body_name": "UTickR14"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1463.5
+    ],
+    "name": "UTickR15",
+    "body_name": "UTickR15"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1552.4
+    ],
+    "name": "UTickR16",
+    "body_name": "UTickR16"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1641.3000000000002
+    ],
+    "name": "UTickR17",
+    "body_name": "UTickR17"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1730.2
+    ],
+    "name": "UTickR18",
+    "body_name": "UTickR18"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1819.1000000000001
+    ],
+    "name": "UTickR19",
+    "body_name": "UTickR19"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1908.0
+    ],
+    "name": "UTickR20",
+    "body_name": "UTickR20"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 1.5,
+    "height": 3,
+    "center": [
+     232,
+     -449,
+     1996.9
+    ],
+    "name": "UTickR21",
+    "body_name": "UTickR21"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     120
+    ],
+    "name": "VentL00",
+    "body_name": "VentL00"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     186
+    ],
+    "name": "VentL01",
+    "body_name": "VentL01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     252
+    ],
+    "name": "VentL02",
+    "body_name": "VentL02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     318
+    ],
+    "name": "VentL03",
+    "body_name": "VentL03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     384
+    ],
+    "name": "VentL04",
+    "body_name": "VentL04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     450
+    ],
+    "name": "VentL05",
+    "body_name": "VentL05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     516
+    ],
+    "name": "VentL06",
+    "body_name": "VentL06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     582
+    ],
+    "name": "VentL07",
+    "body_name": "VentL07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     648
+    ],
+    "name": "VentL08",
+    "body_name": "VentL08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     714
+    ],
+    "name": "VentL09",
+    "body_name": "VentL09"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     780
+    ],
+    "name": "VentL10",
+    "body_name": "VentL10"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     846
+    ],
+    "name": "VentL11",
+    "body_name": "VentL11"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     912
+    ],
+    "name": "VentL12",
+    "body_name": "VentL12"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     978
+    ],
+    "name": "VentL13",
+    "body_name": "VentL13"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1044
+    ],
+    "name": "VentL14",
+    "body_name": "VentL14"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1110
+    ],
+    "name": "VentL15",
+    "body_name": "VentL15"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1176
+    ],
+    "name": "VentL16",
+    "body_name": "VentL16"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1242
+    ],
+    "name": "VentL17",
+    "body_name": "VentL17"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1308
+    ],
+    "name": "VentL18",
+    "body_name": "VentL18"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1374
+    ],
+    "name": "VentL19",
+    "body_name": "VentL19"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1440
+    ],
+    "name": "VentL20",
+    "body_name": "VentL20"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1506
+    ],
+    "name": "VentL21",
+    "body_name": "VentL21"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1572
+    ],
+    "name": "VentL22",
+    "body_name": "VentL22"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1638
+    ],
+    "name": "VentL23",
+    "body_name": "VentL23"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1704
+    ],
+    "name": "VentL24",
+    "body_name": "VentL24"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1770
+    ],
+    "name": "VentL25",
+    "body_name": "VentL25"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1836
+    ],
+    "name": "VentL26",
+    "body_name": "VentL26"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1902
+    ],
+    "name": "VentL27",
+    "body_name": "VentL27"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     1968
+    ],
+    "name": "VentL28",
+    "body_name": "VentL28"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     2034
+    ],
+    "name": "VentL29",
+    "body_name": "VentL29"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     -283,
+     0,
+     2100
+    ],
+    "name": "VentL30",
+    "body_name": "VentL30"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     120
+    ],
+    "name": "VentR00",
+    "body_name": "VentR00"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     186
+    ],
+    "name": "VentR01",
+    "body_name": "VentR01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     252
+    ],
+    "name": "VentR02",
+    "body_name": "VentR02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     318
+    ],
+    "name": "VentR03",
+    "body_name": "VentR03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     384
+    ],
+    "name": "VentR04",
+    "body_name": "VentR04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     450
+    ],
+    "name": "VentR05",
+    "body_name": "VentR05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     516
+    ],
+    "name": "VentR06",
+    "body_name": "VentR06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     582
+    ],
+    "name": "VentR07",
+    "body_name": "VentR07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     648
+    ],
+    "name": "VentR08",
+    "body_name": "VentR08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     714
+    ],
+    "name": "VentR09",
+    "body_name": "VentR09"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     780
+    ],
+    "name": "VentR10",
+    "body_name": "VentR10"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     846
+    ],
+    "name": "VentR11",
+    "body_name": "VentR11"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     912
+    ],
+    "name": "VentR12",
+    "body_name": "VentR12"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     978
+    ],
+    "name": "VentR13",
+    "body_name": "VentR13"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1044
+    ],
+    "name": "VentR14",
+    "body_name": "VentR14"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1110
+    ],
+    "name": "VentR15",
+    "body_name": "VentR15"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1176
+    ],
+    "name": "VentR16",
+    "body_name": "VentR16"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1242
+    ],
+    "name": "VentR17",
+    "body_name": "VentR17"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1308
+    ],
+    "name": "VentR18",
+    "body_name": "VentR18"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1374
+    ],
+    "name": "VentR19",
+    "body_name": "VentR19"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1440
+    ],
+    "name": "VentR20",
+    "body_name": "VentR20"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1506
+    ],
+    "name": "VentR21",
+    "body_name": "VentR21"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1572
+    ],
+    "name": "VentR22",
+    "body_name": "VentR22"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1638
+    ],
+    "name": "VentR23",
+    "body_name": "VentR23"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1704
+    ],
+    "name": "VentR24",
+    "body_name": "VentR24"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1770
+    ],
+    "name": "VentR25",
+    "body_name": "VentR25"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1836
+    ],
+    "name": "VentR26",
+    "body_name": "VentR26"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1902
+    ],
+    "name": "VentR27",
+    "body_name": "VentR27"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     1968
+    ],
+    "name": "VentR28",
+    "body_name": "VentR28"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     2034
+    ],
+    "name": "VentR29",
+    "body_name": "VentR29"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 820,
+    "height": 14,
+    "center": [
+     283,
+     0,
+     2100
+    ],
+    "name": "VentR30",
+    "body_name": "VentR30"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 360,
+    "width": 700,
+    "height": 4,
+    "center": [
+     0,
+     0,
+     2110
+    ],
+    "name": "CableDuctFloor",
+    "body_name": "CableDuctFloor"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 700,
+    "height": 36,
+    "center": [
+     -178,
+     0,
+     2128
+    ],
+    "name": "CableDuctWallL",
+    "body_name": "CableDuctWallL"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 4,
+    "width": 700,
+    "height": 36,
+    "center": [
+     178,
+     0,
+     2128
+    ],
+    "name": "CableDuctWallR",
+    "body_name": "CableDuctWallR"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 650,
+    "base": [
+     -140,
+     0,
+     2124
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "Cable01",
+    "body_name": "Cable01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 650,
+    "base": [
+     -128,
+     0,
+     2124
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "Cable02",
+    "body_name": "Cable02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 650,
+    "base": [
+     -116,
+     0,
+     2124
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "Cable03",
+    "body_name": "Cable03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 650,
+    "base": [
+     -104,
+     0,
+     2124
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "Cable04",
+    "body_name": "Cable04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 650,
+    "base": [
+     -92,
+     0,
+     2124
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "Cable05",
+    "body_name": "Cable05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 650,
+    "base": [
+     -80,
+     0,
+     2124
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "Cable06",
+    "body_name": "Cable06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 56,
+    "width": 36,
+    "height": 1500,
+    "center": [
+     0,
+     468,
+     1000
+    ],
+    "name": "PduStrip",
+    "body_name": "PduStrip"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 12,
+    "height": 300,
+    "base": [
+     0,
+     468,
+     1750
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "PduCable",
+    "body_name": "PduCable",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     -15,
+     490,
+     360
+    ],
+    "name": "PduSocket01",
+    "body_name": "PduSocket01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     15,
+     490,
+     360
+    ],
+    "name": "PduSocket02",
+    "body_name": "PduSocket02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     -15,
+     490,
+     480
+    ],
+    "name": "PduSocket03",
+    "body_name": "PduSocket03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     15,
+     490,
+     480
+    ],
+    "name": "PduSocket04",
+    "body_name": "PduSocket04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     -15,
+     490,
+     600
+    ],
+    "name": "PduSocket05",
+    "body_name": "PduSocket05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     15,
+     490,
+     600
+    ],
+    "name": "PduSocket06",
+    "body_name": "PduSocket06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     -15,
+     490,
+     720
+    ],
+    "name": "PduSocket07",
+    "body_name": "PduSocket07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     15,
+     490,
+     720
+    ],
+    "name": "PduSocket08",
+    "body_name": "PduSocket08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     -15,
+     490,
+     840
+    ],
+    "name": "PduSocket09",
+    "body_name": "PduSocket09"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     15,
+     490,
+     840
+    ],
+    "name": "PduSocket10",
+    "body_name": "PduSocket10"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     -15,
+     490,
+     960
+    ],
+    "name": "PduSocket11",
+    "body_name": "PduSocket11"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24,
+    "width": 8,
+    "height": 26,
+    "center": [
+     15,
+     490,
+     960
+    ],
+    "name": "PduSocket12",
+    "body_name": "PduSocket12"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6,
+    "width": 3,
+    "height": 6,
+    "center": [
+     0,
+     487.5,
+     1730
+    ],
+    "name": "LedGPdu",
+    "body_name": "LedGPdu"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 40,
+    "height": 2148,
+    "center": [
+     -260,
+     -468,
+     1126.0
+    ],
+    "name": "DoorFrameL",
+    "body_name": "Door"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40,
+    "width": 40,
+    "height": 2148,
+    "center": [
+     260,
+     -468,
+     1126.0
+    ],
+    "name": "DoorFrameR",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 40,
+    "height": 40,
+    "center": [
+     0,
+     -468,
+     72
+    ],
+    "name": "DoorFrameB",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 40,
+    "height": 40,
+    "center": [
+     0,
+     -468,
+     2180
+    ],
+    "name": "DoorFrameT",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 8,
+    "height": 20,
+    "center": [
+     0,
+     -468,
+     300
+    ],
+    "name": "Slat01",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 8,
+    "height": 20,
+    "center": [
+     0,
+     -468,
+     600
+    ],
+    "name": "Slat02",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 8,
+    "height": 20,
+    "center": [
+     0,
+     -468,
+     900
+    ],
+    "name": "Slat03",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 8,
+    "height": 20,
+    "center": [
+     0,
+     -468,
+     1200
+    ],
+    "name": "Slat04",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 8,
+    "height": 20,
+    "center": [
+     0,
+     -468,
+     1500
+    ],
+    "name": "Slat05",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 520,
+    "width": 8,
+    "height": 20,
+    "center": [
+     0,
+     -468,
+     1800
+    ],
+    "name": "Slat06",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 180,
+    "width": 3,
+    "height": 80,
+    "center": [
+     0,
+     -469.5,
+     1600
+    ],
+    "name": "LogoPlate",
+    "body_name": "Door",
+    "operation": "join",
+    "targets": [
+     "Door"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 20,
+    "base": [
+     262,
+     -484,
+     1100
+    ],
+    "axis": [
+     0,
+     -1,
+     0
+    ],
+    "name": "LockCylinder",
+    "body_name": "LockCylinder",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14,
+    "width": 8,
+    "height": 200,
+    "center": [
+     262,
+     -496,
+     1100
+    ],
+    "name": "DoorHandleGrip",
+    "body_name": "DoorHandleGrip"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 4,
+    "height": 14,
+    "center": [
+     262,
+     -490,
+     1020
+    ],
+    "name": "DoorHandleStandA",
+    "body_name": "DoorHandleStandA"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8,
+    "width": 4,
+    "height": 14,
+    "center": [
+     262,
+     -490,
+     1180
+    ],
+    "name": "DoorHandleStandB",
+    "body_name": "DoorHandleStandB"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 70,
+    "base": [
+     -282,
+     -474,
+     165
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "HingeBarrel1",
+    "body_name": "HingeBarrel1",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 70,
+    "base": [
+     -282,
+     -474,
+     1065
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "HingeBarrel2",
+    "body_name": "HingeBarrel2",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 8,
+    "height": 70,
+    "base": [
+     -282,
+     -474,
+     1965
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "HingeBarrel3",
+    "body_name": "HingeBarrel3",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 140,
+    "width": 4,
+    "height": 12,
+    "center": [
+     0,
+     -470,
+     2100
+    ],
+    "name": "StatusLightBar",
+    "body_name": "StatusLightBar"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 2,
+    "height": 8,
+    "center": [
+     -50,
+     -471,
+     2100
+    ],
+    "name": "StatusLed01",
+    "body_name": "StatusLed01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 2,
+    "height": 8,
+    "center": [
+     -16,
+     -471,
+     2100
+    ],
+    "name": "StatusLed02",
+    "body_name": "StatusLed02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 2,
+    "height": 8,
+    "center": [
+     16,
+     -471,
+     2100
+    ],
+    "name": "StatusLed03",
+    "body_name": "StatusLed03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10,
+    "width": 2,
+    "height": 8,
+    "center": [
+     50,
+     -471,
+     2100
+    ],
+    "name": "StatusLed04",
+    "body_name": "StatusLed04"
+   }
+  }
+ ]
+}

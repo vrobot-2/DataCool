@@ -1,0 +1,1364 @@
+{
+ "commands": [
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 240000,
+    "width": 240000,
+    "height": 400,
+    "center": [
+     0,
+     0,
+     -200
+    ],
+    "name": "Ground",
+    "operation": "new",
+    "body_name": "Ground"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 28000,
+    "width": 30000,
+    "height": 30240,
+    "center": [
+     -96000,
+     -80000,
+     15120.0
+    ],
+    "name": "Building01",
+    "operation": "new",
+    "body_name": "Building01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 17920,
+    "width": 19200,
+    "height": 11760,
+    "center": [
+     -96000,
+     -80000,
+     36120.0
+    ],
+    "name": "Setback01",
+    "operation": "join",
+    "body_name": "Building01",
+    "targets": [
+     "Building01"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6810,
+    "width": 7296,
+    "height": 4000,
+    "center": [
+     -90445.0,
+     -74048.0,
+     44000.0
+    ],
+    "name": "RoofBox01",
+    "operation": "join",
+    "body_name": "Building01",
+    "targets": [
+     "Building01"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 26000,
+    "width": 34000,
+    "height": 18720,
+    "center": [
+     -66000,
+     -80000,
+     9360.0
+    ],
+    "name": "Building02",
+    "operation": "new",
+    "body_name": "Building02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16640,
+    "width": 21760,
+    "height": 7280,
+    "center": [
+     -66000,
+     -80000,
+     22360.0
+    ],
+    "name": "Setback02",
+    "operation": "join",
+    "body_name": "Building02",
+    "targets": [
+     "Building02"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6323,
+    "width": 8269,
+    "height": 5000,
+    "center": [
+     -71158.5,
+     -86745.5,
+     28500.0
+    ],
+    "name": "RoofBox02",
+    "operation": "join",
+    "body_name": "Building02",
+    "targets": [
+     "Building02"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16000,
+    "width": 34000,
+    "height": 41760,
+    "center": [
+     -20000,
+     -80000,
+     20880.0
+    ],
+    "name": "Building03",
+    "operation": "new",
+    "body_name": "Building03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10240,
+    "width": 21760,
+    "height": 16240,
+    "center": [
+     -20000,
+     -80000,
+     49880.0
+    ],
+    "name": "Setback03",
+    "operation": "join",
+    "body_name": "Building03",
+    "targets": [
+     "Building03"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 8269,
+    "height": 3000,
+    "center": [
+     -17880.0,
+     -86745.5,
+     59500.0
+    ],
+    "name": "RoofBox03",
+    "operation": "join",
+    "body_name": "Building03",
+    "targets": [
+     "Building03"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 15000,
+    "width": 28000,
+    "height": 25920,
+    "center": [
+     0,
+     -78000,
+     12960.0
+    ],
+    "name": "Building04",
+    "operation": "new",
+    "body_name": "Building04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 9600,
+    "width": 17920,
+    "height": 10080,
+    "center": [
+     0,
+     -78000,
+     30960.0
+    ],
+    "name": "Setback04",
+    "operation": "join",
+    "body_name": "Building04",
+    "targets": [
+     "Building04"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 6810,
+    "height": 4000,
+    "center": [
+     -1800.0,
+     -72445.0,
+     38000.0
+    ],
+    "name": "RoofBox04",
+    "operation": "join",
+    "body_name": "Building04",
+    "targets": [
+     "Building04"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16000,
+    "width": 30000,
+    "height": 15840,
+    "center": [
+     20000,
+     -80000,
+     7920.0
+    ],
+    "name": "Building05",
+    "operation": "new",
+    "body_name": "Building05"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10240,
+    "width": 19200,
+    "height": 6160,
+    "center": [
+     20000,
+     -80000,
+     18920.0
+    ],
+    "name": "Setback05",
+    "operation": "join",
+    "body_name": "Building05",
+    "targets": [
+     "Building05"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 7296,
+    "height": 5000,
+    "center": [
+     22120.0,
+     -74048.0,
+     24500.0
+    ],
+    "name": "RoofBox05",
+    "operation": "join",
+    "body_name": "Building05",
+    "targets": [
+     "Building05"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24000,
+    "width": 36000,
+    "height": 24480,
+    "center": [
+     66000,
+     -80000,
+     12240.0
+    ],
+    "name": "Building06",
+    "operation": "new",
+    "body_name": "Building06"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 15360,
+    "width": 23040,
+    "height": 9520,
+    "center": [
+     66000,
+     -80000,
+     29240.0
+    ],
+    "name": "Setback06",
+    "operation": "join",
+    "body_name": "Building06",
+    "targets": [
+     "Building06"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 8755,
+    "height": 3000,
+    "center": [
+     61320.0,
+     -87142.5,
+     35500.0
+    ],
+    "name": "RoofBox06",
+    "operation": "join",
+    "body_name": "Building06",
+    "targets": [
+     "Building06"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30000,
+    "width": 30000,
+    "height": 37440,
+    "center": [
+     96000,
+     -78000,
+     18720.0
+    ],
+    "name": "Building07",
+    "operation": "new",
+    "body_name": "Building07"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 19200,
+    "width": 19200,
+    "height": 14560,
+    "center": [
+     96000,
+     -78000,
+     44720.0
+    ],
+    "name": "Setback07",
+    "operation": "join",
+    "body_name": "Building07",
+    "targets": [
+     "Building07"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 7296,
+    "width": 7296,
+    "height": 4000,
+    "center": [
+     101952.0,
+     -83952.0,
+     54000.0
+    ],
+    "name": "RoofBox07",
+    "operation": "join",
+    "body_name": "Building07",
+    "targets": [
+     "Building07"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 28000,
+    "width": 36000,
+    "height": 47520,
+    "center": [
+     -96000,
+     0,
+     23760.0
+    ],
+    "name": "Building08",
+    "operation": "new",
+    "body_name": "Building08"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 17920,
+    "width": 23040,
+    "height": 18480,
+    "center": [
+     -96000,
+     0,
+     56760.0
+    ],
+    "name": "Setback08",
+    "operation": "join",
+    "body_name": "Building08",
+    "targets": [
+     "Building08"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6810,
+    "width": 8755,
+    "height": 5000,
+    "center": [
+     -101555.0,
+     7142.5,
+     68500.0
+    ],
+    "name": "RoofBox08",
+    "operation": "join",
+    "body_name": "Building08",
+    "targets": [
+     "Building08"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 26000,
+    "width": 30000,
+    "height": 14400,
+    "center": [
+     -66000,
+     0,
+     7200.0
+    ],
+    "name": "Building09",
+    "operation": "new",
+    "body_name": "Building09"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16640,
+    "width": 19200,
+    "height": 5600,
+    "center": [
+     -66000,
+     0,
+     17200.0
+    ],
+    "name": "Setback09",
+    "operation": "join",
+    "body_name": "Building09",
+    "targets": [
+     "Building09"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6323,
+    "width": 7296,
+    "height": 3000,
+    "center": [
+     -60841.5,
+     5952.0,
+     21500.0
+    ],
+    "name": "RoofBox09",
+    "operation": "join",
+    "body_name": "Building09",
+    "targets": [
+     "Building09"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30000,
+    "width": 38000,
+    "height": 34560,
+    "center": [
+     96000,
+     0,
+     17280.0
+    ],
+    "name": "Building10",
+    "operation": "new",
+    "body_name": "Building10"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 19200,
+    "width": 24320,
+    "height": 13440,
+    "center": [
+     96000,
+     0,
+     41280.0
+    ],
+    "name": "Setback10",
+    "operation": "join",
+    "body_name": "Building10",
+    "targets": [
+     "Building10"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 7296,
+    "width": 9242,
+    "height": 4000,
+    "center": [
+     90048.0,
+     -7539.0,
+     50000.0
+    ],
+    "name": "RoofBox10",
+    "operation": "join",
+    "body_name": "Building10",
+    "targets": [
+     "Building10"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24000,
+    "width": 26000,
+    "height": 8640,
+    "center": [
+     64000,
+     0,
+     4320.0
+    ],
+    "name": "Building11",
+    "operation": "new",
+    "body_name": "Building11"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 15360,
+    "width": 16640,
+    "height": 3360,
+    "center": [
+     64000,
+     0,
+     10320.0
+    ],
+    "name": "Setback11",
+    "operation": "join",
+    "body_name": "Building11",
+    "targets": [
+     "Building11"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 6323,
+    "height": 5000,
+    "center": [
+     68680.0,
+     -5158.5,
+     14500.0
+    ],
+    "name": "RoofBox11",
+    "operation": "join",
+    "body_name": "Building11",
+    "targets": [
+     "Building11"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 26000,
+    "width": 30000,
+    "height": 21600,
+    "center": [
+     -96000,
+     80000,
+     10800.0
+    ],
+    "name": "Building12",
+    "operation": "new",
+    "body_name": "Building12"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16640,
+    "width": 19200,
+    "height": 8400,
+    "center": [
+     -96000,
+     80000,
+     25800.0
+    ],
+    "name": "Setback12",
+    "operation": "join",
+    "body_name": "Building12",
+    "targets": [
+     "Building12"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6323,
+    "width": 7296,
+    "height": 3000,
+    "center": [
+     -101158.5,
+     85952.0,
+     31500.0
+    ],
+    "name": "RoofBox12",
+    "operation": "join",
+    "body_name": "Building12",
+    "targets": [
+     "Building12"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 24000,
+    "width": 38000,
+    "height": 50400,
+    "center": [
+     -66000,
+     80000,
+     25200.0
+    ],
+    "name": "Building13",
+    "operation": "new",
+    "body_name": "Building13"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 15360,
+    "width": 24320,
+    "height": 19600,
+    "center": [
+     -66000,
+     80000,
+     60200.0
+    ],
+    "name": "Setback13",
+    "operation": "join",
+    "body_name": "Building13",
+    "targets": [
+     "Building13"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 9242,
+    "height": 4000,
+    "center": [
+     -61320.0,
+     87539.0,
+     72000.0
+    ],
+    "name": "RoofBox13",
+    "operation": "join",
+    "body_name": "Building13",
+    "targets": [
+     "Building13"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14000,
+    "width": 32000,
+    "height": 31680,
+    "center": [
+     -20000,
+     80000,
+     15840.0
+    ],
+    "name": "Building14",
+    "operation": "new",
+    "body_name": "Building14"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8960,
+    "width": 20480,
+    "height": 12320,
+    "center": [
+     -20000,
+     80000,
+     37840.0
+    ],
+    "name": "Setback14",
+    "operation": "join",
+    "body_name": "Building14",
+    "targets": [
+     "Building14"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 7782,
+    "height": 5000,
+    "center": [
+     -21480.0,
+     73651.0,
+     46500.0
+    ],
+    "name": "RoofBox14",
+    "operation": "join",
+    "body_name": "Building14",
+    "targets": [
+     "Building14"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16000,
+    "width": 26000,
+    "height": 46080,
+    "center": [
+     0,
+     82000,
+     23040.0
+    ],
+    "name": "Building15",
+    "operation": "new",
+    "body_name": "Building15"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 10240,
+    "width": 16640,
+    "height": 17920,
+    "center": [
+     0,
+     82000,
+     55040.0
+    ],
+    "name": "Setback15",
+    "operation": "join",
+    "body_name": "Building15",
+    "targets": [
+     "Building15"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 6323,
+    "height": 3000,
+    "center": [
+     2120.0,
+     76841.5,
+     65500.0
+    ],
+    "name": "RoofBox15",
+    "operation": "join",
+    "body_name": "Building15",
+    "targets": [
+     "Building15"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14000,
+    "width": 34000,
+    "height": 12960,
+    "center": [
+     20000,
+     80000,
+     6480.0
+    ],
+    "name": "Building16",
+    "operation": "new",
+    "body_name": "Building16"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8960,
+    "width": 21760,
+    "height": 5040,
+    "center": [
+     20000,
+     80000,
+     15480.0
+    ],
+    "name": "Setback16",
+    "operation": "join",
+    "body_name": "Building16",
+    "targets": [
+     "Building16"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 8269,
+    "height": 4000,
+    "center": [
+     18520.0,
+     86745.5,
+     20000.0
+    ],
+    "name": "RoofBox16",
+    "operation": "join",
+    "body_name": "Building16",
+    "targets": [
+     "Building16"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 26000,
+    "width": 34000,
+    "height": 17280,
+    "center": [
+     66000,
+     80000,
+     8640.0
+    ],
+    "name": "Building17",
+    "operation": "new",
+    "body_name": "Building17"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16640,
+    "width": 21760,
+    "height": 6720,
+    "center": [
+     66000,
+     80000,
+     20640.0
+    ],
+    "name": "Setback17",
+    "operation": "join",
+    "body_name": "Building17",
+    "targets": [
+     "Building17"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6323,
+    "width": 8269,
+    "height": 5000,
+    "center": [
+     71158.5,
+     86745.5,
+     26500.0
+    ],
+    "name": "RoofBox17",
+    "operation": "join",
+    "body_name": "Building17",
+    "targets": [
+     "Building17"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 28000,
+    "width": 30000,
+    "height": 28800,
+    "center": [
+     96000,
+     80000,
+     14400.0
+    ],
+    "name": "Building18",
+    "operation": "new",
+    "body_name": "Building18"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 17920,
+    "width": 19200,
+    "height": 11200,
+    "center": [
+     96000,
+     80000,
+     34400.0
+    ],
+    "name": "Setback18",
+    "operation": "join",
+    "body_name": "Building18",
+    "targets": [
+     "Building18"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6810,
+    "width": 7296,
+    "height": 3000,
+    "center": [
+     90445.0,
+     74048.0,
+     41500.0
+    ],
+    "name": "RoofBox18",
+    "operation": "join",
+    "body_name": "Building18",
+    "targets": [
+     "Building18"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30000,
+    "width": 30000,
+    "height": 15000,
+    "center": [
+     0,
+     0,
+     7500
+    ],
+    "name": "Plant",
+    "operation": "new",
+    "body_name": "Plant"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     -6000,
+     -6000,
+     15000
+    ],
+    "axis": "Z",
+    "name": "Stack01",
+    "body_name": "Stack01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     6000,
+     -6000,
+     15000
+    ],
+    "axis": "Z",
+    "name": "Stack02",
+    "body_name": "Stack02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     6000,
+     6000,
+     15000
+    ],
+    "axis": "Z",
+    "name": "Stack03",
+    "body_name": "Stack03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     -6000,
+     6000,
+     15000
+    ],
+    "axis": "Z",
+    "name": "Stack04",
+    "body_name": "Stack04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200000,
+    "base": [
+     -100000,
+     0,
+     -6000
+    ],
+    "axis": "X",
+    "name": "MainX",
+    "body_name": "MainX",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200000,
+    "base": [
+     0,
+     -100000,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "MainY",
+    "body_name": "MainY",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 62000,
+    "base": [
+     -66000,
+     -62000,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "Branch01",
+    "body_name": "Branch01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 64000,
+    "base": [
+     -20000,
+     -64000,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "Branch02",
+    "body_name": "Branch02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 63000,
+    "base": [
+     66000,
+     -63000,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "Branch03",
+    "body_name": "Branch03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 62000,
+    "base": [
+     -66000,
+     0,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "Branch04",
+    "body_name": "Branch04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 64000,
+    "base": [
+     20000,
+     0,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "Branch05",
+    "body_name": "Branch05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 63000,
+    "base": [
+     66000,
+     0,
+     -6000
+    ],
+    "axis": "Y",
+    "name": "Branch06",
+    "body_name": "Branch06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     -40000,
+     -40000,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole01",
+    "body_name": "Manhole01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     40000,
+     -40000,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole02",
+    "body_name": "Manhole02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     -40000,
+     40000,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole03",
+    "body_name": "Manhole03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     40000,
+     40000,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole04",
+    "body_name": "Manhole04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     0,
+     -40000,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole05",
+    "body_name": "Manhole05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     0,
+     40000,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole06",
+    "body_name": "Manhole06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     -40000,
+     0,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole07",
+    "body_name": "Manhole07",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 200,
+    "base": [
+     40000,
+     0,
+     -150
+    ],
+    "axis": "Z",
+    "name": "Manhole08",
+    "body_name": "Manhole08",
+    "operation": "new"
+   }
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DataCool — Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2EDE3; --ink:#17140F; --mute:#6C6355;
+    --line:rgba(23,20,15,.16);
+    --a:#2B3FA8; --at:#2B3FA8;
+    --serif:"Instrument Serif",Georgia,serif;
+    --sans:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+
+  .top{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;
+       justify-content:space-between;padding:20px 48px;border-bottom:1px solid var(--line);
+       background:rgba(242,237,227,.86);backdrop-filter:blur(14px)}
+  .mark{font-weight:600;font-size:13px;letter-spacing:.24em}
+  .top .meta{display:flex;gap:28px;font-family:var(--mono);font-size:9.5px;
+             letter-spacing:.16em;color:var(--mute);text-transform:uppercase}
+  .top .meta b{color:var(--at);font-weight:500}
+  .prog{position:fixed;top:0;left:0;height:2px;background:var(--at);z-index:60;width:0;
+        transition:width .4s,background .4s}
+
+  main{padding-top:58px}
+  .phase{min-height:100vh;display:grid;grid-template-columns:repeat(12,1fr);
+         column-gap:32px;align-content:center;padding:96px 48px 110px;position:relative}
+  .copy{grid-column:1/6;align-self:center}
+  .frame{grid-column:7/13;align-self:center;position:relative}
+
+  .eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-family:var(--mono);
+           font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--at)}
+  .eyebrow span{color:var(--mute)}
+  h1,h2{margin:0;font-family:var(--serif);font-weight:400;letter-spacing:-.018em;
+        line-height:.96;text-wrap:balance}
+  h1{font-size:clamp(48px,6.2vw,96px)}
+  h2{font-size:clamp(46px,5.6vw,86px)}
+  h1 em,h2 em{font-style:italic}
+  .lede{margin:22px 0 0;max-width:37ch;font-size:17px;line-height:1.66;color:#4C453A}
+  .metrics{display:flex;gap:44px;margin:38px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+  .metrics div{min-width:0}
+  .metrics dt{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+              color:var(--mute)}
+  .metrics dd{margin:6px 0 0;font-family:var(--serif);font-size:34px;line-height:1;
+              letter-spacing:-.02em}
+  .metrics dd small{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--mute);
+                    margin-left:4px}
+
+  .block{position:relative;width:100%;height:min(64vh,660px);overflow:hidden;
+         background:var(--a);color:#F7F2E8}
+  .block:after{content:"";position:absolute;inset:16px;border:1px solid rgba(247,242,232,.22)}
+  .block .topl{position:absolute;left:30px;top:28px;font-family:var(--mono);font-size:9px;
+               letter-spacing:.2em;text-transform:uppercase;color:rgba(247,242,232,.72)}
+  .block .big{position:absolute;left:22px;bottom:6px;font-family:var(--serif);font-style:italic;
+              font-size:clamp(120px,15vw,240px);line-height:.78;letter-spacing:-.04em;
+              color:rgba(247,242,232,.26)}
+  .block .side{position:absolute;right:30px;bottom:30px;writing-mode:vertical-rl;
+               font-family:var(--mono);font-size:9px;letter-spacing:.24em;
+               text-transform:uppercase;color:rgba(247,242,232,.6)}
+  .caption{display:flex;justify-content:space-between;gap:24px;margin-top:14px;
+           padding-top:10px;border-top:1px solid var(--line);
+           font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+           color:var(--mute)}
+  .caption b{color:var(--ink);font-weight:500}
+
+  .cta{display:inline-block;margin-top:34px;padding:15px 26px;background:var(--ink);
+       color:var(--paper);font-size:13px;font-weight:600;letter-spacing:.02em;
+       text-decoration:none;border-radius:999px}
+  .cta:hover{background:var(--at)}
+
+  .foot{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;justify-content:space-between;
+        padding:12px 48px;border-top:1px solid var(--line);background:rgba(242,237,227,.88);
+        backdrop-filter:blur(12px);font-family:var(--mono);font-size:9px;letter-spacing:.16em;
+        text-transform:uppercase;color:var(--mute)}
+  .foot b{color:var(--ink);font-weight:500}
+
+  @media (max-width:980px){
+    .top{padding:16px 22px}
+    .top .meta{gap:14px;font-size:8px}
+    .phase{grid-template-columns:1fr;row-gap:32px;padding:88px 22px 96px;align-content:start}
+    .copy,.frame{grid-column:1/-1}
+    .frame{order:-1;margin-top:20px}
+    .block{height:min(46vh,440px)}
+    .metrics{gap:28px;margin-top:28px}
+    .metrics dd{font-size:28px}
+    .foot{padding:10px 22px;font-size:8px}
+    .foot span:nth-child(2){display:none}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="prog" id="prog"></div>
+
+<header class="top">
+  <div class="mark">DATACOOL</div>
+  <div class="meta">
+    <span>Thermal recovery</span>
+    <span id="phaseTag"><b>00 / 04</b> System overview</span>
+  </div>
+</header>
+
+<main>
+
+  <section class="phase" data-id="intro" data-phase="0" style="--a:#1D2A73;--at:#1D2A73">
+    <div class="copy">
+      <p class="eyebrow">00 — <span>System overview</span></p>
+      <h1>Every rack is a radiator. <em>We stopped calling it waste.</em></h1>
+      <p class="lede">DataCool rejects nothing to the sky. It captures heat at the die and hands it, as hot water, to the city above.</p>
+      <dl class="metrics">
+        <div><dt>Rack temp</dt><dd>24<small>°C</small></dd></div>
+        <div><dt>Heat recovered</dt><dd>0<small>%</small></dd></div>
+      </dl>
+    </div>
+    <div class="frame">
+      <div class="block">
+        <span class="topl">Chip → city</span>
+        <span class="big">00</span>
+        <span class="side">One continuous loop</span>
+      </div>
+      <div class="caption"><span><b>Fig. 00</b> — System</span><span>Intro · establishing</span></div>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p1" data-phase="1" style="--a:#8C2B1E;--at:#8C2B1E">
+    <div class="copy">
+      <p class="eyebrow">01 — <span>Capture</span></p>
+      <h2>Direct-to-chip <em>capture</em></h2>
+      <p class="lede">Coolant runs across the hottest silicon, not the room. Heat never reaches the air, so the rack never throttles.</p>
+      <dl class="metrics">
+        <div><dt>Rack temp</dt><dd>85<small>°C</small></dd></div>
+        <div><dt>Heat recovered</dt><dd>62<small>%</small></dd></div>
+      </dl>
+    </div>
+    <div class="frame">
+      <div class="block">
+        <span class="topl">Rack interior</span>
+        <span class="big">01</span>
+        <span class="side">85 °C at the die</span>
+      </div>
+      <div class="caption"><span><b>Fig. 01</b> — Cold plate</span><span>Macro · push in</span></div>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p2" data-phase="2" style="--a:#1F2A6E;--at:#1F2A6E">
+    <div class="copy">
+      <p class="eyebrow">02 — <span>Transport</span></p>
+      <h2>High-velocity <em>extraction</em></h2>
+      <p class="lede">Sealed conduits pull the load away at 4.2 litres a second. Nothing evaporates, and nothing touches the electronics.</p>
+      <dl class="metrics">
+        <div><dt>Fluid velocity</dt><dd>4.2<small>L/s</small></dd></div>
+        <div><dt>Evaporation</dt><dd>0<small>%</small></dd></div>
+      </dl>
+    </div>
+    <div class="frame">
+      <div class="block">
+        <span class="topl">Sealed manifold</span>
+        <span class="big">02</span>
+        <span class="side">Nothing evaporates</span>
+      </div>
+      <div class="caption"><span><b>Fig. 02</b> — Manifold</span><span>Dolly back · flow</span></div>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p3" data-phase="3" style="--a:#9A6410;--at:#8A590E">
+    <div class="copy">
+      <p class="eyebrow">03 — <span>Exchange</span></p>
+      <h2>The <em>exchange</em></h2>
+      <p class="lede">Two loops share a wall and nothing else. Ninety-six percent of the heat crosses over; zero fluid crosses with it.</p>
+      <dl class="metrics">
+        <div><dt>Heat recovered</dt><dd>96.4<small>%</small></dd></div>
+        <div><dt>Cross-mixing</dt><dd>0<small>%</small></dd></div>
+      </dl>
+    </div>
+    <div class="frame">
+      <div class="block">
+        <span class="topl">Plate core</span>
+        <span class="big">03</span>
+        <span class="side">Two loops, one wall</span>
+      </div>
+      <div class="caption"><span><b>Fig. 03</b> — Exchanger</span><span>Orbit · macro</span></div>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p4" data-phase="4" style="--a:#7A3E19;--at:#6C3615">
+    <div class="copy">
+      <p class="eyebrow">04 — <span>Reuse</span></p>
+      <h2>District <em>energy</em></h2>
+      <p class="lede">The camera rises through the slab. Warm mains fan out under the street and light up the buildings above.</p>
+      <dl class="metrics">
+        <div><dt>CO₂ offset</dt><dd>1,420<small>t/yr</small></dd></div>
+        <div><dt>Homes heated</dt><dd>12,000<small>homes</small></dd></div>
+      </dl>
+    </div>
+    <div class="frame">
+      <div class="block">
+        <span class="topl">District mains</span>
+        <span class="big">04</span>
+        <span class="side">Warmth, not waste</span>
+      </div>
+      <div class="caption"><span><b>Fig. 04</b> — City</span><span>Rise · pull out</span></div>
+    </div>
+  </section>
+
+  <section class="phase" data-id="end" data-phase="4" style="--a:#7A3E19;--at:#6C3615">
+    <div class="copy" style="grid-column:1/8">
+      <p class="eyebrow">— <span>The loop closes</span></p>
+      <h1>85 °C at the die.<br><em>A warm apartment at dusk.</em></h1>
+      <p class="lede">Four stages, one continuous loop. The construction is a camera move, a plate pack and a city — nothing else.</p>
+      <a class="cta" href="#top">Replay the scroll</a>
+      <dl class="metrics" style="max-width:420px">
+        <div><dt>CO₂ offset</dt><dd>1,420<small>t/yr</small></dd></div>
+        <div><dt>Homes heated</dt><dd>12,000<small>homes</small></dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span>DataCool — <b>thermal recovery</b></span>
+  <span>Blockout / editorial direction</span>
+  <span id="pct">00 %</span>
+</footer>
+
+<script>
+const phases = {
+  0:{no:"00 / 04",title:"System overview"},
+  1:{no:"01 / 04",title:"Direct-to-chip capture"},
+  2:{no:"02 / 04",title:"High-velocity extraction"},
+  3:{no:"03 / 04",title:"The exchange"},
+  4:{no:"04 / 04",title:"District energy"}
+};
+const $=id=>document.getElementById(id);
+let active=-1;
+
+function setPhase(i){
+  if(i===active)return; active=i;
+  const p=phases[i];
+  const sec=document.querySelector('.phase[data-phase="'+i+'"]');
+  const a=sec?getComputedStyle(sec).getPropertyValue("--a").trim():"#1D2A73";
+  const at=sec?getComputedStyle(sec).getPropertyValue("--at").trim():a;
+  document.documentElement.style.setProperty("--a",a);
+  document.documentElement.style.setProperty("--at",at);
+  $("phaseTag").innerHTML="<b>"+p.no+"</b> "+p.title;
+}
+document.querySelectorAll(".phase").forEach(s=>{
+  new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting)setPhase(+e.target.dataset.phase)},{threshold:.5}).observe(s);
+});
+addEventListener("scroll",()=>{
+  const max=document.documentElement.scrollHeight-innerHeight;
+  const t=max>0?scrollY/max:0;
+  $("prog").style.width=(t*100)+"%";
+  $("pct").textContent=String(Math.round(t*100)).padStart(2,"0")+" %";
+},{passive:true});
+
+const q=new URLSearchParams(location.search);
+if(q.get("only")){
+  document.querySelectorAll(".phase").forEach(s=>{if(s.dataset.id!==q.get("only"))s.style.display="none"});
+  const vis=document.querySelector('.phase[data-id="'+q.get("only")+'"]');
+  if(vis)setTimeout(()=>setPhase(+vis.dataset.phase),60);
+}else setPhase(0);
+</script>
+</body>
+</html>

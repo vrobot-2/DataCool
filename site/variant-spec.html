@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DataCool — Spec Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B0E13; --panel:#10141B; --fg:#EDEFF3;
+    --mute:rgba(237,239,243,.58); --line:rgba(237,239,243,.13);
+    --a:#7C8BFF;
+    --sans:"Archivo",ui-sans-serif,system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+
+  /* ---------- masthead ---------- */
+  .mast{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;
+        justify-content:space-between;padding:18px 40px;border-bottom:1px solid var(--line);
+        background:rgba(11,14,19,.82);backdrop-filter:blur(16px)}
+  .mark{font-weight:750;font-variation-settings:"wdth" 120;font-size:14px;letter-spacing:.2em}
+  .mast .mid{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--mute)}
+  .mast .rev{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--mute)}
+  .mast .rev b{color:var(--a);font-weight:500}
+
+  /* ---------- sections ---------- */
+  main{padding-bottom:96px}
+  .phase{min-height:100vh;display:grid;grid-template-columns:repeat(12,1fr);gap:24px;
+         align-content:center;padding:132px 40px 74px;position:relative;
+         border-top:1px solid var(--line)}
+  .phase:first-child{border-top:0}
+  .copy{grid-column:1/6;position:relative}
+  .vis{grid-column:7/13;align-self:center;aspect-ratio:4/3;position:relative;
+       background:var(--panel);border:1px solid rgba(237,239,243,.22);overflow:hidden}
+  .vis:before{content:"";position:absolute;inset:0;
+       background:linear-gradient(155deg,var(--a),transparent 72%);opacity:.2}
+  .vis:after{content:"";position:absolute;inset:14px;border:1px solid rgba(237,239,243,.07)}
+
+  .eyebrow{display:flex;align-items:center;gap:14px;margin:0 0 22px;font-family:var(--mono);
+           font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+  .eyebrow i{font-style:normal;color:var(--a)}
+  .eyebrow:before{content:"";width:34px;height:1px;background:var(--a)}
+  h1,h2{margin:0;font-weight:680;font-variation-settings:"wdth" 118;letter-spacing:-.045em;
+        line-height:.92;text-wrap:balance}
+  h1{font-size:clamp(40px,4.9vw,74px)}
+  h2{font-size:clamp(38px,4.4vw,66px)}
+  .lede{margin:22px 0 0;max-width:38ch;font-size:16px;line-height:1.62;color:var(--mute)}
+  .specs{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--line)}
+  .specs li{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:11px 0;
+            border-bottom:1px solid var(--line);font-size:13.5px;color:rgba(237,239,243,.78)}
+  .specs li b{font-family:var(--mono);font-size:10px;font-weight:400;color:var(--a);letter-spacing:.06em;padding-top:2px}
+
+  /* visual contents */
+  .vis .code{position:absolute;left:26px;top:24px;font-family:var(--mono);font-size:9px;
+             letter-spacing:.18em;color:rgba(237,239,243,.55);text-transform:uppercase}
+  .vis .num{position:absolute;left:24px;bottom:22px;font-size:clamp(76px,9vw,138px);
+            font-weight:200;line-height:.76;letter-spacing:-.06em;color:rgba(237,239,243,.92)}
+  .vis .cap{position:absolute;right:26px;bottom:26px;text-align:right;font-family:var(--mono);
+            font-size:9px;line-height:1.8;letter-spacing:.1em;color:rgba(237,239,243,.5);
+            text-transform:uppercase}
+
+  /* ---------- spec strip ---------- */
+  .strip{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;
+         grid-template-columns:1.05fr 1fr 1fr 1.55fr;
+         background:rgba(11,14,19,.9);backdrop-filter:blur(18px);
+         border-top:1px solid var(--line)}
+  .strip>div{padding:13px 24px 15px;border-right:1px solid var(--line);min-width:0}
+  .strip>div:last-child{border-right:0}
+  .strip .k{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.18em;
+            text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+  .strip .v{font-family:var(--mono);font-size:20px;line-height:1;letter-spacing:-.02em}
+  .strip .v small{font-size:9px;color:var(--mute);margin-left:4px;letter-spacing:.08em}
+  .strip .sec{display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .strip .sec .t{font-size:13px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;
+                 overflow:hidden;text-overflow:ellipsis}
+  .track{position:relative;height:2px;width:110px;flex:none;background:rgba(237,239,243,.14)}
+  .track i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--a);transition:width .45s}
+
+  /* ---------- progress ---------- */
+  .bar{position:fixed;left:0;right:0;bottom:73px;height:1px;background:transparent;z-index:61}
+  .bar i{display:block;height:1px;width:0;background:var(--a);opacity:.7;transition:background .3s}
+
+  /* ---------- breakpoints ---------- */
+  @media (max-width:1050px){
+    .copy{grid-column:1/7}.vis{grid-column:7/13}
+    .mast .mid{display:none}
+  }
+  @media (max-width:820px){
+    .mast{padding:14px 20px}
+    .phase{grid-template-columns:1fr;gap:30px;padding:104px 20px 190px;align-content:start}
+    .copy,.vis{grid-column:1/-1}
+    .vis{order:-1;aspect-ratio:16/10;margin-top:24px}
+    .strip{grid-template-columns:1fr 1fr;bottom:0}
+    .strip>div{padding:10px 16px 12px}
+    .strip>div:nth-child(4){display:none}
+    .strip .v{font-size:16px}
+    .specs li{font-size:12.5px}
+    .bar{bottom:69px}
+    .eyebrow{margin-bottom:16px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mark">DATACOOL</div>
+  <div class="mid">PLATE HEAT EXCHANGER · SYSTEM DATASHEET</div>
+  <div class="rev">REV <b>02</b> / 2026</div>
+</header>
+
+<main id="main">
+
+  <section class="phase" data-id="intro" data-phase="0" style="--a:#7C8BFF">
+    <div class="copy">
+      <p class="eyebrow"><i>00</i> System overview</p>
+      <h1>Every rack is a radiator. We stopped calling it waste.</h1>
+      <p class="lede">DataCool rejects nothing to the sky. It captures heat at the die and hands it, as hot water, to the city above.</p>
+      <ul class="specs">
+        <li><b>01</b><span>Direct-to-chip capture at 85 °C source temperature</span></li>
+        <li><b>02</b><span>Sealed transport loop, zero evaporation</span></li>
+        <li><b>03</b><span>96.4 % effective plate exchange, no cross-mixing</span></li>
+      </ul>
+    </div>
+    <div class="vis">
+      <span class="code">Fig. 00 — System</span>
+      <span class="num">00</span>
+      <span class="cap">Chip → city<br>One continuous loop</span>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p1" data-phase="1" style="--a:#FF6B57">
+    <div class="copy">
+      <p class="eyebrow"><i>01</i> Capture</p>
+      <h2>Direct-to-chip capture</h2>
+      <p class="lede">Coolant runs across the hottest silicon, not the room. Heat never reaches the air, so the rack never throttles.</p>
+      <ul class="specs">
+        <li><b>01</b><span>Micro-channel cold plates on CPU / GPU packages</span></li>
+        <li><b>02</b><span>Rack delta 85 °C → 32 °C at the manifold</span></li>
+        <li><b>03</b><span>No room-scale air conditioning load</span></li>
+      </ul>
+    </div>
+    <div class="vis">
+      <span class="code">Fig. 01 — Rack interior</span>
+      <span class="num">01</span>
+      <span class="cap">Macro · cold plate<br>85 °C at the die</span>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p2" data-phase="2" style="--a:#8FA2FF">
+    <div class="copy">
+      <p class="eyebrow"><i>02</i> Transport</p>
+      <h2>High-velocity extraction</h2>
+      <p class="lede">Sealed conduits pull the load away at 4.2 litres a second. Nothing evaporates, and nothing touches the electronics.</p>
+      <ul class="specs">
+        <li><b>01</b><span>Closed-loop manifold, zero evaporation</span></li>
+        <li><b>02</b><span>Particle flow fields through translucent pipe</span></li>
+        <li><b>03</b><span>Indigo at inlet, crimson under load</span></li>
+      </ul>
+    </div>
+    <div class="vis">
+      <span class="code">Fig. 02 — Manifold</span>
+      <span class="num">02</span>
+      <span class="cap">Waveguide · dolly back<br>4.2 L/s sealed</span>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p3" data-phase="3" style="--a:#FFC266">
+    <div class="copy">
+      <p class="eyebrow"><i>03</i> Exchange</p>
+      <h2>The exchange</h2>
+      <p class="lede">Two loops share a wall and nothing else. Ninety-six percent of the heat crosses over; zero fluid crosses with it.</p>
+      <ul class="specs">
+        <li><b>01</b><span>Counter-flow plate core, 95 %+ effectiveness</span></li>
+        <li><b>02</b><span>Crimson → blue on the process side</span></li>
+        <li><b>03</b><span>Municipal water leaves warm amber</span></li>
+      </ul>
+    </div>
+    <div class="vis" style="--a:#FFC266">
+      <span class="code">Fig. 03 — Plate core</span>
+      <span class="num">03</span>
+      <span class="cap">Exploded plate pack<br>96.4 % recovered</span>
+    </div>
+  </section>
+
+  <section class="phase" data-id="p4" data-phase="4" style="--a:#FFB45C">
+    <div class="copy">
+      <p class="eyebrow"><i>04</i> Reuse</p>
+      <h2>District energy</h2>
+      <p class="lede">The camera rises through the slab. Warm mains fan out under the street and light up the buildings above.</p>
+      <ul class="specs">
+        <li><b>01</b><span>Subterranean mains glow amber outward</span></li>
+        <li><b>02</b><span>Housing, schools and civic centres on the loop</span></li>
+        <li><b>03</b><span>Once-wasted heat becomes zero-carbon warmth</span></li>
+      </ul>
+    </div>
+    <div class="vis">
+      <span class="code">Fig. 04 — District</span>
+      <span class="num">04</span>
+      <span class="cap">Dusk skyline · pull-out<br>1,420 t CO₂ / yr</span>
+    </div>
+  </section>
+
+  <section class="phase" data-id="end" data-phase="4" style="--a:#FFB45C">
+    <div class="copy" style="grid-column:1/8">
+      <p class="eyebrow"><i>—</i> The loop closes</p>
+      <h1>85 °C at the die.<br>A warm apartment at dusk.</h1>
+      <p class="lede">Four stages, one continuous loop. The construction is a camera move, a plate pack and a city — nothing else.</p>
+      <ul class="specs">
+        <li><b>→</b><span>Next · geometry upgrade · look-dev · telemetry</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<div class="bar"><i id="bar"></i></div>
+
+<footer class="strip">
+  <div>
+    <span class="k">Phase</span>
+    <span class="v" id="sNo">00 / 04</span>
+  </div>
+  <div>
+    <span class="k" id="m1l">Rack temp</span>
+    <span class="v"><b id="m1v">24</b><small id="m1s">°C</small></span>
+  </div>
+  <div>
+    <span class="k" id="m2l">Heat recovered</span>
+    <span class="v"><b id="m2v">0</b><small id="m2s">%</small></span>
+  </div>
+  <div class="sec">
+    <span class="t" id="sTitle">System overview</span>
+    <span class="track"><i id="sTrack"></i></span>
+  </div>
+</footer>
+
+<script>
+const phases = {
+  0:{no:"00 / 04",title:"System overview",m:[["Rack temp",24,"°C"],["Heat recovered",0,"%"]]},
+  1:{no:"01 / 04",title:"Direct-to-chip capture",m:[["Rack temp",85,"°C"],["Heat recovered",62,"%"]]},
+  2:{no:"02 / 04",title:"High-velocity extraction",m:[["Fluid velocity",4.2,"L/s"],["Evaporation",0,"%"]]},
+  3:{no:"03 / 04",title:"The exchange",m:[["Heat recovered",96.4,"%"],["Cross-mixing",0,"%"]]},
+  4:{no:"04 / 04",title:"District energy",m:[["CO₂ offset",1420,"t/yr"],["Homes heated",12000,""]]}
+};
+const $=id=>document.getElementById(id);
+let active=-1,raf=0;
+
+function count(el,to){
+  const dec=String(to).includes(".")?1:0;
+  if(window.__snap){el.textContent=to.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g,",");return;}
+  const from=parseFloat(el.textContent.replace(/[^\d.]/g,""))||0;
+  const start=performance.now(),dur=800,
+        ease=t=>1-Math.pow(1-t,3);
+  cancelAnimationFrame(raf);
+  const step=now=>{const t=Math.min(1,(now-start)/dur);
+    el.textContent=(from+(to-from)*ease(t)).toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g,",");
+    if(t<1)raf=requestAnimationFrame(step)};
+  raf=requestAnimationFrame(step);
+}
+function setPhase(i){
+  if(i===active)return; active=i;
+  const p=phases[i];
+  const sec=document.querySelector('.phase[data-phase="'+i+'"]');
+  const a=sec?getComputedStyle(sec).getPropertyValue("--a"):"#7C8BFF";
+  document.documentElement.style.setProperty("--a",a.trim());
+  $("sNo").textContent=p.no;
+  $("sTitle").textContent=p.title;
+  $("m1l").textContent=p.m[0][0]; $("m2l").textContent=p.m[1][0];
+  $("m1s").textContent=p.m[0][2]; $("m2s").textContent=p.m[1][2];
+  count($("m1v"),p.m[0][1]); count($("m2v"),p.m[1][1]);
+  $("sTrack").style.width=((i+1)/5*100)+"%";
+}
+document.querySelectorAll(".phase").forEach(s=>{
+  new IntersectionObserver((es)=>{for(const e of es)if(e.isIntersecting)setPhase(+e.target.dataset.phase)},{threshold:.5}).observe(s);
+});
+addEventListener("scroll",()=>{
+  const max=document.documentElement.scrollHeight-innerHeight;
+  $("bar").style.width=(max>0?scrollY/max*100:0)+"%";
+  $("bar").style.background=getComputedStyle(document.documentElement).getPropertyValue("--a");
+},{passive:true});
+
+const q=new URLSearchParams(location.search);
+if(q.get("only")){
+  window.__snap=1;
+  document.querySelectorAll(".phase").forEach(s=>{if(s.dataset.id!==q.get("only"))s.style.display="none"});
+  const vis=document.querySelector('.phase[data-id="'+q.get("only")+'"]');
+  if(vis)setTimeout(()=>setPhase(+vis.dataset.phase),60);
+}else setPhase(0);
+</script>
+</body>
+</html>

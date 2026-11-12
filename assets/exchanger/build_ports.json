@@ -1,0 +1,856 @@
+{
+    "commands":  [
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  72,
+                                        "height":  270,
+                                        "base":  [
+                                                     -200,
+                                                     -350,
+                                                     500
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "PortF1",
+                                        "body_name":  "PortF1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  138,
+                                        "height":  28,
+                                        "base":  [
+                                                     -200,
+                                                     -620,
+                                                     500
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "operation":  "join",
+                                        "targets":  [
+                                                        "PortF1"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  62,
+                                        "height":  320,
+                                        "base":  [
+                                                     -200,
+                                                     -655,
+                                                     500
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "operation":  "cut",
+                                        "targets":  [
+                                                        "PortF1"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -98.373,
+                                                     -648,
+                                                     542.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_1",
+                                        "body_name":  "BoltF1_1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -157.905,
+                                                     -648,
+                                                     601.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_2",
+                                        "body_name":  "BoltF1_2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -242.095,
+                                                     -648,
+                                                     601.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_3",
+                                        "body_name":  "BoltF1_3"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -301.627,
+                                                     -648,
+                                                     542.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_4",
+                                        "body_name":  "BoltF1_4"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -301.627,
+                                                     -648,
+                                                     457.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_5",
+                                        "body_name":  "BoltF1_5"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -242.095,
+                                                     -648,
+                                                     398.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_6",
+                                        "body_name":  "BoltF1_6"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -157.905,
+                                                     -648,
+                                                     398.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_7",
+                                        "body_name":  "BoltF1_7"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -98.373,
+                                                     -648,
+                                                     457.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF1_8",
+                                        "body_name":  "BoltF1_8"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  72,
+                                        "height":  270,
+                                        "base":  [
+                                                     -200,
+                                                     -350,
+                                                     1050
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "PortF2",
+                                        "body_name":  "PortF2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  138,
+                                        "height":  28,
+                                        "base":  [
+                                                     -200,
+                                                     -620,
+                                                     1050
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "operation":  "join",
+                                        "targets":  [
+                                                        "PortF2"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  62,
+                                        "height":  320,
+                                        "base":  [
+                                                     -200,
+                                                     -655,
+                                                     1050
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "operation":  "cut",
+                                        "targets":  [
+                                                        "PortF2"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -98.373,
+                                                     -648,
+                                                     1092.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_1",
+                                        "body_name":  "BoltF2_1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -157.905,
+                                                     -648,
+                                                     1151.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_2",
+                                        "body_name":  "BoltF2_2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -242.095,
+                                                     -648,
+                                                     1151.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_3",
+                                        "body_name":  "BoltF2_3"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -301.627,
+                                                     -648,
+                                                     1092.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_4",
+                                        "body_name":  "BoltF2_4"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -301.627,
+                                                     -648,
+                                                     1007.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_5",
+                                        "body_name":  "BoltF2_5"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -242.095,
+                                                     -648,
+                                                     948.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_6",
+                                        "body_name":  "BoltF2_6"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -157.905,
+                                                     -648,
+                                                     948.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_7",
+                                        "body_name":  "BoltF2_7"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     -98.373,
+                                                     -648,
+                                                     1007.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltF2_8",
+                                        "body_name":  "BoltF2_8"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  72,
+                                        "height":  270,
+                                        "base":  [
+                                                     200,
+                                                     350,
+                                                     500
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "PortR1",
+                                        "body_name":  "PortR1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  138,
+                                        "height":  28,
+                                        "base":  [
+                                                     200,
+                                                     620,
+                                                     500
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "operation":  "join",
+                                        "targets":  [
+                                                        "PortR1"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  62,
+                                        "height":  320,
+                                        "base":  [
+                                                     200,
+                                                     655,
+                                                     500
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "operation":  "cut",
+                                        "targets":  [
+                                                        "PortR1"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     301.627,
+                                                     648,
+                                                     542.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_1",
+                                        "body_name":  "BoltR1_1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     242.095,
+                                                     648,
+                                                     601.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_2",
+                                        "body_name":  "BoltR1_2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     157.905,
+                                                     648,
+                                                     601.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_3",
+                                        "body_name":  "BoltR1_3"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     98.373,
+                                                     648,
+                                                     542.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_4",
+                                        "body_name":  "BoltR1_4"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     98.373,
+                                                     648,
+                                                     457.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_5",
+                                        "body_name":  "BoltR1_5"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     157.905,
+                                                     648,
+                                                     398.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_6",
+                                        "body_name":  "BoltR1_6"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     242.095,
+                                                     648,
+                                                     398.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_7",
+                                        "body_name":  "BoltR1_7"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     301.627,
+                                                     648,
+                                                     457.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR1_8",
+                                        "body_name":  "BoltR1_8"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  72,
+                                        "height":  270,
+                                        "base":  [
+                                                     200,
+                                                     350,
+                                                     1050
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "PortR2",
+                                        "body_name":  "PortR2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  138,
+                                        "height":  28,
+                                        "base":  [
+                                                     200,
+                                                     620,
+                                                     1050
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "operation":  "join",
+                                        "targets":  [
+                                                        "PortR2"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  62,
+                                        "height":  320,
+                                        "base":  [
+                                                     200,
+                                                     655,
+                                                     1050
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     -1,
+                                                     0
+                                                 ],
+                                        "operation":  "cut",
+                                        "targets":  [
+                                                        "PortR2"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     301.627,
+                                                     648,
+                                                     1092.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_1",
+                                        "body_name":  "BoltR2_1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     242.095,
+                                                     648,
+                                                     1151.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_2",
+                                        "body_name":  "BoltR2_2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     157.905,
+                                                     648,
+                                                     1151.627
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_3",
+                                        "body_name":  "BoltR2_3"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     98.373,
+                                                     648,
+                                                     1092.095
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_4",
+                                        "body_name":  "BoltR2_4"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     98.373,
+                                                     648,
+                                                     1007.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_5",
+                                        "body_name":  "BoltR2_5"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     157.905,
+                                                     648,
+                                                     948.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_6",
+                                        "body_name":  "BoltR2_6"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     242.095,
+                                                     648,
+                                                     948.373
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_7",
+                                        "body_name":  "BoltR2_7"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  9,
+                                        "height":  16,
+                                        "base":  [
+                                                     301.627,
+                                                     648,
+                                                     1007.905
+                                                 ],
+                                        "axis":  [
+                                                     0,
+                                                     1,
+                                                     0
+                                                 ],
+                                        "name":  "BoltR2_8",
+                                        "body_name":  "BoltR2_8"
+                                    }
+                     }
+                 ]
+}

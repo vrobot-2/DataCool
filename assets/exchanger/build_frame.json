@@ -1,0 +1,486 @@
+{
+    "commands":  [
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  780,
+                                        "width":  90,
+                                        "height":  1350,
+                                        "center":  [
+                                                       0,
+                                                       -305,
+                                                       795
+                                                   ],
+                                        "name":  "FrameFixed",
+                                        "body_name":  "FrameFixed"
+                                    }
+                     },
+                     {
+                         "command":  "solid.fillet",
+                         "params":  {
+                                        "body":  "FrameFixed",
+                                        "edges":  [
+                                                      [
+                                                          390,
+                                                          -305,
+                                                          1470
+                                                      ],
+                                                      [
+                                                          390,
+                                                          -305,
+                                                          120
+                                                      ],
+                                                      [
+                                                          -390,
+                                                          -305,
+                                                          1470
+                                                      ],
+                                                      [
+                                                          -390,
+                                                          -305,
+                                                          120
+                                                      ]
+                                                  ],
+                                        "radius":  45
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  780,
+                                        "width":  90,
+                                        "height":  1350,
+                                        "center":  [
+                                                       0,
+                                                       305,
+                                                       795
+                                                   ],
+                                        "name":  "FrameMoving",
+                                        "body_name":  "FrameMoving"
+                                    }
+                     },
+                     {
+                         "command":  "solid.fillet",
+                         "params":  {
+                                        "body":  "FrameMoving",
+                                        "edges":  [
+                                                      [
+                                                          390,
+                                                          305,
+                                                          1470
+                                                      ],
+                                                      [
+                                                          390,
+                                                          305,
+                                                          120
+                                                      ],
+                                                      [
+                                                          -390,
+                                                          305,
+                                                          1470
+                                                      ],
+                                                      [
+                                                          -390,
+                                                          305,
+                                                          120
+                                                      ]
+                                                  ],
+                                        "radius":  45
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  22,
+                                        "height":  860,
+                                        "base":  [
+                                                     -400,
+                                                     -430,
+                                                     300
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "TieRodL_B",
+                                        "body_name":  "TieRodL_B"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  22,
+                                        "height":  860,
+                                        "base":  [
+                                                     -400,
+                                                     -430,
+                                                     1290
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "TieRodL_T",
+                                        "body_name":  "TieRodL_T"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  22,
+                                        "height":  860,
+                                        "base":  [
+                                                     400,
+                                                     -430,
+                                                     300
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "TieRodR_B",
+                                        "body_name":  "TieRodR_B"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  22,
+                                        "height":  860,
+                                        "base":  [
+                                                     400,
+                                                     -430,
+                                                     1290
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "TieRodR_T",
+                                        "body_name":  "TieRodR_T"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     -400,
+                                                     -447,
+                                                     300
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutL_B_F",
+                                        "body_name":  "NutL_B_F"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     -400,
+                                                     413,
+                                                     300
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutL_B_R",
+                                        "body_name":  "NutL_B_R"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     -400,
+                                                     -447,
+                                                     1290
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutL_T_F",
+                                        "body_name":  "NutL_T_F"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     -400,
+                                                     413,
+                                                     1290
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutL_T_R",
+                                        "body_name":  "NutL_T_R"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     400,
+                                                     -447,
+                                                     300
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutR_B_F",
+                                        "body_name":  "NutR_B_F"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     400,
+                                                     413,
+                                                     300
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutR_B_R",
+                                        "body_name":  "NutR_B_R"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     400,
+                                                     -447,
+                                                     1290
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutR_T_F",
+                                        "body_name":  "NutR_T_F"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  34,
+                                        "height":  34,
+                                        "base":  [
+                                                     400,
+                                                     413,
+                                                     1290
+                                                 ],
+                                        "axis":  "Y",
+                                        "name":  "NutR_T_R",
+                                        "body_name":  "NutR_T_R"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  110,
+                                        "width":  1000,
+                                        "height":  120,
+                                        "center":  [
+                                                       -250,
+                                                       0,
+                                                       60
+                                                   ],
+                                        "name":  "SkidRailL",
+                                        "body_name":  "SkidRailL"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  110,
+                                        "width":  1000,
+                                        "height":  120,
+                                        "center":  [
+                                                       250,
+                                                       0,
+                                                       60
+                                                   ],
+                                        "name":  "SkidRailR",
+                                        "body_name":  "SkidRailR"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  610,
+                                        "width":  80,
+                                        "height":  60,
+                                        "center":  [
+                                                       0,
+                                                       -400,
+                                                       30
+                                                   ],
+                                        "name":  "SkidCrossA",
+                                        "body_name":  "SkidCrossA"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  610,
+                                        "width":  80,
+                                        "height":  60,
+                                        "center":  [
+                                                       0,
+                                                       0,
+                                                       30
+                                                   ],
+                                        "name":  "SkidCrossB",
+                                        "body_name":  "SkidCrossB"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  610,
+                                        "width":  80,
+                                        "height":  60,
+                                        "center":  [
+                                                       0,
+                                                       400,
+                                                       30
+                                                   ],
+                                        "name":  "SkidCrossC",
+                                        "body_name":  "SkidCrossC"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  170,
+                                        "width":  170,
+                                        "height":  24,
+                                        "center":  [
+                                                       -250,
+                                                       -420,
+                                                       12
+                                                   ],
+                                        "name":  "Foot1",
+                                        "body_name":  "Foot1"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  170,
+                                        "width":  170,
+                                        "height":  24,
+                                        "center":  [
+                                                       -250,
+                                                       420,
+                                                       12
+                                                   ],
+                                        "name":  "Foot2",
+                                        "body_name":  "Foot2"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  170,
+                                        "width":  170,
+                                        "height":  24,
+                                        "center":  [
+                                                       250,
+                                                       -420,
+                                                       12
+                                                   ],
+                                        "name":  "Foot3",
+                                        "body_name":  "Foot3"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  170,
+                                        "width":  170,
+                                        "height":  24,
+                                        "center":  [
+                                                       250,
+                                                       420,
+                                                       12
+                                                   ],
+                                        "name":  "Foot4",
+                                        "body_name":  "Foot4"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  40,
+                                        "width":  140,
+                                        "height":  160,
+                                        "center":  [
+                                                       -230,
+                                                       -305,
+                                                       1540
+                                                   ],
+                                        "name":  "LugL",
+                                        "body_name":  "LugL"
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  40,
+                                        "width":  140,
+                                        "height":  160,
+                                        "center":  [
+                                                       230,
+                                                       -305,
+                                                       1540
+                                                   ],
+                                        "name":  "LugR",
+                                        "body_name":  "LugR"
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  30,
+                                        "height":  100,
+                                        "base":  [
+                                                     -280,
+                                                     -305,
+                                                     1560
+                                                 ],
+                                        "axis":  "X",
+                                        "operation":  "cut",
+                                        "targets":  [
+                                                        "LugL"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.cylinder",
+                         "params":  {
+                                        "radius":  30,
+                                        "height":  100,
+                                        "base":  [
+                                                     180,
+                                                     -305,
+                                                     1560
+                                                 ],
+                                        "axis":  "X",
+                                        "operation":  "cut",
+                                        "targets":  [
+                                                        "LugR"
+                                                    ]
+                                    }
+                     },
+                     {
+                         "command":  "solid.box",
+                         "params":  {
+                                        "length":  300,
+                                        "width":  8,
+                                        "height":  110,
+                                        "center":  [
+                                                       0,
+                                                       -354,
+                                                       680
+                                                   ],
+                                        "name":  "Nameplate",
+                                        "body_name":  "Nameplate"
+                                    }
+                     }
+                 ]
+}

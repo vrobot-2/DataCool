@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DataCool — scroll blockout v0</title>
+<style>
+  :root{
+    --ink:#0A0F1A; --paper:#F2F4F8; --muted:rgba(242,244,248,.62);
+    --line:rgba(242,244,248,.16);
+    --sans:ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .brand{position:fixed;left:28px;top:24px;z-index:20;font-weight:700;letter-spacing:.14em;font-size:13px}
+  .brand span{font-family:var(--mono);font-weight:400;color:var(--muted);letter-spacing:0;margin-left:.6em}
+
+  /* ---------- HUD ---------- */
+  .hud{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:20;width:300px;
+       background:rgba(10,15,26,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+       border:1px solid var(--line);border-radius:16px;padding:18px 20px 16px;
+       box-shadow:0 20px 60px rgba(0,0,0,.35);transition:border-color .4s}
+  .hud-top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;
+           letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .hud h2{font-size:15px;line-height:1.25;margin:12px 0 16px;font-weight:600}
+  .hud dl{margin:0;display:grid;gap:10px}
+  .hud dl div{display:flex;justify-content:space-between;align-items:baseline;
+             border-top:1px solid var(--line);padding-top:8px}
+  .hud dt{font-size:11px;color:var(--muted)}
+  .hud dd{margin:0;font-family:var(--mono);font-size:15px}
+  .hud dd i{font-style:normal;font-size:10px;color:var(--muted);margin-left:2px}
+  .hud p{margin:16px 0 0;font-size:12px;line-height:1.55;color:var(--muted)}
+  .hud .pip{display:flex;gap:6px;margin-top:14px}
+  .hud .pip b{height:2px;flex:1;background:var(--line);border-radius:2px;transition:background .3s}
+  .hud .pip b.on{background:var(--a,#7C8BFF)}
+
+  /* ---------- sections ---------- */
+  main{position:relative}
+  .panel{position:relative;min-height:100vh;display:flex;align-items:center;
+         padding:120px 380px 100px 64px;background:var(--bg,#0A0F1A);transition:background .5s;overflow:hidden}
+  .panel:after{content:"";position:absolute;inset:0;pointer-events:none;
+               background:radial-gradient(120% 90% at 15% 0%,var(--a,#7C8BFF),transparent 55%);
+               opacity:.12}
+  .grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+        gap:56px;align-items:center;width:100%;max-width:1240px}
+  .copy .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+                 color:var(--a);margin:0 0 14px}
+  .copy h1,.copy h2{margin:0;font-size:clamp(34px,4.4vw,64px);line-height:.98;letter-spacing:-.03em;font-weight:650}
+  .copy h2{font-size:clamp(30px,3.4vw,50px)}
+  .copy p.lede{margin:18px 0 0;font-size:clamp(15px,1.2vw,18px);line-height:1.6;color:var(--muted);max-width:38ch}
+  .notes{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:8px;font-size:13px;color:var(--muted)}
+  .notes li{display:flex;gap:10px;align-items:baseline}
+  .notes li:before{content:"";width:6px;height:6px;background:var(--a);flex:none;transform:rotate(45deg);margin-top:2px}
+
+  /* ---------- visual placeholder ---------- */
+  .visual{position:relative;aspect-ratio:4/3;border:1px dashed rgba(242,244,248,.38);
+          border-radius:18px;display:flex;flex-direction:column;justify-content:space-between;
+          padding:22px;background:linear-gradient(150deg,rgba(255,255,255,.07),rgba(0,0,0,.18));
+          overflow:hidden}
+  .visual .num{font-family:var(--mono);font-size:clamp(64px,9vw,140px);line-height:.8;
+               font-weight:300;color:rgba(242,244,248,.9);letter-spacing:-.05em}
+  .visual .tag{font-family:var(--mono);font-size:10px;line-height:1.6;letter-spacing:.08em;
+               text-transform:uppercase;color:rgba(242,244,248,.55);align-self:flex-start}
+  .visual .glow{position:absolute;inset:auto -20% -35% -20%;height:70%;
+                background:radial-gradient(60% 60% at 50% 50%,var(--a),transparent 70%);
+                filter:blur(30px);opacity:.55}
+
+  /* ---------- intro ---------- */
+  #intro{padding-right:380px}
+  #intro .grid{grid-template-columns:1fr}
+  #intro .hero-vis{aspect-ratio:21/9;margin-top:38px}
+  #intro .hero-vis .num{font-size:clamp(40px,5vw,72px);letter-spacing:-.04em;font-weight:400}
+  .hint{display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-family:var(--mono);
+        font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .hint i{width:1px;height:26px;background:var(--line);display:block;position:relative;overflow:hidden}
+  .hint i:after{content:"";position:absolute;top:-26px;left:0;width:1px;height:26px;background:var(--a,#7C8BFF);
+                animation:drip 1.8s cubic-bezier(.6,0,.4,1) infinite}
+  @keyframes drip{to{top:26px}}
+
+  /* ---------- ending ---------- */
+  #end .grid{grid-template-columns:1fr}
+  .cta{display:inline-block;margin-top:30px;padding:14px 22px;border-radius:999px;
+       background:var(--paper);color:var(--ink);font-weight:600;font-size:13px;text-decoration:none}
+  .foot{margin-top:60px;display:flex;gap:28px;flex-wrap:wrap;font-family:var(--mono);
+        font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,244,248,.4)}
+
+  /* ---------- progress ---------- */
+  .bar{position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(242,244,248,.1);z-index:30}
+  .bar i{display:block;height:100%;width:0;background:var(--a,#7C8BFF);transition:background .3s}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:980px){
+    .panel,#intro{padding:110px 24px 150px}
+    .grid{grid-template-columns:1fr;gap:34px}
+    .visual{aspect-ratio:16/10;order:-1}
+    .hud{left:16px;right:16px;top:auto;bottom:18px;width:auto;transform:none;padding:14px 16px}
+    .hud p,.hud .pip{display:none}
+    .hud dl{grid-template-columns:1fr 1fr;gap:8px}
+    .hud dl div{flex-direction:column;align-items:flex-start;gap:2px}
+    .brand{left:20px;top:18px;font-size:11px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="brand">DATACOOL <span>blockout / v0</span></div>
+
+<aside class="hud" id="hud" style="--a:#7C8BFF">
+  <div class="hud-top"><span>Core metrics</span><span id="phaseNo">00 / 04</span></div>
+  <h2 id="phaseTitle">System overview</h2>
+  <dl>
+    <div><dt id="m1l">Rack temp</dt><dd><b id="m1v">24</b><i id="m1s">°C</i></dd></div>
+    <div><dt id="m2l">Heat recovered</dt><dd><b id="m2v">0</b><i id="m2s">%</i></dd></div>
+  </dl>
+  <p id="callout">Four stages, one continuous loop. Scroll to follow the heat.</p>
+  <div class="pip" id="pip"><b class="on"></b><b></b><b></b><b></b><b></b></div>
+</aside>
+
+<main>
+
+  <section class="panel" id="intro" data-phase="0" style="--a:#7C8BFF;--bg:#0A0F1A">
+    <div class="grid">
+      <div class="copy">
+        <p class="eyebrow">DataCool · thermal recovery</p>
+        <h1>Every rack is a radiator.<br>We stopped calling it waste.</h1>
+        <p class="lede">A datacenter rejects enough heat to warm a neighbourhood. DataCool captures it at the die and hands it to the city.</p>
+        <a class="hint" href="#p1"><i></i> Scroll the loop</a>
+      </div>
+      <div class="visual hero-vis">
+        <span class="num">Chip → city</span>
+        <span class="tag">Blockout · 16:9 hero · one continuous camera move · no footage</span>
+        <span class="glow"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="p1" data-phase="1" style="--a:#FF6B57;--bg:#341310">
+    <div class="grid">
+      <div class="copy">
+        <p class="eyebrow">Phase 01 / capture</p>
+        <h2>Direct-to-chip capture</h2>
+        <p class="lede">Coolant runs across the hottest silicon, not the room. Heat never reaches the air, so the rack never throttles.</p>
+        <ul class="notes">
+          <li>Micro-channel cold plates on CPU / GPU packages</li>
+          <li>Rack delta 85 °C → 32 °C at the manifold</li>
+          <li>No room-scale air conditioning load</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <span class="num">01</span>
+        <span class="tag">Visual · macro rack interior · crimson emissive dies · fluid shimmer</span>
+        <span class="glow"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="p2" data-phase="2" style="--a:#8FA2FF;--bg:#141A5E">
+    <div class="grid">
+      <div class="copy">
+        <p class="eyebrow">Phase 02 / transport</p>
+        <h2>High-velocity extraction</h2>
+        <p class="lede">Sealed conduits pull the load away at 4.2 litres a second. Nothing evaporates, and nothing touches the electronics.</p>
+        <ul class="notes">
+          <li>Closed-loop manifold, zero evaporation</li>
+          <li>Particle flow fields through translucent pipe</li>
+          <li>Indigo at inlet, crimson under load</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <span class="num">02</span>
+        <span class="tag">Visual · waveguide manifold · particle streams · slow dolly back</span>
+        <span class="glow"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="p3" data-phase="3" style="--a:#FFC266;--bg:#4A2B0C">
+    <div class="grid">
+      <div class="copy">
+        <p class="eyebrow">Phase 03 / exchange</p>
+        <h2>The exchange</h2>
+        <p class="lede">Two loops share a wall and nothing else. Ninety-six percent of the heat crosses over; zero fluid crosses with it.</p>
+        <ul class="notes">
+          <li>Counter-flow plate core, 95 %+ effectiveness</li>
+          <li>Crimson → blue on the process side</li>
+          <li>Municipal water leaves warm amber</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <span class="num">03</span>
+        <span class="tag">Visual · heat exchanger macro · dual-loop colour contrast · no mixing</span>
+        <span class="glow"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="p4" data-phase="4" style="--a:#FFB45C;--bg:#1B1420">
+    <div class="grid">
+      <div class="copy">
+        <p class="eyebrow">Phase 04 / reuse</p>
+        <h2>District energy</h2>
+        <p class="lede">The camera rises through the slab. Warm mains fan out under the street and light up the buildings above.</p>
+        <ul class="notes">
+          <li>Subterranean mains glow amber outward</li>
+          <li>Housing, schools and civic centres on the loop</li>
+          <li>Once-wasted heat becomes zero-carbon warmth</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <span class="num">04</span>
+        <span class="tag">Visual · dusk skyline · amber conduits · pull-out to city scale</span>
+        <span class="glow"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="end" data-phase="4" style="--a:#FFB45C;--bg:#0A0F1A">
+    <div class="grid">
+      <div class="copy">
+        <p class="eyebrow">The loop closes</p>
+        <h2>85 °C at the die.<br>A warm apartment at dusk.</h2>
+        <p class="lede">This blockout is layout, pace and copy only. No 3D, no assets — just the story skeleton the build will hang on.</p>
+        <a class="cta" href="#intro">Replay the scroll</a>
+        <div class="foot">
+          <span>Next · camera pass</span><span>Next · look-dev</span><span>Next · telemetry</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="bar"><i id="bar"></i></div>
+
+<script>
+const phases = {
+  0:{no:"00 / 04", title:"System overview", callout:"Four stages, one continuous loop. Scroll to follow the heat.",
+     m:[["Rack temp",24,"°C"],["Heat recovered",0,"%"]]},
+  1:{no:"01 / 04", title:"Direct-to-chip capture", callout:"95 %+ of datacenter thermal energy is recovered at the source, not the room.",
+     m:[["Rack temp",85,"°C"],["Heat recovered",62,"%"]]},
+  2:{no:"02 / 04", title:"High-velocity extraction", callout:"Sealed, zero-evaporation transport at 4.2 L/s with total isolation from electronics.",
+     m:[["Fluid velocity",4.2,"L/s"],["Evaporation",0,"%"]]},
+  3:{no:"03 / 04", title:"The exchange", callout:"96.4 % of the heat crosses the plate wall. 0 % of the fluid does.",
+     m:[["Heat recovered",96.4,"%"],["Cross-mixing",0,"%"]]},
+  4:{no:"04 / 04", title:"District energy", callout:"Captured compute heat becomes municipal warmth — 1,420 tonnes of CO₂ avoided a year.",
+     m:[["CO₂ offset",1420,"t/yr"],["Homes heated",12000,""]]}
+};
+
+const $ = id => document.getElementById(id);
+const hud = $("hud"), pips = [...$("pip").children];
+let active = -1, raf = 0;
+
+function count(el, to, suffix) {
+  const from = parseFloat(el.textContent.replace(/[^\d.]/g, "")) || 0;
+  const start = performance.now(), dur = 900,
+        dec = String(to).includes(".") ? 1 : 0,
+        ease = t => 1 - Math.pow(1 - t, 3);
+  cancelAnimationFrame(raf);
+  const step = now => {
+    const t = Math.min(1, (now - start) / dur);
+    el.textContent = (from + (to - from) * ease(t)).toFixed(dec);
+    if (t < 1) raf = requestAnimationFrame(step);
+  };
+  raf = requestAnimationFrame(step);
+  if (suffix !== undefined) el.nextElementSibling.textContent = suffix;
+}
+
+function setPhase(i) {
+  if (i === active) return;
+  active = i;
+  const p = phases[i];
+  hud.style.setProperty("--a", getComputedStyle(document.getElementById(i ? "p" + i : "intro")).getPropertyValue("--a"));
+  document.documentElement.style.setProperty("--a", hud.style.getPropertyValue("--a"));
+  $("phaseNo").textContent = p.no;
+  $("phaseTitle").textContent = p.title;
+  $("callout").textContent = p.callout;
+  $("m1l").textContent = p.m[0][0];
+  $("m2l").textContent = p.m[1][0];
+  count($("m1v"), p.m[0][1], p.m[0][2]);
+  count($("m2v"), p.m[1][1], p.m[1][2]);
+  pips.forEach((b, k) => b.classList.toggle("on", k === i));
+}
+
+const seen = new Set();
+const io = new IntersectionObserver(entries => {
+  for (const e of entries) {
+    if (e.isIntersecting && !seen.has(e.target)) { /* reserved for reveal */ }
+    if (e.isIntersecting) setPhase(+e.target.dataset.phase);
+  }
+}, { threshold: 0.5 });
+document.querySelectorAll(".panel").forEach(s => io.observe(s));
+
+addEventListener("scroll", () => {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  $("bar").style.width = (max > 0 ? scrollY / max * 100 : 0) + "%";
+  $("bar").style.background = hud.style.getPropertyValue("--a") || "#7C8BFF";
+}, { passive: true });
+
+setPhase(0);
+</script>
+</body>
+</html>

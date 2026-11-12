@@ -1,0 +1,122 @@
+/* Preloader: loading -> solidify (logo fills + accent flash) -> dissolve (fade/blur/scale) -> gone.
+   Overrides the legacy rules under "preloader" in styles.css (clip-path wipe, logo-fill keyframe). */
+
+/* ---- root: opacity dissolve instead of the clip-path wipe ---- */
+div.preloader {
+  clip-path: none !important;
+  opacity: 1;
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+div.preloader.is-dissolve {
+  clip-path: none !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ---- content: gentle blur + scale-up while it fades ---- */
+div.preloader .preloader-inner {
+  opacity: 1;
+  translate: none;
+  scale: 1;
+  filter: blur(0);
+  transition: opacity 0.7s ease, scale 0.9s var(--ease), filter 0.9s var(--ease) !important;
+  will-change: opacity, scale, filter;
+}
+div.preloader.is-dissolve .preloader-inner {
+  opacity: 0;
+  translate: none;
+  scale: 1.09;
+  filter: blur(10px);
+}
+
+/* ---- bar: brightens when it completes ---- */
+div.preloader .preloader-bar i {
+  transition: box-shadow 0.4s ease, background-color 0.4s ease;
+}
+div.preloader.is-solidify .preloader-bar i,
+div.preloader.is-dissolve .preloader-bar i {
+  box-shadow: 0 0 22px 2px var(--a);
+}
+
+/* ---- logo: outline traces + breathes while loading ---- */
+div.preloader .preloader-logo {
+  animation: pl-breathe 2.4s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  overflow: visible;
+}
+svg.logo-animated .logo-path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  stroke-width: 2;
+  /* fill is driven by --pl-p (progress 0..1, set by Preloader) at a low level until solid */
+  fill: currentColor;
+  fill-opacity: calc(var(--pl-p, 0) * 0.12);
+  /* the draw runs once (never restarts); the trace pulse loops */
+  animation:
+    logo-draw 1.7s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    pl-trace 1.6s ease-in-out 1.7s infinite;
+}
+@keyframes pl-trace {
+  50% {
+    stroke-opacity: 0.45;
+  }
+}
+@keyframes pl-breathe {
+  50% {
+    filter: drop-shadow(0 0 7px color-mix(in srgb, var(--a) 45%, transparent));
+  }
+}
+
+/* ---- solidify: fill in (state driven), flash + pop ---- */
+svg.logo-animated.is-solid .logo-path {
+  fill-opacity: 1;
+  stroke-width: 0;
+  transition:
+    fill-opacity 0.45s ease-out 0.08s,
+    stroke-width 0.5s ease-out 0.1s;
+}
+div.preloader .preloader-logo.is-solid {
+  animation: pl-solidify 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes pl-solidify {
+  0% {
+    scale: 1;
+    color: var(--fg);
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  30% {
+    scale: 1.07;
+    color: color-mix(in srgb, var(--a) 55%, #fff);
+    filter: drop-shadow(0 0 26px var(--a)) drop-shadow(0 0 8px var(--a));
+  }
+  100% {
+    scale: 1.02;
+    color: var(--fg);
+    filter: drop-shadow(0 0 10px color-mix(in srgb, var(--a) 40%, transparent));
+  }
+}
+
+/* ---- reduced motion: instant solid, plain 300ms fade ---- */
+@media (prefers-reduced-motion: reduce) {
+  div.preloader {
+    transition: opacity 0.3s linear !important;
+  }
+  div.preloader .preloader-inner,
+  div.preloader.is-dissolve .preloader-inner {
+    transition: none !important;
+    scale: 1;
+    filter: none;
+    translate: none;
+  }
+  div.preloader .preloader-logo,
+  div.preloader .preloader-logo.is-solid,
+  svg.logo-animated .logo-path {
+    animation: none !important;
+  }
+  svg.logo-animated .logo-path {
+    stroke-dashoffset: 0;
+  }
+  svg.logo-animated.is-solid .logo-path {
+    transition: none !important;
+  }
+}

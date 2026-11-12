@@ -1,0 +1,730 @@
+{
+  "version": 2,
+  "description": "Enhanced DataCool scene metadata: instances, network, waypoints, bounds",
+  "units": "metres",
+  "nodes": {
+    "rack": "rack__baked",
+    "exchanger": "exchanger__baked",
+    "district": "district__baked",
+    "loops": "loops__baked",
+    "district_ground": "district__Ground",
+    "environment_ground": "environment__Ground"
+  },
+  "hall": {
+    "description": "Data hall with instanced racks",
+    "rackInstances": [
+      {
+        "id": "rack_01",
+        "position": [
+          -4.8,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          3.14159
+        ]
+      },
+      {
+        "id": "rack_02",
+        "position": [
+          -3.6,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          3.14159
+        ]
+      },
+      {
+        "id": "rack_03",
+        "position": [
+          -2.4,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          3.14159
+        ]
+      },
+      {
+        "id": "rack_04",
+        "position": [
+          -1.2,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          3.14159
+        ]
+      },
+      {
+        "id": "rack_05",
+        "position": [
+          0,
+          1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          3.14159
+        ]
+      },
+      {
+        "id": "rack_06",
+        "position": [
+          -4.8,
+          -1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "rack_07",
+        "position": [
+          -3.6,
+          -1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "rack_08",
+        "position": [
+          -2.4,
+          -1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "rack_09",
+        "position": [
+          -1.2,
+          -1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "id": "rack_10",
+        "position": [
+          0,
+          -1.5,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "bounds": {
+      "min": [
+        -5.4,
+        -2.5,
+        0
+      ],
+      "max": [
+        0.6,
+        2.5,
+        2.2
+      ]
+    }
+  },
+  "plant": {
+    "description": "Plant room with exchanger, pumps, headers",
+    "position": [
+      -30,
+      30,
+      0
+    ],
+    "size": [
+      30,
+      30,
+      15
+    ]
+  },
+  "network": {
+    "description": "Heat network polylines for flow animation",
+    "polylines": [
+      {
+        "id": "trunk_x",
+        "points": [
+          {
+            "x": -140,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": -100,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": -50,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 50,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 100,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 140,
+            "y": 0,
+            "z": -6
+          }
+        ],
+        "type": "trunk"
+      },
+      {
+        "id": "trunk_y",
+        "points": [
+          {
+            "x": 0,
+            "y": -140,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": -100,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": -50,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": 50,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": 100,
+            "z": -6
+          },
+          {
+            "x": 0,
+            "y": 140,
+            "z": -6
+          }
+        ],
+        "type": "trunk"
+      },
+      {
+        "id": "branch_01",
+        "points": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 30,
+            "y": 30,
+            "z": -6
+          },
+          {
+            "x": 60,
+            "y": 60,
+            "z": -3
+          },
+          {
+            "x": 60,
+            "y": 60,
+            "z": 0
+          }
+        ],
+        "type": "branch",
+        "distanceM": 85
+      },
+      {
+        "id": "branch_02",
+        "points": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": 30,
+            "y": -30,
+            "z": -6
+          },
+          {
+            "x": 60,
+            "y": -60,
+            "z": -3
+          },
+          {
+            "x": 60,
+            "y": -60,
+            "z": 0
+          }
+        ],
+        "type": "branch",
+        "distanceM": 85
+      },
+      {
+        "id": "branch_03",
+        "points": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": -30,
+            "y": 30,
+            "z": -6
+          },
+          {
+            "x": -60,
+            "y": 60,
+            "z": -3
+          },
+          {
+            "x": -60,
+            "y": 60,
+            "z": 0
+          }
+        ],
+        "type": "branch",
+        "distanceM": 85
+      },
+      {
+        "id": "branch_04",
+        "points": [
+          {
+            "x": 0,
+            "y": 0,
+            "z": -6
+          },
+          {
+            "x": -30,
+            "y": -30,
+            "z": -6
+          },
+          {
+            "x": -60,
+            "y": -60,
+            "z": -3
+          },
+          {
+            "x": -60,
+            "y": -60,
+            "z": 0
+          }
+        ],
+        "type": "branch",
+        "distanceM": 85
+      }
+    ]
+  },
+  "buildings": [
+    {
+      "id": "bldg_001",
+      "archetype": "low_rise",
+      "position": [
+        -80,
+        -80,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 113
+    },
+    {
+      "id": "bldg_002",
+      "archetype": "mid_rise",
+      "position": [
+        -80,
+        80,
+        0
+      ],
+      "rotation": 1.57,
+      "distanceAlongNetwork": 113
+    },
+    {
+      "id": "bldg_003",
+      "archetype": "low_rise",
+      "position": [
+        80,
+        -80,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 113
+    },
+    {
+      "id": "bldg_004",
+      "archetype": "tower",
+      "position": [
+        80,
+        80,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 113
+    },
+    {
+      "id": "bldg_005",
+      "archetype": "low_rise",
+      "position": [
+        -120,
+        0,
+        0
+      ],
+      "rotation": 1.57,
+      "distanceAlongNetwork": 120
+    },
+    {
+      "id": "bldg_006",
+      "archetype": "mid_rise",
+      "position": [
+        120,
+        0,
+        0
+      ],
+      "rotation": 1.57,
+      "distanceAlongNetwork": 120
+    },
+    {
+      "id": "bldg_007",
+      "archetype": "low_rise",
+      "position": [
+        0,
+        -120,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 120
+    },
+    {
+      "id": "bldg_008",
+      "archetype": "low_rise",
+      "position": [
+        0,
+        120,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 120
+    },
+    {
+      "id": "bldg_009",
+      "archetype": "school",
+      "position": [
+        -140,
+        -80,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 160
+    },
+    {
+      "id": "bldg_010",
+      "archetype": "hospital",
+      "position": [
+        140,
+        80,
+        0
+      ],
+      "rotation": 0,
+      "distanceAlongNetwork": 160
+    }
+  ],
+  "waypoints": {
+    "description": "Named camera waypoints for spline rig",
+    "points": [
+      {
+        "id": "establish",
+        "position": [
+          4.4,
+          -3.9,
+          1.6
+        ],
+        "target": [
+          0,
+          0,
+          0.9
+        ],
+        "fov": 34
+      },
+      {
+        "id": "rack_macro",
+        "position": [
+          -3.2,
+          3.55,
+          1.35
+        ],
+        "target": [
+          -3.2,
+          2.2,
+          1.2
+        ],
+        "fov": 34
+      },
+      {
+        "id": "manifold",
+        "position": [
+          -3.2,
+          -2.35,
+          1.35
+        ],
+        "target": [
+          -3.2,
+          1.5,
+          1.15
+        ],
+        "fov": 34
+      },
+      {
+        "id": "hall_entry",
+        "position": [
+          -2.4,
+          -6,
+          1.8
+        ],
+        "target": [
+          -2.4,
+          0,
+          1.1
+        ],
+        "fov": 34
+      },
+      {
+        "id": "hall_aisle",
+        "position": [
+          -2.4,
+          -1,
+          1.2
+        ],
+        "target": [
+          -2.4,
+          1.5,
+          1.1
+        ],
+        "fov": 34
+      },
+      {
+        "id": "exchanger",
+        "position": [
+          1.5,
+          -2.35,
+          2.2
+        ],
+        "target": [
+          0,
+          0,
+          0.85
+        ],
+        "fov": 34
+      },
+      {
+        "id": "plant_orbit",
+        "position": [
+          -28,
+          22,
+          3.5
+        ],
+        "target": [
+          -30,
+          30,
+          1.5
+        ],
+        "fov": 34
+      },
+      {
+        "id": "pipe_follow_start",
+        "position": [
+          -29,
+          32,
+          1.5
+        ],
+        "target": [
+          -29,
+          33,
+          1.5
+        ],
+        "fov": 34
+      },
+      {
+        "id": "pipe_follow_mid",
+        "position": [
+          -25,
+          35,
+          -2
+        ],
+        "target": [
+          -24,
+          35,
+          -2
+        ],
+        "fov": 34
+      },
+      {
+        "id": "underground",
+        "position": [
+          0,
+          10,
+          -3
+        ],
+        "target": [
+          0,
+          0,
+          -6
+        ],
+        "fov": 34
+      },
+      {
+        "id": "city_emerge",
+        "position": [
+          10,
+          10,
+          2
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fov": 34
+      },
+      {
+        "id": "city_rise",
+        "position": [
+          90,
+          -80,
+          110
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fov": 34
+      },
+      {
+        "id": "city_wide",
+        "position": [
+          120,
+          -100,
+          150
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "fov": 34
+      }
+    ]
+  },
+  "bounds": {
+    "description": "Scene bounding boxes for culling",
+    "rack": {
+      "min": [
+        -3.5,
+        1.5,
+        0
+      ],
+      "max": [
+        -2.9,
+        2.5,
+        2.2
+      ]
+    },
+    "exchanger": {
+      "min": [
+        -0.434,
+        -0.664,
+        0
+      ],
+      "max": [
+        0.434,
+        0.664,
+        1.62
+      ]
+    },
+    "hall": {
+      "min": [
+        -5.4,
+        -2.5,
+        0
+      ],
+      "max": [
+        0.6,
+        2.5,
+        2.2
+      ]
+    },
+    "plant": {
+      "min": [
+        -45,
+        15,
+        0
+      ],
+      "max": [
+        -15,
+        45,
+        15
+      ]
+    },
+    "district": {
+      "min": [
+        -230,
+        -230,
+        -7
+      ],
+      "max": [
+        230,
+        230,
+        75
+      ]
+    }
+  }
+}

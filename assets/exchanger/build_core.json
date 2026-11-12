@@ -1,0 +1,13 @@
+{
+  "commands": [
+    {"command":"sketch.create","params":{"plane":"XZ","offset":-253,"name":"PlateProfile"}},
+    {"command":"sketch.rectangle.rounded","params":{"p0":[-365,-1430],"p1":[365,-160],"radius":25}},
+    {"command":"sketch.circle.center","params":{"center":[-200,-500],"diameter":120}},
+    {"command":"sketch.circle.center","params":{"center":[200,-500],"diameter":120}},
+    {"command":"sketch.circle.center","params":{"center":[-200,-1050],"diameter":120}},
+    {"command":"sketch.circle.center","params":{"center":[200,-1050],"diameter":120}},
+    {"command":"sketch.finish","params":{}},
+    {"command":"solid.extrude","params":{"distance":5.6,"direction":"positive","operation":"new","name":"Plate01","body_name":"Plate01"}},
+    {"command":"solid.pattern.rectangular","params":{"features":["Plate01"],"dir1":[0,1,0],"count1":72,"spacing1":7.1}}
+  ]
+}

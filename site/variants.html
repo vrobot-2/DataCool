@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DataCool — UI directions</title>
+<style>
+  :root{--bg:#0B0E13;--fg:#EDEFF3;--mute:rgba(237,239,243,.55);
+        --line:rgba(237,239,243,.14);--sans:ui-sans-serif,system-ui,"Segoe UI",sans-serif;
+        --mono:ui-monospace,"Cascadia Mono",Consolas,monospace}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1560px;margin:0 auto;padding:56px 32px 80px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
+         border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:36px}
+  .mark{font-weight:700;letter-spacing:.18em;font-size:13px}
+  h1{margin:18px 0 0;font-size:clamp(28px,3vw,44px);letter-spacing:-.035em;font-weight:600}
+  header p{margin:10px 0 0;color:var(--mute);font-size:14px;max-width:60ch;line-height:1.6}
+  header .note{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--mute);
+               text-transform:uppercase;text-align:right;line-height:1.9;white-space:nowrap}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+  .card{display:flex;flex-direction:column;border:1px solid var(--line);background:#0E1218;
+        text-decoration:none;color:inherit;transition:border-color .25s,transform .25s}
+  .card:hover{border-color:rgba(237,239,243,.42);transform:translateY(-3px)}
+  .thumb{position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:#111}
+  .thumb img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .thumb span{position:absolute;left:12px;top:12px;font-family:var(--mono);font-size:8px;
+              letter-spacing:.16em;text-transform:uppercase;background:rgba(7,8,11,.72);
+              border:1px solid rgba(255,255,255,.16);padding:5px 8px;border-radius:2px}
+  .body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  .card h2{margin:0;font-size:20px;letter-spacing:-.02em;font-weight:600}
+  .card .tag{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+  .fonts{display:flex;gap:6px;flex-wrap:wrap}
+  .fonts b{font-family:var(--mono);font-size:8.5px;font-weight:400;letter-spacing:.08em;
+           border:1px solid var(--line);padding:4px 7px;color:var(--mute)}
+  .card p{margin:0;font-size:13px;line-height:1.6;color:var(--mute)}
+  .card ul{margin:2px 0 0;padding:0 0 0 14px;font-size:12.5px;line-height:1.75;color:rgba(237,239,243,.72)}
+  .open{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);
+        display:flex;justify-content:space-between;align-items:center;
+        font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+  .open em{font-style:normal;color:var(--mute)}
+  .swatches{display:flex;gap:5px}
+  .swatches i{width:14px;height:14px;display:block;border-radius:50%}
+  .rec{border-color:rgba(124,139,255,.55)}
+  .rec .thumb:after{content:"Recommended";position:absolute;right:12px;top:12px;
+        font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;
+        background:#7C8BFF;color:#0B0E13;padding:5px 8px;border-radius:2px}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);
+         font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--mute);
+         text-transform:uppercase;display:flex;justify-content:space-between;gap:16px}
+  @media (max-width:1080px){.grid{grid-template-columns:1fr 1fr}}
+  @media (max-width:720px){
+    .wrap{padding:32px 16px 56px}
+    header{flex-direction:column;align-items:flex-start}
+    header .note{text-align:left}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="mark">DATACOOL</div>
+      <h1>Three UI directions</h1>
+      <p>Same copy, same five phases, same scroll behaviour — only the type system, layout shell and HUD change. Open each one full-page and scroll it before choosing.</p>
+    </div>
+    <div class="note">
+      Blockout v1 · 2026<br>
+      3 directions · 1600 × 1000
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <a class="card rec" href="variant-spec.html">
+      <div class="thumb">
+        <span>01 / Spec sheet</span>
+        <img src="_m_spec_intro.png" alt="Spec sheet direction">
+      </div>
+      <div class="body">
+        <div class="row"><h2>Spec Sheet</h2><span class="tag">Industrial</span></div>
+        <div class="fonts"><b>Archivo</b><b>IBM Plex Mono</b></div>
+        <p>An engineering datasheet for a machine. Graphite base, extended grotesque headlines, a persistent bottom spec strip replacing the floating HUD card.</p>
+        <ul>
+          <li>12-column grid, copy 1–5, visual 7–12</li>
+          <li>Bottom strip: phase / metrics / section</li>
+          <li>Accent only in hairlines and data</li>
+        </ul>
+        <div class="open"><em>Open direction</em><span class="swatches"><i style="background:#FF6B57"></i><i style="background:#8FA2FF"></i><i style="background:#FFC266"></i><i style="background:#FFB45C"></i></span></div>
+      </div>
+    </a>
+
+    <a class="card" href="variant-editorial.html">
+      <div class="thumb">
+        <span>02 / Editorial</span>
+        <img src="_m_editorial_intro.png" alt="Editorial direction">
+      </div>
+      <div class="body">
+        <div class="row"><h2>Editorial Warmth</h2><span class="tag">Magazine</span></div>
+        <div class="fonts"><b>Instrument Serif</b><b>Instrument Sans</b><b>Plex Mono</b></div>
+        <p>Bone paper instead of dark UI. Large serif headlines, one saturated colour field per phase, metrics as an editorial caption rather than a widget.</p>
+        <ul>
+          <li>Light base, full-bleed colour blocks</li>
+          <li>Fig. 03 captions under each visual</li>
+          <li>No fixed HUD — telemetry inline</li>
+        </ul>
+        <div class="open"><em>Open direction</em><span class="swatches"><i style="background:#8C2B1E"></i><i style="background:#1F2A6E"></i><i style="background:#9A6410"></i><i style="background:#7A3E19"></i></span></div>
+      </div>
+    </a>
+
+    <a class="card" href="variant-control.html">
+      <div class="thumb">
+        <span>03 / Control room</span>
+        <img src="_m_control_intro.png" alt="Control room direction">
+      </div>
+      <div class="body">
+        <div class="row"><h2>Control Room</h2><span class="tag">Instrumentation</span></div>
+        <div class="fonts"><b>Space Grotesk</b><b>JetBrains Mono</b></div>
+        <p>Near-black instrumentation. Fixed phase rail on the left, live readouts top-right, outlined numerals bleeding off the frame. The most system-like of the three.</p>
+        <ul>
+          <li>Fixed left rail with active phase</li>
+          <li>Readouts sit outside the content flow</li>
+          <li>Accent used sparingly as status</li>
+        </ul>
+        <div class="open"><em>Open direction</em><span class="swatches"><i style="background:#FF6B57"></i><i style="background:#8FA2FF"></i><i style="background:#FFC266"></i><i style="background:#FFB45C"></i></span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <footer>
+    <span>Mockups use CDN fonts — self-host with Fontsource in production</span>
+    <span>Original blockout: index.html</span>
+  </footer>
+
+</div>
+</body>
+</html>

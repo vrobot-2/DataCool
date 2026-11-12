@@ -1,0 +1,3257 @@
+{
+ "commands": [
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400000,
+    "width": 400000,
+    "height": 400,
+    "center": [
+     0,
+     0,
+     -200.0
+    ],
+    "name": "Plinth",
+    "body_name": "Plinth"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400200,
+    "width": 400200,
+    "height": 800,
+    "center": [
+     0,
+     0,
+     -800
+    ],
+    "name": "EarthTopsoil",
+    "body_name": "EarthTopsoil"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400200,
+    "width": 400200,
+    "height": 2000,
+    "center": [
+     0,
+     0,
+     -2200
+    ],
+    "name": "EarthClay",
+    "body_name": "EarthClay"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400200,
+    "width": 400200,
+    "height": 4000,
+    "center": [
+     0,
+     0,
+     -5200
+    ],
+    "name": "EarthGravel",
+    "body_name": "EarthGravel"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 18000,
+    "width": 14000,
+    "height": 15000,
+    "center": [
+     0,
+     0,
+     7500
+    ],
+    "name": "ArchLowRise",
+    "body_name": "ArchLowRise"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 20000,
+    "width": 16000,
+    "height": 24000,
+    "center": [
+     0,
+     0,
+     12000
+    ],
+    "name": "ArchMidRise",
+    "body_name": "ArchMidRise"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16000,
+    "width": 16000,
+    "height": 32000,
+    "center": [
+     0,
+     0,
+     16000
+    ],
+    "name": "TowerBase",
+    "body_name": "ArchTower"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 12000,
+    "width": 12000,
+    "height": 16000,
+    "center": [
+     0,
+     0,
+     40000
+    ],
+    "name": "TowerTop",
+    "body_name": "ArchTower",
+    "operation": "join",
+    "targets": [
+     "ArchTower"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40000,
+    "width": 14000,
+    "height": 8000,
+    "center": [
+     0,
+     0,
+     4000
+    ],
+    "name": "SchoolWingA",
+    "body_name": "ArchSchool"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14000,
+    "width": 26000,
+    "height": 8000,
+    "center": [
+     13000,
+     6000,
+     4000
+    ],
+    "name": "SchoolWingB",
+    "body_name": "ArchSchool",
+    "operation": "join",
+    "targets": [
+     "ArchSchool"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30000,
+    "width": 30000,
+    "height": 20000,
+    "center": [
+     0,
+     0,
+     10000
+    ],
+    "name": "HospitalCtr",
+    "body_name": "ArchHospital"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 12000,
+    "width": 40000,
+    "height": 20000,
+    "center": [
+     0,
+     0,
+     10000
+    ],
+    "name": "HospitalNS",
+    "body_name": "ArchHospital",
+    "operation": "join",
+    "targets": [
+     "ArchHospital"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 40000,
+    "width": 12000,
+    "height": 20000,
+    "center": [
+     0,
+     0,
+     10000
+    ],
+    "name": "HospitalEW",
+    "body_name": "ArchHospital",
+    "operation": "join",
+    "targets": [
+     "ArchHospital"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 36000,
+    "width": 24000,
+    "height": 12000,
+    "center": [
+     0,
+     0,
+     6000
+    ],
+    "name": "CivicBase",
+    "body_name": "ArchCivic"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 28000,
+    "width": 18000,
+    "height": 4000,
+    "center": [
+     0,
+     0,
+     14000
+    ],
+    "name": "CivicRoof",
+    "body_name": "ArchCivic",
+    "operation": "join",
+    "targets": [
+     "ArchCivic"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 32000,
+    "width": 24000,
+    "height": 8000,
+    "center": [
+     0,
+     0,
+     4000
+    ],
+    "name": "PoolMain",
+    "body_name": "ArchPool"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 34000,
+    "width": 26000,
+    "height": 3000,
+    "center": [
+     0,
+     0,
+     9500
+    ],
+    "name": "PoolRoof",
+    "body_name": "ArchPool",
+    "operation": "join",
+    "targets": [
+     "ArchPool"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 28000,
+    "width": 18000,
+    "height": 6000,
+    "center": [
+     0,
+     0,
+     3000
+    ],
+    "name": "Greenhouse",
+    "body_name": "ArchGreenhouse"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 28000,
+    "width": 18000,
+    "height": 800,
+    "center": [
+     0,
+     0,
+     6400
+    ],
+    "name": "GHRoof0",
+    "body_name": "ArchGreenhouse",
+    "operation": "join",
+    "targets": [
+     "ArchGreenhouse"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 22400,
+    "width": 18000,
+    "height": 800,
+    "center": [
+     0,
+     0,
+     7200
+    ],
+    "name": "GHRoof1",
+    "body_name": "ArchGreenhouse",
+    "operation": "join",
+    "targets": [
+     "ArchGreenhouse"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 16800,
+    "width": 18000,
+    "height": 800,
+    "center": [
+     0,
+     0,
+     8000
+    ],
+    "name": "GHRoof2",
+    "body_name": "ArchGreenhouse",
+    "operation": "join",
+    "targets": [
+     "ArchGreenhouse"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 11200,
+    "width": 18000,
+    "height": 800,
+    "center": [
+     0,
+     0,
+     8800
+    ],
+    "name": "GHRoof3",
+    "body_name": "ArchGreenhouse",
+    "operation": "join",
+    "targets": [
+     "ArchGreenhouse"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 5600,
+    "width": 18000,
+    "height": 800,
+    "center": [
+     0,
+     0,
+     9600
+    ],
+    "name": "GHRoof4",
+    "body_name": "ArchGreenhouse",
+    "operation": "join",
+    "targets": [
+     "ArchGreenhouse"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 30000,
+    "width": 30000,
+    "height": 15000,
+    "center": [
+     0,
+     0,
+     7500
+    ],
+    "name": "PlantBody",
+    "body_name": "Plant"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8000,
+    "width": 4000,
+    "height": 10000,
+    "center": [
+     0,
+     -15500,
+     8000
+    ],
+    "name": "PlantWindowN",
+    "body_name": "PlantNWindow"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8000,
+    "width": 4000,
+    "height": 10000,
+    "center": [
+     0,
+     15500,
+     8000
+    ],
+    "name": "PlantWindowS",
+    "body_name": "PlantSWindow"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8000,
+    "width": 4000,
+    "height": 10000,
+    "center": [
+     15500,
+     0,
+     8000
+    ],
+    "name": "PlantWindowE",
+    "body_name": "PlantEWindow"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 8000,
+    "width": 4000,
+    "height": 10000,
+    "center": [
+     -15500,
+     0,
+     8000
+    ],
+    "name": "PlantWindowW",
+    "body_name": "PlantWWindow"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     8000,
+     8000,
+     15000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Stack01",
+    "body_name": "Stack01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     -8000,
+     8000,
+     15000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Stack02",
+    "body_name": "Stack02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     8000,
+     -8000,
+     15000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Stack03",
+    "body_name": "Stack03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1500,
+    "height": 8000,
+    "base": [
+     -8000,
+     -8000,
+     15000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Stack04",
+    "body_name": "Stack04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 400000,
+    "height": 200,
+    "center": [
+     -160000,
+     0,
+     100
+    ],
+    "name": "StreetNS00",
+    "body_name": "StreetNS00"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 400000,
+    "height": 200,
+    "center": [
+     -80000,
+     0,
+     100
+    ],
+    "name": "StreetNS01",
+    "body_name": "StreetNS01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 400000,
+    "height": 200,
+    "center": [
+     0,
+     0,
+     100
+    ],
+    "name": "StreetNS02",
+    "body_name": "StreetNS02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 400000,
+    "height": 200,
+    "center": [
+     80000,
+     0,
+     100
+    ],
+    "name": "StreetNS03",
+    "body_name": "StreetNS03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 400000,
+    "height": 200,
+    "center": [
+     160000,
+     0,
+     100
+    ],
+    "name": "StreetNS04",
+    "body_name": "StreetNS04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400000,
+    "width": 6000,
+    "height": 200,
+    "center": [
+     0,
+     -160000,
+     100
+    ],
+    "name": "StreetEW00",
+    "body_name": "StreetEW00"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400000,
+    "width": 6000,
+    "height": 200,
+    "center": [
+     0,
+     -80000,
+     100
+    ],
+    "name": "StreetEW01",
+    "body_name": "StreetEW01"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400000,
+    "width": 6000,
+    "height": 200,
+    "center": [
+     0,
+     0,
+     100
+    ],
+    "name": "StreetEW02",
+    "body_name": "StreetEW02"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400000,
+    "width": 6000,
+    "height": 200,
+    "center": [
+     0,
+     80000,
+     100
+    ],
+    "name": "StreetEW03",
+    "body_name": "StreetEW03"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 400000,
+    "width": 6000,
+    "height": 200,
+    "center": [
+     0,
+     160000,
+     100
+    ],
+    "name": "StreetEW04",
+    "body_name": "StreetEW04"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -162000,
+     110
+    ],
+    "name": "Xwalk160000_160000_1",
+    "body_name": "Xwalk160000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -161000,
+     110
+    ],
+    "name": "Xwalk160000_160000_2",
+    "body_name": "Xwalk160000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -160000,
+     110
+    ],
+    "name": "Xwalk160000_160000_3",
+    "body_name": "Xwalk160000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -159000,
+     110
+    ],
+    "name": "Xwalk160000_160000_4",
+    "body_name": "Xwalk160000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -158000,
+     110
+    ],
+    "name": "Xwalk160000_160000_5",
+    "body_name": "Xwalk160000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -82000,
+     110
+    ],
+    "name": "Xwalk160000_80000_1",
+    "body_name": "Xwalk160000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -81000,
+     110
+    ],
+    "name": "Xwalk160000_80000_2",
+    "body_name": "Xwalk160000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -80000,
+     110
+    ],
+    "name": "Xwalk160000_80000_3",
+    "body_name": "Xwalk160000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -79000,
+     110
+    ],
+    "name": "Xwalk160000_80000_4",
+    "body_name": "Xwalk160000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -78000,
+     110
+    ],
+    "name": "Xwalk160000_80000_5",
+    "body_name": "Xwalk160000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -2000,
+     110
+    ],
+    "name": "Xwalk160000_0_1",
+    "body_name": "Xwalk160000_0_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     -1000,
+     110
+    ],
+    "name": "Xwalk160000_0_2",
+    "body_name": "Xwalk160000_0_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     0,
+     110
+    ],
+    "name": "Xwalk160000_0_3",
+    "body_name": "Xwalk160000_0_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     1000,
+     110
+    ],
+    "name": "Xwalk160000_0_4",
+    "body_name": "Xwalk160000_0_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     2000,
+     110
+    ],
+    "name": "Xwalk160000_0_5",
+    "body_name": "Xwalk160000_0_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     78000,
+     110
+    ],
+    "name": "Xwalk160000_80000_1",
+    "body_name": "Xwalk160000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     79000,
+     110
+    ],
+    "name": "Xwalk160000_80000_2",
+    "body_name": "Xwalk160000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     80000,
+     110
+    ],
+    "name": "Xwalk160000_80000_3",
+    "body_name": "Xwalk160000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     81000,
+     110
+    ],
+    "name": "Xwalk160000_80000_4",
+    "body_name": "Xwalk160000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     82000,
+     110
+    ],
+    "name": "Xwalk160000_80000_5",
+    "body_name": "Xwalk160000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     158000,
+     110
+    ],
+    "name": "Xwalk160000_160000_1",
+    "body_name": "Xwalk160000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     159000,
+     110
+    ],
+    "name": "Xwalk160000_160000_2",
+    "body_name": "Xwalk160000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     160000,
+     110
+    ],
+    "name": "Xwalk160000_160000_3",
+    "body_name": "Xwalk160000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     161000,
+     110
+    ],
+    "name": "Xwalk160000_160000_4",
+    "body_name": "Xwalk160000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -160000,
+     162000,
+     110
+    ],
+    "name": "Xwalk160000_160000_5",
+    "body_name": "Xwalk160000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -162000,
+     110
+    ],
+    "name": "Xwalk80000_160000_1",
+    "body_name": "Xwalk80000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -161000,
+     110
+    ],
+    "name": "Xwalk80000_160000_2",
+    "body_name": "Xwalk80000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -160000,
+     110
+    ],
+    "name": "Xwalk80000_160000_3",
+    "body_name": "Xwalk80000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -159000,
+     110
+    ],
+    "name": "Xwalk80000_160000_4",
+    "body_name": "Xwalk80000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -158000,
+     110
+    ],
+    "name": "Xwalk80000_160000_5",
+    "body_name": "Xwalk80000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -82000,
+     110
+    ],
+    "name": "Xwalk80000_80000_1",
+    "body_name": "Xwalk80000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -81000,
+     110
+    ],
+    "name": "Xwalk80000_80000_2",
+    "body_name": "Xwalk80000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -80000,
+     110
+    ],
+    "name": "Xwalk80000_80000_3",
+    "body_name": "Xwalk80000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -79000,
+     110
+    ],
+    "name": "Xwalk80000_80000_4",
+    "body_name": "Xwalk80000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -78000,
+     110
+    ],
+    "name": "Xwalk80000_80000_5",
+    "body_name": "Xwalk80000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -2000,
+     110
+    ],
+    "name": "Xwalk80000_0_1",
+    "body_name": "Xwalk80000_0_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     -1000,
+     110
+    ],
+    "name": "Xwalk80000_0_2",
+    "body_name": "Xwalk80000_0_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     0,
+     110
+    ],
+    "name": "Xwalk80000_0_3",
+    "body_name": "Xwalk80000_0_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     1000,
+     110
+    ],
+    "name": "Xwalk80000_0_4",
+    "body_name": "Xwalk80000_0_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     2000,
+     110
+    ],
+    "name": "Xwalk80000_0_5",
+    "body_name": "Xwalk80000_0_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     78000,
+     110
+    ],
+    "name": "Xwalk80000_80000_1",
+    "body_name": "Xwalk80000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     79000,
+     110
+    ],
+    "name": "Xwalk80000_80000_2",
+    "body_name": "Xwalk80000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     80000,
+     110
+    ],
+    "name": "Xwalk80000_80000_3",
+    "body_name": "Xwalk80000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     81000,
+     110
+    ],
+    "name": "Xwalk80000_80000_4",
+    "body_name": "Xwalk80000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     82000,
+     110
+    ],
+    "name": "Xwalk80000_80000_5",
+    "body_name": "Xwalk80000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     158000,
+     110
+    ],
+    "name": "Xwalk80000_160000_1",
+    "body_name": "Xwalk80000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     159000,
+     110
+    ],
+    "name": "Xwalk80000_160000_2",
+    "body_name": "Xwalk80000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     160000,
+     110
+    ],
+    "name": "Xwalk80000_160000_3",
+    "body_name": "Xwalk80000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     161000,
+     110
+    ],
+    "name": "Xwalk80000_160000_4",
+    "body_name": "Xwalk80000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     -80000,
+     162000,
+     110
+    ],
+    "name": "Xwalk80000_160000_5",
+    "body_name": "Xwalk80000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -162000,
+     110
+    ],
+    "name": "Xwalk0_160000_1",
+    "body_name": "Xwalk0_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -161000,
+     110
+    ],
+    "name": "Xwalk0_160000_2",
+    "body_name": "Xwalk0_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -160000,
+     110
+    ],
+    "name": "Xwalk0_160000_3",
+    "body_name": "Xwalk0_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -159000,
+     110
+    ],
+    "name": "Xwalk0_160000_4",
+    "body_name": "Xwalk0_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -158000,
+     110
+    ],
+    "name": "Xwalk0_160000_5",
+    "body_name": "Xwalk0_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -82000,
+     110
+    ],
+    "name": "Xwalk0_80000_1",
+    "body_name": "Xwalk0_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -81000,
+     110
+    ],
+    "name": "Xwalk0_80000_2",
+    "body_name": "Xwalk0_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -80000,
+     110
+    ],
+    "name": "Xwalk0_80000_3",
+    "body_name": "Xwalk0_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -79000,
+     110
+    ],
+    "name": "Xwalk0_80000_4",
+    "body_name": "Xwalk0_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -78000,
+     110
+    ],
+    "name": "Xwalk0_80000_5",
+    "body_name": "Xwalk0_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -2000,
+     110
+    ],
+    "name": "Xwalk0_0_1",
+    "body_name": "Xwalk0_0_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     -1000,
+     110
+    ],
+    "name": "Xwalk0_0_2",
+    "body_name": "Xwalk0_0_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     0,
+     110
+    ],
+    "name": "Xwalk0_0_3",
+    "body_name": "Xwalk0_0_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     1000,
+     110
+    ],
+    "name": "Xwalk0_0_4",
+    "body_name": "Xwalk0_0_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     2000,
+     110
+    ],
+    "name": "Xwalk0_0_5",
+    "body_name": "Xwalk0_0_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     78000,
+     110
+    ],
+    "name": "Xwalk0_80000_1",
+    "body_name": "Xwalk0_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     79000,
+     110
+    ],
+    "name": "Xwalk0_80000_2",
+    "body_name": "Xwalk0_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     80000,
+     110
+    ],
+    "name": "Xwalk0_80000_3",
+    "body_name": "Xwalk0_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     81000,
+     110
+    ],
+    "name": "Xwalk0_80000_4",
+    "body_name": "Xwalk0_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     82000,
+     110
+    ],
+    "name": "Xwalk0_80000_5",
+    "body_name": "Xwalk0_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     158000,
+     110
+    ],
+    "name": "Xwalk0_160000_1",
+    "body_name": "Xwalk0_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     159000,
+     110
+    ],
+    "name": "Xwalk0_160000_2",
+    "body_name": "Xwalk0_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     160000,
+     110
+    ],
+    "name": "Xwalk0_160000_3",
+    "body_name": "Xwalk0_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     161000,
+     110
+    ],
+    "name": "Xwalk0_160000_4",
+    "body_name": "Xwalk0_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     0,
+     162000,
+     110
+    ],
+    "name": "Xwalk0_160000_5",
+    "body_name": "Xwalk0_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -162000,
+     110
+    ],
+    "name": "Xwalk80000_160000_1",
+    "body_name": "Xwalk80000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -161000,
+     110
+    ],
+    "name": "Xwalk80000_160000_2",
+    "body_name": "Xwalk80000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -160000,
+     110
+    ],
+    "name": "Xwalk80000_160000_3",
+    "body_name": "Xwalk80000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -159000,
+     110
+    ],
+    "name": "Xwalk80000_160000_4",
+    "body_name": "Xwalk80000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -158000,
+     110
+    ],
+    "name": "Xwalk80000_160000_5",
+    "body_name": "Xwalk80000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -82000,
+     110
+    ],
+    "name": "Xwalk80000_80000_1",
+    "body_name": "Xwalk80000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -81000,
+     110
+    ],
+    "name": "Xwalk80000_80000_2",
+    "body_name": "Xwalk80000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -80000,
+     110
+    ],
+    "name": "Xwalk80000_80000_3",
+    "body_name": "Xwalk80000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -79000,
+     110
+    ],
+    "name": "Xwalk80000_80000_4",
+    "body_name": "Xwalk80000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -78000,
+     110
+    ],
+    "name": "Xwalk80000_80000_5",
+    "body_name": "Xwalk80000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -2000,
+     110
+    ],
+    "name": "Xwalk80000_0_1",
+    "body_name": "Xwalk80000_0_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     -1000,
+     110
+    ],
+    "name": "Xwalk80000_0_2",
+    "body_name": "Xwalk80000_0_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     0,
+     110
+    ],
+    "name": "Xwalk80000_0_3",
+    "body_name": "Xwalk80000_0_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     1000,
+     110
+    ],
+    "name": "Xwalk80000_0_4",
+    "body_name": "Xwalk80000_0_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     2000,
+     110
+    ],
+    "name": "Xwalk80000_0_5",
+    "body_name": "Xwalk80000_0_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     78000,
+     110
+    ],
+    "name": "Xwalk80000_80000_1",
+    "body_name": "Xwalk80000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     79000,
+     110
+    ],
+    "name": "Xwalk80000_80000_2",
+    "body_name": "Xwalk80000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     80000,
+     110
+    ],
+    "name": "Xwalk80000_80000_3",
+    "body_name": "Xwalk80000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     81000,
+     110
+    ],
+    "name": "Xwalk80000_80000_4",
+    "body_name": "Xwalk80000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     82000,
+     110
+    ],
+    "name": "Xwalk80000_80000_5",
+    "body_name": "Xwalk80000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     158000,
+     110
+    ],
+    "name": "Xwalk80000_160000_1",
+    "body_name": "Xwalk80000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     159000,
+     110
+    ],
+    "name": "Xwalk80000_160000_2",
+    "body_name": "Xwalk80000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     160000,
+     110
+    ],
+    "name": "Xwalk80000_160000_3",
+    "body_name": "Xwalk80000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     161000,
+     110
+    ],
+    "name": "Xwalk80000_160000_4",
+    "body_name": "Xwalk80000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     80000,
+     162000,
+     110
+    ],
+    "name": "Xwalk80000_160000_5",
+    "body_name": "Xwalk80000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -162000,
+     110
+    ],
+    "name": "Xwalk160000_160000_1",
+    "body_name": "Xwalk160000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -161000,
+     110
+    ],
+    "name": "Xwalk160000_160000_2",
+    "body_name": "Xwalk160000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -160000,
+     110
+    ],
+    "name": "Xwalk160000_160000_3",
+    "body_name": "Xwalk160000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -159000,
+     110
+    ],
+    "name": "Xwalk160000_160000_4",
+    "body_name": "Xwalk160000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -158000,
+     110
+    ],
+    "name": "Xwalk160000_160000_5",
+    "body_name": "Xwalk160000_160000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -82000,
+     110
+    ],
+    "name": "Xwalk160000_80000_1",
+    "body_name": "Xwalk160000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -81000,
+     110
+    ],
+    "name": "Xwalk160000_80000_2",
+    "body_name": "Xwalk160000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -80000,
+     110
+    ],
+    "name": "Xwalk160000_80000_3",
+    "body_name": "Xwalk160000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -79000,
+     110
+    ],
+    "name": "Xwalk160000_80000_4",
+    "body_name": "Xwalk160000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -78000,
+     110
+    ],
+    "name": "Xwalk160000_80000_5",
+    "body_name": "Xwalk160000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -2000,
+     110
+    ],
+    "name": "Xwalk160000_0_1",
+    "body_name": "Xwalk160000_0_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     -1000,
+     110
+    ],
+    "name": "Xwalk160000_0_2",
+    "body_name": "Xwalk160000_0_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     0,
+     110
+    ],
+    "name": "Xwalk160000_0_3",
+    "body_name": "Xwalk160000_0_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     1000,
+     110
+    ],
+    "name": "Xwalk160000_0_4",
+    "body_name": "Xwalk160000_0_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     2000,
+     110
+    ],
+    "name": "Xwalk160000_0_5",
+    "body_name": "Xwalk160000_0_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     78000,
+     110
+    ],
+    "name": "Xwalk160000_80000_1",
+    "body_name": "Xwalk160000_80000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     79000,
+     110
+    ],
+    "name": "Xwalk160000_80000_2",
+    "body_name": "Xwalk160000_80000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     80000,
+     110
+    ],
+    "name": "Xwalk160000_80000_3",
+    "body_name": "Xwalk160000_80000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     81000,
+     110
+    ],
+    "name": "Xwalk160000_80000_4",
+    "body_name": "Xwalk160000_80000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     82000,
+     110
+    ],
+    "name": "Xwalk160000_80000_5",
+    "body_name": "Xwalk160000_80000_5"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     158000,
+     110
+    ],
+    "name": "Xwalk160000_160000_1",
+    "body_name": "Xwalk160000_160000_1"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     159000,
+     110
+    ],
+    "name": "Xwalk160000_160000_2",
+    "body_name": "Xwalk160000_160000_2"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     160000,
+     110
+    ],
+    "name": "Xwalk160000_160000_3",
+    "body_name": "Xwalk160000_160000_3"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     161000,
+     110
+    ],
+    "name": "Xwalk160000_160000_4",
+    "body_name": "Xwalk160000_160000_4"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 6000,
+    "width": 800,
+    "height": 20,
+    "center": [
+     160000,
+     162000,
+     110
+    ],
+    "name": "Xwalk160000_160000_5",
+    "body_name": "Xwalk160000_160000_5"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 300,
+    "height": 8000,
+    "base": [
+     0,
+     0,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ArchTree",
+    "body_name": "ArchTree",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 120,
+    "height": 4500,
+    "base": [
+     0,
+     0,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "ArchLampPole",
+    "body_name": "ArchLamp",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 600,
+    "width": 400,
+    "height": 200,
+    "center": [
+     0,
+     0,
+     4700
+    ],
+    "name": "ArchLampHead",
+    "body_name": "ArchLamp",
+    "operation": "join",
+    "targets": [
+     "ArchLamp"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 70000,
+    "width": 50000,
+    "height": 100,
+    "center": [
+     -120000,
+     80000,
+     50
+    ],
+    "name": "Park",
+    "body_name": "Park"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 300000,
+    "width": 12000,
+    "height": 2000,
+    "center": [
+     0,
+     140000,
+     -1000
+    ],
+    "name": "RiverChannel",
+    "body_name": "RiverChannel"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 50000,
+    "width": 14000,
+    "height": 600,
+    "center": [
+     0,
+     140000,
+     300
+    ],
+    "name": "BridgeRoad",
+    "body_name": "BridgeRoad"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1000,
+    "height": 3000,
+    "base": [
+     -18000,
+     140000,
+     -1500
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BridgePillar18000",
+    "body_name": "BridgePillar18000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1000,
+    "height": 3000,
+    "base": [
+     -6000,
+     140000,
+     -1500
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BridgePillar6000",
+    "body_name": "BridgePillar6000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1000,
+    "height": 3000,
+    "base": [
+     6000,
+     140000,
+     -1500
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BridgePillar6000",
+    "body_name": "BridgePillar6000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 1000,
+    "height": 3000,
+    "base": [
+     18000,
+     140000,
+     -1500
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BridgePillar18000",
+    "body_name": "BridgePillar18000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 280000,
+    "base": [
+     0,
+     0,
+     -6000
+    ],
+    "axis": [
+     1,
+     0,
+     0
+    ],
+    "name": "TrunkX",
+    "body_name": "HeatNetwork",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 280000,
+    "base": [
+     0,
+     0,
+     -6000
+    ],
+    "axis": [
+     0,
+     1,
+     0
+    ],
+    "name": "TrunkY",
+    "body_name": "HeatNetwork",
+    "operation": "join",
+    "targets": [
+     "HeatNetwork"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 6000,
+    "base": [
+     60000,
+     60000,
+     -6000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRise01",
+    "body_name": "Branch01",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 5000,
+    "base": [
+     60000,
+     60000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRun01",
+    "body_name": "Branch01",
+    "operation": "join",
+    "targets": [
+     "Branch01"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 6000,
+    "base": [
+     60000,
+     -60000,
+     -6000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRise02",
+    "body_name": "Branch02",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 5000,
+    "base": [
+     60000,
+     -60000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRun02",
+    "body_name": "Branch02",
+    "operation": "join",
+    "targets": [
+     "Branch02"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 6000,
+    "base": [
+     -60000,
+     60000,
+     -6000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRise03",
+    "body_name": "Branch03",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 5000,
+    "base": [
+     -60000,
+     60000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRun03",
+    "body_name": "Branch03",
+    "operation": "join",
+    "targets": [
+     "Branch03"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 6000,
+    "base": [
+     -60000,
+     -60000,
+     -6000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRise04",
+    "body_name": "Branch04",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 5000,
+    "base": [
+     -60000,
+     -60000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRun04",
+    "body_name": "Branch04",
+    "operation": "join",
+    "targets": [
+     "Branch04"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 6000,
+    "base": [
+     100000,
+     0,
+     -6000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRise05",
+    "body_name": "Branch05",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 5000,
+    "base": [
+     100000,
+     0,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRun05",
+    "body_name": "Branch05",
+    "operation": "join",
+    "targets": [
+     "Branch05"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 6000,
+    "base": [
+     0,
+     100000,
+     -6000
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRise06",
+    "body_name": "Branch06",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 600,
+    "height": 5000,
+    "base": [
+     0,
+     100000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "BranchRun06",
+    "body_name": "Branch06",
+    "operation": "join",
+    "targets": [
+     "Branch06"
+    ],
+    "touching": "one_body"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     -80000,
+     -80000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole80000_80000",
+    "body_name": "Manhole80000_80000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     -80000,
+     0,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole80000_0",
+    "body_name": "Manhole80000_0",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     -80000,
+     80000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole80000_80000",
+    "body_name": "Manhole80000_80000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     0,
+     -80000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole0_80000",
+    "body_name": "Manhole0_80000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     0,
+     0,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole0_0",
+    "body_name": "Manhole0_0",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     0,
+     80000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole0_80000",
+    "body_name": "Manhole0_80000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     80000,
+     -80000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole80000_80000",
+    "body_name": "Manhole80000_80000",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     80000,
+     0,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole80000_0",
+    "body_name": "Manhole80000_0",
+    "operation": "new"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "radius": 800,
+    "height": 200,
+    "base": [
+     80000,
+     80000,
+     0
+    ],
+    "axis": [
+     0,
+     0,
+     1
+    ],
+    "name": "Manhole80000_80000",
+    "body_name": "Manhole80000_80000",
+    "operation": "new"
+   }
+  }
+ ]
+}

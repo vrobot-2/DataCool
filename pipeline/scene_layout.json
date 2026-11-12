@@ -1,0 +1,936 @@
+{
+  "version": 2,
+  "units": "metres",
+  "up_axis": "Z",
+  "front_axis": "-Y",
+  "notes": "Single source of placement, look-dev and camera keyframes. Read by assemble.py, bake.py, render_stills.py and export_glb.py. Paths are relative to the repository root. Blender (x, y, z) -> glTF/three.js (x, z, -y); app/src/data/phases.ts camera keys equal the keyframes below under that mapping (fov 34 deg vertical = 39.2 mm on a 24 mm vertical sensor).",
+  "import": {
+    "prefer": "obj",
+    "obj_scale": 0.001,
+    "note": "The Blender 5.4 STEP importer returns ONE merged mesh per file, so body names (and the name-based material rules) are lost. The SolidCraft OBJ keeps one named object per body, in millimetres, so OBJ is imported and scaled by 0.001. STEP remains the fallback when an OBJ is missing."
+  },
+  "optimize": {
+    "tris_per_metre": 8000,
+    "min_tris": 150,
+    "max_tris": 6000,
+    "asset_factor": {
+      "district": 0.35,
+      "rack": 1,
+      "exchanger": 1
+    },
+    "note": "Objects above their triangle budget (bbox diagonal * tris_per_metre, clamped, times asset_factor) are collapse-decimated before shading. Fine tessellation of bolts, nuts, collars and manholes made the raw export ~1.4 M triangles."
+  },
+  "assets": {
+    "rack": {
+      "position": [
+        -3.2,
+        2,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        180
+      ],
+      "files": [
+        "assets/rack/rack.step"
+      ],
+      "placeholder": "rack",
+      "note": "600 x 1000 x 2200 mm envelope. Z 180 deg turns the front (-Y local) to face +Y world, away from the exchanger; the rear manifold ends up at world y=1.52, between rack and exchanger (the loop pipes run there). three.js position = (-3.2, 0, -2.0)."
+    },
+    "exchanger": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "files": [
+        "assets/exchanger/exchanger_frame.step",
+        "assets/exchanger/exchanger_core.step",
+        "assets/exchanger/exchanger_ports.step"
+      ],
+      "placeholder": "exchanger",
+      "note": "hero object, 868 x 1328 x 1620 mm envelope; the -Y face carries ports x=-0.2 at z=0.5/1.05, the +Y face ports x=+0.2"
+    },
+    "district": {
+      "position": [
+        -30,
+        30,
+        0
+      ],
+      "rotation_deg": [
+        0,
+        0,
+        0
+      ],
+      "files": [
+        "assets/district/district.step"
+      ],
+      "placeholder": "district",
+      "note": "240 x 240 m plot, slab top at z = 0. Offset (-30,+30) so the hero equipment (world origin) sits at district point (30,-30): in the open between the 30 m plant (now at world (-30,+30), behind the exchanger as seen from the establishing camera) and the nearest buildings, instead of inside the plant footprint."
+    }
+  },
+  "materials": {
+    "painted_steel": {
+      "hex": "#2E3238",
+      "metallic": 0.35,
+      "roughness": 0.55,
+      "description": "painted steel frame"
+    },
+    "stainless": {
+      "hex": "#B9BEC6",
+      "metallic": 1,
+      "roughness": 0.3,
+      "description": "stainless plate pack"
+    },
+    "copper": {
+      "hex": "#B87333",
+      "metallic": 1,
+      "roughness": 0.3,
+      "description": "copper cold plates, faint warm glow",
+      "emissive": {
+        "hex": "#FF6A2A",
+        "strength": 0.22
+      }
+    },
+    "stainless_plate": {
+      "hex": "#B9BEC6",
+      "metallic": 1,
+      "roughness": 0.3,
+      "description": "exchanger plate pack, chevron normal map"
+    },
+    "dark_plastic": {
+      "hex": "#16191E",
+      "metallic": 0,
+      "roughness": 0.5,
+      "description": "bezels, fans, PSUs, ports, PDU, casters"
+    },
+    "led_green": {
+      "hex": "#0A3A1A",
+      "metallic": 0,
+      "roughness": 0.4,
+      "description": "status LED (emissive)",
+      "emissive": {
+        "hex": "#35FF8A",
+        "strength": 1
+      }
+    },
+    "led_amber": {
+      "hex": "#3A2A06",
+      "metallic": 0,
+      "roughness": 0.4,
+      "description": "status LED (emissive)",
+      "emissive": {
+        "hex": "#FFB020",
+        "strength": 1
+      }
+    },
+    "building_facade": {
+      "hex": "#6E6A63",
+      "metallic": 0,
+      "roughness": 0.9,
+      "description": "district facades: procedural window grid with warm lit windows"
+    },
+    "concrete": {
+      "hex": "#6E6A63",
+      "metallic": 0,
+      "roughness": 0.9,
+      "description": "concrete / city"
+    },
+    "glass": {
+      "hex": "#1A1D22",
+      "metallic": 0.2,
+      "roughness": 0.12,
+      "description": "dark glass windows"
+    },
+    "accent_pipe": {
+      "hex": "#B5502A",
+      "metallic": 0.7,
+      "roughness": 0.4,
+      "description": "accent pipe / loop"
+    },
+    "uqd_collar_blue": {
+      "hex": "#7C8BFF",
+      "metallic": 0.6,
+      "roughness": 0.4,
+      "description": "UQD coupling collar - supply (indigo)"
+    },
+    "uqd_collar_red": {
+      "hex": "#FF6B57",
+      "metallic": 0.6,
+      "roughness": 0.4,
+      "description": "UQD coupling collar - return (crimson)"
+    },
+    "gasket_black": {
+      "hex": "#0D0D0F",
+      "metallic": 0,
+      "roughness": 0.85,
+      "description": "EPDM gasket - black rubber"
+    },
+    "brass_valve": {
+      "hex": "#B5A642",
+      "metallic": 1,
+      "roughness": 0.35,
+      "description": "brass valve body"
+    },
+    "label_plate": {
+      "hex": "#E9ECF2",
+      "metallic": 0,
+      "roughness": 0.6,
+      "description": "label plate - white background for text texture"
+    }
+  },
+  "material_rules": [
+    {
+      "asset": "rack",
+      "match": [
+        "ledg"
+      ],
+      "material": "led_green"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "leda"
+      ],
+      "material": "led_amber"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "coldplate",
+        "cold_plate",
+        "cold plate"
+      ],
+      "material": "copper"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "tray",
+        "handle",
+        "hinge"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "manifold",
+        "branch",
+        "hose",
+        "barb",
+        "pipe"
+      ],
+      "material": "accent_pipe"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "bezel",
+        "fan",
+        "psu",
+        "grille",
+        "port",
+        "pdu",
+        "caster"
+      ],
+      "material": "dark_plastic"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "uqdcollarblue",
+        "collarblue"
+      ],
+      "material": "uqd_collar_blue"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "uqdcollarred",
+        "collarred"
+      ],
+      "material": "uqd_collar_red"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "uqdbase",
+        "uqd"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "valve",
+        "drain"
+      ],
+      "material": "brass_valve"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "gauge"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "retclip",
+        "bracket",
+        "ground"
+      ],
+      "material": "painted_steel"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "label",
+        "logoplate"
+      ],
+      "material": "label_plate"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "cable"
+      ],
+      "material": "dark_plastic"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "statusled"
+      ],
+      "material": "led_amber"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "lock"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "rack",
+      "match": [
+        "*"
+      ],
+      "material": "painted_steel"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "exchanger_core"
+      ],
+      "material": "stainless_plate"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "port",
+        "flange",
+        "bolt",
+        "tierod",
+        "nut",
+        "nameplate"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "gasket"
+      ],
+      "material": "gasket_black"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "nameplate",
+        "carry",
+        "guide",
+        "liftlug"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "label",
+        "comp"
+      ],
+      "material": "label_plate"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "sleeve"
+      ],
+      "material": "dark_plastic"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "rivet"
+      ],
+      "material": "stainless"
+    },
+    {
+      "asset": "exchanger",
+      "match": [
+        "*"
+      ],
+      "material": "painted_steel"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "window",
+        "glass",
+        "facade"
+      ],
+      "material": "glass"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "building"
+      ],
+      "material": "building_facade"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "main",
+        "branch",
+        "pipe",
+        "stack"
+      ],
+      "material": "accent_pipe"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "manhole"
+      ],
+      "material": "painted_steel"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "arch",
+        "building",
+        "bldg"
+      ],
+      "material": "building_facade"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "plant"
+      ],
+      "material": "painted_steel"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "stack"
+      ],
+      "material": "accent_pipe"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "street",
+        "bridge",
+        "park"
+      ],
+      "material": "concrete"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "tree"
+      ],
+      "material": "concrete"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "lamp"
+      ],
+      "material": "painted_steel"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "river"
+      ],
+      "material": "glass"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "earth",
+        "plinth"
+      ],
+      "material": "concrete"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "heatnetwork",
+        "trunk",
+        "branch"
+      ],
+      "material": "accent_pipe"
+    },
+    {
+      "asset": "district",
+      "match": [
+        "*"
+      ],
+      "material": "concrete"
+    },
+    {
+      "asset": "loops",
+      "match": [
+        "*"
+      ],
+      "material": "accent_pipe"
+    },
+    {
+      "asset": "environment",
+      "match": [
+        "*"
+      ],
+      "material": "concrete"
+    }
+  ],
+  "detail": {
+    "note": "Procedural detail maps per material (bake.py + procedural_textures.py). tile_m = world metres per UV repeat on the world-space 'UVDetail' map (TEXCOORD_1). mr = metallic-roughness (G rough, B metal), normal = tangent-space normal map.",
+    "stainless": {
+      "tile_m": [
+        0.5,
+        0.5
+      ],
+      "mr": {
+        "kind": "brushed",
+        "metal": 1,
+        "rough": 0.3,
+        "var": 0.1,
+        "size": 512
+      },
+      "normal": {
+        "kind": "brushed",
+        "strength": 0.25,
+        "size": 512
+      }
+    },
+    "stainless_plate": {
+      "tile_m": [
+        0.12,
+        0.12
+      ],
+      "mr": {
+        "kind": "brushed",
+        "metal": 1,
+        "rough": 0.26,
+        "var": 0.06,
+        "size": 512
+      },
+      "normal": {
+        "kind": "chevron",
+        "strength": 1.6,
+        "size": 512
+      }
+    },
+    "painted_steel": {
+      "tile_m": [
+        0.4,
+        0.4
+      ],
+      "mr": {
+        "kind": "brushed",
+        "metal": 0.35,
+        "rough": 0.55,
+        "var": 0.08,
+        "size": 512
+      },
+      "normal": {
+        "kind": "brushed",
+        "strength": 0.1,
+        "size": 512
+      }
+    },
+    "copper": {
+      "tile_m": [
+        0.3,
+        0.3
+      ],
+      "mr": {
+        "kind": "brushed",
+        "metal": 1,
+        "rough": 0.28,
+        "var": 0.08,
+        "size": 512
+      },
+      "normal": {
+        "kind": "brushed",
+        "strength": 0.15,
+        "size": 512
+      }
+    },
+    "accent_pipe": {
+      "tile_m": [
+        0.4,
+        0.4
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0.7,
+        "rough": 0.4,
+        "var": 0.05,
+        "size": 256
+      }
+    },
+    "dark_plastic": {
+      "tile_m": [
+        0.3,
+        0.3
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0,
+        "rough": 0.5,
+        "var": 0.07,
+        "size": 256
+      }
+    },
+    "concrete": {
+      "tile_m": [
+        3,
+        3
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0,
+        "rough": 0.9,
+        "var": 0.05,
+        "size": 256
+      },
+      "normal": {
+        "kind": "noise",
+        "strength": 0.2,
+        "size": 256
+      }
+    },
+    "building_facade": {
+      "tile_m": [
+        18,
+        21.6
+      ],
+      "facade": {
+        "cols": 6,
+        "rows": 6,
+        "lit_prob": 0.38,
+        "size": 1024,
+        "wall_hex": "#6E6A63",
+        "glass_hex": "#1A1D22"
+      }
+    },
+    "gasket_black": {
+      "tile_m": [
+        0.2,
+        0.2
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0,
+        "rough": 0.85,
+        "var": 0.05,
+        "size": 256
+      }
+    },
+    "brass_valve": {
+      "tile_m": [
+        0.15,
+        0.15
+      ],
+      "mr": {
+        "kind": "brushed",
+        "metal": 1,
+        "rough": 0.35,
+        "var": 0.08,
+        "size": 512
+      },
+      "normal": {
+        "kind": "brushed",
+        "strength": 0.15,
+        "size": 512
+      }
+    },
+    "uqd_collar_blue": {
+      "tile_m": [
+        0.1,
+        0.1
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0.6,
+        "rough": 0.4,
+        "var": 0.06,
+        "size": 256
+      }
+    },
+    "uqd_collar_red": {
+      "tile_m": [
+        0.1,
+        0.1
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0.6,
+        "rough": 0.4,
+        "var": 0.06,
+        "size": 256
+      }
+    },
+    "label_plate": {
+      "tile_m": [
+        0.3,
+        0.3
+      ],
+      "mr": {
+        "kind": "noise",
+        "metal": 0,
+        "rough": 0.6,
+        "var": 0.03,
+        "size": 256
+      }
+    }
+  },
+  "loop_pipes": {
+    "diameter_mm": 100,
+    "flange_diameter_mm": 180,
+    "flange_thickness_mm": 36,
+    "elbow_radius_mm": 60,
+    "supply": {
+      "name": "LoopSupply",
+      "points": [
+        [
+          -3,
+          1.49,
+          1.9
+        ],
+        [
+          -3,
+          1,
+          1.9
+        ],
+        [
+          -3,
+          1,
+          1.05
+        ],
+        [
+          0.2,
+          1,
+          1.05
+        ],
+        [
+          0.2,
+          0.682,
+          1.05
+        ]
+      ],
+      "elbow_indices": [
+        1,
+        2,
+        3
+      ]
+    },
+    "return": {
+      "name": "LoopReturn",
+      "points": [
+        [
+          -3.4,
+          1.49,
+          0.35
+        ],
+        [
+          -3.4,
+          0.9,
+          0.35
+        ],
+        [
+          0.2,
+          0.9,
+          0.35
+        ],
+        [
+          0.2,
+          0.9,
+          0.5
+        ],
+        [
+          0.2,
+          0.682,
+          0.5
+        ]
+      ],
+      "elbow_indices": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "camera": {
+    "name": "CameraRig",
+    "sensor_fit": "VERTICAL",
+    "sensor_height_mm": 24,
+    "keyframes": [
+      {
+        "phase": 0,
+        "name": "establish",
+        "frame": 1,
+        "position": [
+          4.4,
+          -3.9,
+          1.6
+        ],
+        "target": [
+          0,
+          0,
+          0.9
+        ],
+        "lens_mm": 39.2,
+        "spec": "phases.ts cam 0, fov 34 deg vertical"
+      },
+      {
+        "phase": 1,
+        "name": "rack_macro",
+        "frame": 30,
+        "position": [
+          -3.2,
+          3.55,
+          1.35
+        ],
+        "target": [
+          -3.2,
+          2.2,
+          1.2
+        ],
+        "lens_mm": 39.2,
+        "spec": "phases.ts cam 1: macro on the cold plates from the exchanger side"
+      },
+      {
+        "phase": 2,
+        "name": "manifold_dolly",
+        "frame": 60,
+        "position": [
+          -3.2,
+          -2.35,
+          1.35
+        ],
+        "target": [
+          -3.2,
+          1.5,
+          1.15
+        ],
+        "lens_mm": 39.2,
+        "spec": "phases.ts cam 2: dolly back along the rear manifold"
+      },
+      {
+        "phase": 3,
+        "name": "exchanger_orbit",
+        "frame": 90,
+        "position": [
+          1.5,
+          -2.35,
+          2.2
+        ],
+        "target": [
+          0,
+          0,
+          0.85
+        ],
+        "lens_mm": 39.2,
+        "spec": "phases.ts cam 3: orbit the exchanger"
+      },
+      {
+        "phase": 4,
+        "name": "district_rise",
+        "frame": 120,
+        "position": [
+          90,
+          -80,
+          110
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "lens_mm": 39.2,
+        "spec": "phases.ts cam 4: rise to ~112 m over the district"
+      }
+    ]
+  },
+  "render": {
+    "resolution": [
+      1600,
+      900
+    ],
+    "engine": "CYCLES",
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": -0.3,
+    "samples": 96,
+    "denoise": true,
+    "compositing": false,
+    "world_color": [
+      0.055,
+      0.062,
+      0.075
+    ]
+  },
+  "bake": {
+    "groups": {
+      "rack": 1024,
+      "exchanger": 2048,
+      "district": 1024,
+      "loops": 1024
+    },
+    "quick_resolution": 512,
+    "quick_samples": 4,
+    "full_samples": 32,
+    "margin": 16,
+    "exclude": {
+      "district": [
+        "ground"
+      ]
+    },
+    "texture_dir": "pipeline/textures",
+    "ao_prefix": "ao_",
+    "albedo_suffix": "_ao"
+  },
+  "outputs": {
+    "blend": "pipeline/scene.blend",
+    "baked_blend": "pipeline/scene_baked.blend",
+    "glb": "pipeline/scene_unbaked.glb",
+    "baked_glb": "app/public/models/scene.glb",
+    "renders": "pipeline/renders",
+    "textures": "pipeline/textures"
+  }
+}
